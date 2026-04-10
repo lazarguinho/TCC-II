@@ -158,7 +158,7 @@ Cada arquivo de resultado é salvo em `.csv` com o cabeçalho:
 graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
 ```
 
-Significado das colunas:
+##### Significado das colunas
 
 - **`graph`**: nome da instância;
 - **`#vertices`**: número de vértices do grafo;
