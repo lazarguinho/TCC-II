@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+gemat12_clean,4929,33078,0.00272,46,4,900740.89,52.0,BEST FOUND (time limit exceeded)

@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+zenios_clean,2873,12159,0.00295,46,0,900297.84,53.0,BEST FOUND (time limit exceeded)

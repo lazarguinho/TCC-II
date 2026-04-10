@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+arc130_clean,130,715,0.08527,124,5,900187.71,126.0,BEST FOUND (time limit exceeded)

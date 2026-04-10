@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+keller5_clean,776,225990,0.75155,638,560,902168.15,778.0,BEST FOUND (time limit exceeded)

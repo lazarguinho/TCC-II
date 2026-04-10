@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+young3c_clean,841,1671,0.00473,7,2,900049.40,11.0,BEST FOUND (time limit exceeded)

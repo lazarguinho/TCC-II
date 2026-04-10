@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+impcol_b_clean,59,281,0.16423,17,2,63449.53,26.0,BEST FOUND (integer optimal solution)

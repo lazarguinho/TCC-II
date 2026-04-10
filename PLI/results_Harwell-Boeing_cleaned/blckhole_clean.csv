@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+blckhole_clean,2132,6370,0.00280,19,0,905437.64,21.0,BEST FOUND (time limit exceeded)

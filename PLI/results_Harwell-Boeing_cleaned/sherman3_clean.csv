@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+sherman3_clean,5005,7514,0.00060,6,0,900252.82,17.0,BEST FOUND (time limit exceeded)

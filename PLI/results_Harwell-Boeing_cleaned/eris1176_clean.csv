@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+eris1176_clean,1176,8688,0.01257,98,1,900198.97,158.0,BEST FOUND (time limit exceeded)

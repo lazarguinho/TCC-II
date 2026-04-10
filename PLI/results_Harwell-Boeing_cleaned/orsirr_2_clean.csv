@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+orsirr_2_clean,886,2542,0.00648,13,2,901478.39,18.0,BEST FOUND (time limit exceeded)

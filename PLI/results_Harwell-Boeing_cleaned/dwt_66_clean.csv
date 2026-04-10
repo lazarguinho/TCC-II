@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+dwt_66_clean,66,127,0.05921,5,1,564.64,6.0,BEST FOUND (integer optimal solution)

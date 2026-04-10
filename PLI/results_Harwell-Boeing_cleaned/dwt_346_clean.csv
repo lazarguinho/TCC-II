@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+dwt_346_clean,346,1440,0.02413,18,1,900050.09,26.0,BEST FOUND (time limit exceeded)

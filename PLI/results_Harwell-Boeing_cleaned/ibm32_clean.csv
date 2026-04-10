@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+ibm32_clean,32,90,0.18145,11,3,900007.71,12.0,BEST FOUND (time limit exceeded)

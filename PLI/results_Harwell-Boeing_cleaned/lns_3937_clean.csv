@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+lns_3937_clean,3937,12771,0.00165,12,0,900386.10,21.0,BEST FOUND (time limit exceeded)

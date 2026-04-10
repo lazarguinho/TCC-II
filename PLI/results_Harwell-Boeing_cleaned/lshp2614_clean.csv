@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+lshp2614_clean,2614,7683,0.00225,6,3,900790.86,17.0,BEST FOUND (time limit exceeded)

@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+gen400-p0-9-55_clean,400,71820,0.90000,375,334,901125.55,445.0,BEST FOUND (time limit exceeded)

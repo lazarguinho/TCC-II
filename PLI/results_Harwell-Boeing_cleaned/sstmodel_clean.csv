@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+sstmodel_clean,3345,9702,0.00173,17,0,902313.03,24.0,BEST FOUND (time limit exceeded)

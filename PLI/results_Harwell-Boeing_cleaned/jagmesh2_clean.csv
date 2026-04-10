@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+jagmesh2_clean,1009,2928,0.00576,6,3,900236.57,16.0,BEST FOUND (time limit exceeded)

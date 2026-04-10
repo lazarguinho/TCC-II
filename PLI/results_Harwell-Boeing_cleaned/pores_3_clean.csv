@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+pores_3_clean,532,1850,0.01310,9,1,901729.99,20.0,BEST FOUND (time limit exceeded)

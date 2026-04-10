@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+watt_1_clean,1856,4816,0.00280,6,1,900105.64,14.0,BEST FOUND (time limit exceeded)

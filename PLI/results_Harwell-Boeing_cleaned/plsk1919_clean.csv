@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+plsk1919_clean,1919,4831,0.00263,6,1,900132.46,13.0,BEST FOUND (time limit exceeded)

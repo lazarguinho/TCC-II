@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+impcol_a_clean,207,557,0.02612,12,0,900028.79,14.0,BEST FOUND (time limit exceeded)

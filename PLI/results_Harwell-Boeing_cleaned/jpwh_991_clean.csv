@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+jpwh_991_clean,991,2678,0.00546,15,0,900144.35,18.0,BEST FOUND (time limit exceeded)

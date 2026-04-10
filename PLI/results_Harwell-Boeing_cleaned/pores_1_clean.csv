@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+pores_1_clean,30,103,0.23678,9,5,669474.07,12.0,BEST FOUND (integer optimal solution)

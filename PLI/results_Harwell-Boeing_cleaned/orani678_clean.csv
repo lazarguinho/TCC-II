@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+orani678_clean,2529,86768,0.02714,1544,2,961501.86,1545.0,BEST FOUND (time limit exceeded)

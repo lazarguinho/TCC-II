@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+brock400-1_clean,400,59723,0.74841,320,272,900794.33,400.0,BEST FOUND (time limit exceeded)

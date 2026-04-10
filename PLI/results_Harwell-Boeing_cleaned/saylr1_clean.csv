@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+saylr1_clean,238,445,0.01578,4,2,38875.66,6.0,BEST FOUND (integer optimal solution)

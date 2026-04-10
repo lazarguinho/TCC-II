@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+johnson8-2-4_clean,28,210,0.55556,15,15,55.31,27.0,BEST FOUND (integer optimal solution)

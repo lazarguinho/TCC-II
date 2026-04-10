@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+bcsstm07_clean,420,3416,0.03882,25,1,903098.22,44.0,BEST FOUND (time limit exceeded)

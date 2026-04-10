@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+c-fat200-1_clean,200,1534,0.07709,17,14,900021.30,31.0,BEST FOUND (time limit exceeded)

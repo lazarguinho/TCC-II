@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+psmigr_3_clean,3140,410781,0.08335,2744,5,1354918.05,2780.0,BEST FOUND (time limit exceeded)

@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+hamming6-4_clean,64,704,0.34921,22,22,287.37,63.0,BEST FOUND (integer optimal solution)

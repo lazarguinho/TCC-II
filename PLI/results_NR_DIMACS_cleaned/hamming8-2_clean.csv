@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+hamming8-2_clean,256,31616,0.96863,247,247,900298.16,286.0,BEST FOUND (time limit exceeded)

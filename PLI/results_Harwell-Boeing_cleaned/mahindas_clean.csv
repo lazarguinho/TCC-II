@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+mahindas_clean,1258,7513,0.00950,206,2,901045.38,207.0,BEST FOUND (time limit exceeded)

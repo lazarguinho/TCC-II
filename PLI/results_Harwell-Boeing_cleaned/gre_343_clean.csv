@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+gre_343_clean,343,1092,0.01862,8,2,900205.11,17.0,BEST FOUND (time limit exceeded)

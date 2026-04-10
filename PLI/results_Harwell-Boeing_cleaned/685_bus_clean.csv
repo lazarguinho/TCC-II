@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+685_bus_clean,685,1282,0.00547,12,1,900188.81,13.0,BEST FOUND (time limit exceeded)

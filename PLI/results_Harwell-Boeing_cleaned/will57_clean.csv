@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+will57_clean,57,127,0.07957,10,1,155072.29,11.0,BEST FOUND (integer optimal solution)

@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+bp_400_clean,822,4015,0.01190,294,2,900356.19,295.0,BEST FOUND (time limit exceeded)

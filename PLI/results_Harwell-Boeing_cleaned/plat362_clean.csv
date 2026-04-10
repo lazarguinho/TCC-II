@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+plat362_clean,362,2712,0.04151,18,3,900057.32,35.0,BEST FOUND (time limit exceeded)

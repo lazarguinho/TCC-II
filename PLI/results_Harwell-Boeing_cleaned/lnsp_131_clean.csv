@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+lnsp_131_clean,131,275,0.03230,12,0,900021.54,14.0,BEST FOUND (time limit exceeded)

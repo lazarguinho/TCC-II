@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+mcfe_clean,765,15358,0.05255,109,16,900898.48,169.0,BEST FOUND (time limit exceeded)

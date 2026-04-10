@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+MANN-a9_clean,45,918,0.92727,41,40,900013.68,57.0,BEST FOUND (time limit exceeded)

@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+johnson8-4-4_clean,70,1855,0.76812,53,53,900022.07,72.0,BEST FOUND (time limit exceeded)

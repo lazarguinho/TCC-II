@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+man_5976_clean,5976,109582,0.00614,50,0,901392.27,79.0,BEST FOUND (time limit exceeded)

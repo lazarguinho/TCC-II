@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+bcsstm08_clean,1074,0,0.00000,0,0,4.64,0,BEST FOUND (integer optimal solution)

@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+p-hat1500-1_clean,1500,284923,0.25343,614,157,904242.68,1499.0,BEST FOUND (time limit exceeded)

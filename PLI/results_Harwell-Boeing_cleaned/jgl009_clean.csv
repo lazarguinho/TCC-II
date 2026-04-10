@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+jgl009_clean,9,32,0.88889,8,5,551.04,13.0,BEST FOUND (integer optimal solution)

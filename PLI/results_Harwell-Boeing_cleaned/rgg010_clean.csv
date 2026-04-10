@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+rgg010_clean,10,45,1.00000,9,9,31.44,18.0,BEST FOUND (integer optimal solution)

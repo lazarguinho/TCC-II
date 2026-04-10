@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
+cegb2802_clean,2802,137334,0.03500,152,0,903261.50,202.0,BEST FOUND (time limit exceeded)
