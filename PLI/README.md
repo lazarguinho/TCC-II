@@ -21,24 +21,24 @@ O projeto contém duas implementações principais da modelagem:
 
 A formulação usa:
 
-- \(x_i\): rótulo inteiro não negativo associado ao vértice \(i\);
-- \(z\): maior rótulo utilizado na solução;
-- \(b_{ij}\): variável binária usada para linearizar as restrições entre vértices a distância 1;
-- \(d_{ij}\): variável binária usada para linearizar as restrições entre vértices a distância 2.
+- $x_i$: rótulo inteiro não negativo associado ao vértice $i$;
+- $z$: maior rótulo utilizado na solução;
+- $b_{ij}$: variável binária usada para linearizar as restrições entre vértices a distância 1;
+- $d_{ij}$: variável binária usada para linearizar as restrições entre vértices a distância 2.
 
 ### Restrições
 
-Para todo vértice \(i\):
+Para todo vértice $i$:
 
-- \(x_i \le z\)
+- $x_i \le z$
 
-Para cada par de vértices adjacentes \((i,j)\):
+Para cada par de vértices adjacentes $(i,j)$:
 
-- \(|x_i - x_j| \ge 2\)
+- $|x_i - x_j| \ge 2$
 
 Para cada par de vértices a distância 2:
 
-- \(|x_i - x_j| \ge 1\)
+- $|x_i - x_j| \ge 1$
 
 Como o modelo é linear inteiro, as desigualdades com valor absoluto são linearizadas com constantes do tipo **big-M**.
 
@@ -46,7 +46,7 @@ Como o modelo é linear inteiro, as desigualdades com valor absoluto são linear
 
 Minimizar:
 
-- \(z\)
+- $z$
 
 ou seja, minimizar o maior rótulo usado.
 
