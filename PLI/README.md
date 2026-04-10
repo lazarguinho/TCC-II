@@ -40,7 +40,7 @@ Além da modelagem matemática, o projeto inclui uma rotina experimental para:
 O projeto contém duas implementações principais da modelagem:
 
 - `main.py`: versão usando **OR-Tools**;
-- `main copy.py`: versão experimental usando **DOcplex/CPLEX**, leitura de arquivos `.mtx`, geração de solução inicial gulosa e processamento em lote.
+- `main copy.py`: versão experimental usando **DOcplex/CPLEX**, com leitura de arquivos `.mtx`, geração de solução inicial gulosa e processamento em lote.
 
 ### Variáveis de decisão
 
@@ -89,66 +89,67 @@ A rotina implementada em `main copy.py` segue as etapas abaixo para cada instân
 8. adiciona a solução gulosa como **MIP start**, quando ela é válida;
 9. resolve o modelo com limite de tempo;
 10. salva:
-
-- a rotulação em `labelings_*`;
-- o resumo da execução em `results_*`;
-
+    - a rotulação em `labelings_*`;
+    - o resumo da execução em `results_*`;
 11. remove da pasta de entrada a instância processada com sucesso.
 
 ## Descrição da estrutura do projeto
 
 ### Instâncias de entrada
 
-- `data/`
-Contém instâncias de grafos aleatórios do tipo Erdős-Rényi no formato `.mtx`.
-- `NR_DIMACS_cleaned/`
-Contém instâncias limpas da coleção `NR/DIMACS` no formato `.mtx` que não foram processadas.
-- `Harwell-Boeing_cleaned/`
-Contém instâncias limpas do conjunto `Harwell-Boeing` no formato `.mtx` que não foram processadas.
-- `teste/`
-Contém instâncias do conjunto de teste no formato `.mtx` que não foram processadas.
+- `data/`  
+  Contém instâncias de grafos aleatórios do tipo Erdős-Rényi no formato `.mtx`.
 
-> **Nota:** no fluxo atual de experimentos, após o processamento bem-sucedido de uma instância, o arquivo .mtx correspondente é removido da pasta de entrada. Isso foi adotado como estratégia de controle das instâncias já processadase foi adotada em todos os conjuntos de instâncias, com exceção das instâncias do conjunto dos grafos aleatórios (pois quando foram processadas ainda não tinha implementado a remoção). Em versões futuras, a organização pode ser centralizada em uma pasta única de instâncias.
+- `NR_DIMACS_cleaned/`  
+  Contém instâncias limpas da coleção `NR/DIMACS` no formato `.mtx` que não foram processadas.
+
+- `Harwell-Boeing_cleaned/`  
+  Contém instâncias limpas do conjunto `Harwell-Boeing` no formato `.mtx` que não foram processadas.
+
+- `teste/`  
+  Contém instâncias do conjunto de teste no formato `.mtx` que não foram processadas.
+
+> **Nota:** no fluxo atual de experimentos, após o processamento bem-sucedido de uma instância, o arquivo `.mtx` correspondente é removido da pasta de entrada. Essa estratégia foi adotada como forma de controle das instâncias já processadas e passou a ser usada em todos os conjuntos, com exceção do conjunto de grafos aleatórios, que foi processado antes da implementação dessa remoção. Em versões futuras, a organização poderá ser centralizada em uma única pasta de instâncias.
 
 ### Pastas de saída
 
 #### Rotulações-L(2,1)
 
-- `labelings_data/`
-Armazena as rotulações geradas para as instâncias de `data/`.
+- `labelings_data/`  
+  Armazena as rotulações geradas para as instâncias de `data/`.
 
-- `labelings_NR_DIMACS_cleaned/`
-Armazena as rotulações geradas para as instâncias de `NR_DIMACS_cleaned`.
+- `labelings_NR_DIMACS_cleaned/`  
+  Armazena as rotulações geradas para as instâncias de `NR_DIMACS_cleaned/`.
 
-- `labelings_Harwell-Boeing_cleaned/`
-Armazena as rotulações geradas para as instâncias de `Harwell-Boeing_cleaned`.
+- `labelings_Harwell-Boeing_cleaned/`  
+  Armazena as rotulações geradas para as instâncias de `Harwell-Boeing_cleaned/`.
 
-- `labelings_teste/`
-Armazena as rotulações geradas para as instâncias do conjunto de teste.
+- `labelings_teste/`  
+  Armazena as rotulações geradas para as instâncias do conjunto de teste.
 
-Cada arquivo de rotulação é salvo no formato .csv com duas colunas:
+Cada arquivo de rotulação é salvo no formato `.csv` com duas colunas:
 
-```tex
-vertex, label
+```text
+vertex,label
 ```
 
 #### Resultados
 
-- `results_data/`
-Contém os resultados das execuções para as instâncias em `data/`.
+- `results_data/`  
+  Contém os resultados das execuções para as instâncias em `data/`.
 
-- `results_NR_DIMACS_cleaned/`
-Contém os resultados das execuções para as instâncias em `NR_DIMACS_cleaned`.
+- `results_NR_DIMACS_cleaned/`  
+  Contém os resultados das execuções para as instâncias em `NR_DIMACS_cleaned/`.
 
-- `results_Harwell-Boeing_cleaned/`
-Contém os resultados das execuções para as instâncias em `Harwell-Boeing_cleaned`.
+- `results_Harwell-Boeing_cleaned/`  
+  Contém os resultados das execuções para as instâncias em `Harwell-Boeing_cleaned/`.
 
-- `results_teste/`
-Contém os resultados das execuções para as instâncias do conjunto de teste.
+- `results_teste/`  
+  Contém os resultados das execuções para as instâncias do conjunto de teste.
 
 Cada arquivo de resultado é salvo em `.csv` com o cabeçalho:
 
-```tex
+```text
 graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
 ```
 
@@ -161,30 +162,30 @@ Significado das colunas:
 - **`max_degree`**: maior grau do grafo;
 - **`min_degree`**: menor grau do grafo;
 - **`time(ms)`**: tempo de resolução em milissegundos;
-- **`lambda`**: valor do span encontrado;
+- **`lambda`**: valor do *span* encontrado;
 - **`status`**: status da solução retornada pelo solver.
 
 ### Execuções anteriores
 
-- `Primeira execução sem solução inicial/`
-Guarda resultados de uma execução anterior do projeto, realizada sem fornecer solução inicial ao solver. Esse diretório contém:
+- `Primeira execução sem solução inicial/`  
+  Guarda resultados de uma execução anterior do projeto, realizada sem fornecer solução inicial ao solver. Esse diretório contém:
   - `labelings_data/`
   - `results_data/`
 
-> **Nota:** nas primeiras execuções, observou-se que o solver frequentemente não conseguia encontrar uma solução viável dentro do limite de 15 minutos. Por isso, foi incorporada uma solução inicial gulosa. Mesmo quando o solver não consegue provar otimalidade, essa estratégia permite obter ao menos uma boa solução viável para comparação com as abordagens genéticas.
+> **Nota:** nas primeiras execuções, observou-se que o solver frequentemente não conseguia encontrar uma solução viável dentro do limite de 15 minutos. Por isso, foi incorporada uma solução inicial gulosa. Mesmo quando o solver não consegue provar a otimalidade, essa estratégia permite obter ao menos uma boa solução viável para comparação com abordagens genéticas.
 
 ### Arquivos principais
 
-- `main.py`
-Implementa o modelo de rotulação-L(2,1) com OR-Tools.
+- `main.py`  
+  Implementa o modelo de rotulação-L(2,1) com **OR-Tools**.
 
-- `main copy.py`
-Implementa a rotina experimental com DOcplex/CPLEX, incluindo:
+- `main copy.py`  
+  Implementa a rotina experimental com **DOcplex/CPLEX**, incluindo:
   - leitura de arquivos `.mtx`;
   - geração de solução inicial gulosa;
-  - validação de solução inicial;
-  - cálculo de vizinhos a distâncias 1 e 2;
-  - uso do MIP start;
+  - validação da solução inicial;
+  - cálculo de vizinhos a distância 1 e 2;
+  - uso de **MIP start**;
   - salvamento de resultados e rotulações.
 
 ## Dependências
@@ -195,13 +196,13 @@ Implementa a rotina experimental com DOcplex/CPLEX, incluindo:
 - `ortools`
 - `tqdm`
 
-Instalação via pip:
+Instalação via `pip`:
 
 ```bash
 pip install networkx scipy docplex ortools tqdm
 ```
 
-> **Importante:** para executar a versão com DOcplex, é necessário ter acesso a um solver compatível, como o IBM CPLEX.
+> **Importante:** para executar a versão com **DOcplex**, é necessário ter acesso a um solver compatível, como o **IBM CPLEX**.
 
 ## Como executar
 
@@ -213,7 +214,7 @@ Para testar a formulação em um grafo de exemplo:
 python main.py
 ```
 
-Essa versão cria um ciclo (C_5) e resolve o problema de rotulação-L(2,1) para esse grafo.
+Essa versão cria um ciclo $C_5$ e resolve o problema de rotulação-L(2,1) para esse grafo.
 
 ### Versão experimental em lote com DOcplex/CPLEX
 
@@ -250,7 +251,6 @@ Esse valor define o limite de tempo do solver para cada instância.
 Além disso, o modelo usa constantes `big-M` baseadas no grau máximo do grafo:
 
 - $M = \Delta^2 + \Delta + 2$
-
 - $L = \Delta^2 + \Delta + 1$
 
 onde $\Delta$ representa o maior grau do grafo.
@@ -259,9 +259,8 @@ onde $\Delta$ representa o maior grau do grafo.
 
 Na rotina experimental, o campo `status` pode indicar, por exemplo:
 
-- `OPTIMAL`: solução otimal encontrada;
-
-- `BEST FOUND`: solução viável encontrada.
+- `OPTIMAL`: solução ótima encontrada;
+- `BEST FOUND`: melhor solução viável encontrada dentro do limite de tempo.
 
 ## Exemplo de saída
 
@@ -285,14 +284,9 @@ C5,5,5,0.50000,2,2,123.45,4,OPTIMAL
 
 ## Melhorias futuras
 
-- [ ] remover `main.py` e consolidar e organizar o `main copy.py`, tendo assim uma unica versão;
-
+- [ ] remover `main.py` e consolidar o conteúdo em uma única versão organizada baseada em `main copy.py`;
 - [ ] criar uma interface por argumentos de linha de comando;
-
 - [ ] tornar opcional a remoção automática dos arquivos `.mtx` processados;
-
 - [ ] incluir logs consolidados de execução;
-
 - [ ] centralizar os diretórios de entrada;
-
-- [ ] centralizar os resultados em um unico `.csv`.
+- [ ] centralizar os resultados em um único `.csv`.
