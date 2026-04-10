@@ -1,0 +1,101 @@
+#!/bin/bash
+###############################################################################
+# Script chamado pelo irace.
+#   $1 = configuration ID
+#   $2 = instance ID
+#   $3 = seed
+#   $4 = instance (caminho do .mtx)
+#   $* = parâmetros da configuração (ex.: --p ... --pe ... ...)
+#
+# Saída: UM ÚNICO número = custo a ser minimizado:
+#   custo = SPAN + alpha * tempo
+###############################################################################
+
+EXE="./bin/main"
+
+error() {
+  echo "$(TZ=UTC date): $0: error: $@" >&2
+  exit 1
+}
+
+# ---------------------------------------------------------------------------
+# Parse dos argumentos do irace (NÃO mexer)
+# ---------------------------------------------------------------------------
+CONFIG_ID=$1
+INSTANCE_ID=$2
+SEED=$3
+INSTANCE=$4
+shift 4 || error "Not enough parameters"
+CONFIG_PARAMS="$*"
+
+# ---------------------------------------------------------------------------
+# Checagem do executável
+# ---------------------------------------------------------------------------
+if [ ! -x "${EXE}" ]; then
+  error "${EXE}: not found or not executable (pwd: $(pwd))"
+fi
+
+STDOUT="c${CONFIG_ID}-${INSTANCE_ID}-${SEED}.stdout"
+STDERR="c${CONFIG_ID}-${INSTANCE_ID}-${SEED}.stderr"
+
+# ---------------------------------------------------------------------------
+# Medir tempo total
+# ---------------------------------------------------------------------------
+SECONDS=0  # bash builtin: conta segundos desde que foi setado
+
+# Monte o comando
+CMD=( "${EXE}" "${INSTANCE}" ${CONFIG_PARAMS} )
+
+# Se quiser debugar o comando exato:
+# echo "${CMD[@]}" >&2
+
+# Executa
+"${CMD[@]}" 1> "${STDOUT}" 2> "${STDERR}"
+RET=$?
+
+if [ $RET -ne 0 ]; then
+  echo "DEBUG: exit code = $RET" >&2
+  echo "DEBUG: last stderr lines:" >&2
+  tail -n 30 "${STDERR}" >&2 || true
+  error "Execution failed"
+fi
+
+if [ ! -s "${STDOUT}" ]; then
+  error "${STDOUT}: empty or not created"
+fi
+
+ELAPSED_SECONDS=$SECONDS
+
+# ---------------------------------------------------------------------------
+# Parse do SPAN:
+# Seu programa imprime no stdout um único número (overall_best).
+# Vamos pegar o último número que aparecer no arquivo por segurança.
+# ---------------------------------------------------------------------------
+RAW_LINE=$(tail -n 1 "${STDOUT}")
+SPAN=$(echo "${RAW_LINE}" | grep -Eo '[0-9]+([.][0-9]+)?([eE][-+]?[0-9]+)?' | tail -n 1)
+
+if [ -z "${SPAN}" ]; then
+  echo "DEBUG: ultima linha de ${STDOUT}:" >&2
+  echo ">> ${RAW_LINE}" >&2
+  error "Could not parse numeric SPAN from ${STDOUT}"
+fi
+
+# ---------------------------------------------------------------------------
+# Combinar SPAN e tempo:
+# custo = SPAN + alpha * tempo
+# ---------------------------------------------------------------------------
+ALPHA=0.001
+
+COST=$(awk -v s="$SPAN" -v t="$ELAPSED_SECONDS" -v a="$ALPHA" \
+  'BEGIN { printf("%.6f", s + a * t) }')
+
+# Normaliza decimal (só por garantia)
+echo "${COST}" | sed 's/,/./g'
+
+# Só remove se stderr estiver vazio
+if [ ! -s "${STDERR}" ]; then
+    rm -f "${STDOUT}" "${STDERR}"
+fi
+
+# Mantém os arquivos (você disse que quer logs)
+exit 0
