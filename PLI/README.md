@@ -10,6 +10,31 @@ Além da modelagem matemática, o projeto inclui uma rotina experimental para:
 - salvar a rotulação encontrada em `.csv`;
 - salvar métricas da instância e da execução em `.csv`.
 
+## Sumário
+
+- [Formulação implementada](#formulação-implementada)
+  - [Variáveis de decisão](#variáveis-de-decisão)
+  - [Restrições](#restrições)
+  - [Função objetivo](#função-objetivo)
+- [Estratégia computacional](#estratégia-computacional)
+- [Descrição da estrutura do projeto](#descrição-da-estrutura-do-projeto)
+  - [Instâncias de entrada](#instâncias-de-entrada)
+  - [Pastas de saída](#pastas-de-saída)
+    - [Rotulações-L(2,1)](#rotulações-l21)
+    - [Resultados](#resultados)
+  - [Execuções anteriores](#execuções-anteriores)
+  - [Arquivos principais](#arquivos-principais)
+- [Dependências](#dependências)
+- [Como executar](#como-executar)
+  - [Versão simples com OR-Tools](#versão-simples-com-or-tools)
+  - [Versão experimental em lote com DOcplex/CPLEX](#versão-experimental-em-lote-com-docplexcplex)
+- [Parâmetros relevantes](#parâmetros-relevantes)
+- [Status das soluções](#status-das-soluções)
+- [Exemplo de saída](#exemplo-de-saída)
+  - [Arquivo de rotulação](#arquivo-de-rotulação)
+  - [Arquivo de resultado](#arquivo-de-resultado)
+- [Melhorias futuras](#melhorias-futuras)
+
 ## Formulação implementada
 
 O projeto contém duas implementações principais da modelagem:
@@ -251,7 +276,7 @@ vertex,label
 4,3
 ```
 
-Arquivo de resultado
+### Arquivo de resultado
 
 ```csv
 graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status
