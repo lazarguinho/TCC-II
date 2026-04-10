@@ -1,0 +1,100 @@
+#!/bin/bash
+###############################################################################
+# Script chamado pelo irace.
+#   $1 = configuration ID
+#   $2 = instance ID
+#   $3 = seed
+#   $4 = instance (caminho do .mtx)
+#   $* = parâmetros da configuração (--pop ... --gens ... --mut ... --cr ...)
+#
+# Saída: UM ÚNICO número = custo a ser minimizado (combinação de span e tempo).
+###############################################################################
+
+EXE=./bin/main
+
+error() {
+    echo "$(TZ=UTC date): $0: error: $@" >&2
+    exit 1
+}
+
+# ---------------------------------------------------------------------------
+# Parse dos argumentos dados pelo irace (NÃO mexer)
+# ---------------------------------------------------------------------------
+CONFIG_ID=$1
+INSTANCE_ID=$2
+SEED=$3
+INSTANCE=$4
+shift 4 || error "Not enough parameters"
+
+CONFIG_PARAMS="$*"
+
+# ---------------------------------------------------------------------------
+# Checagem do executável
+# ---------------------------------------------------------------------------
+if [ ! -x "${EXE}" ]; then
+    error "${EXE}: not found or not executable (pwd: $(pwd))"
+fi
+
+STDOUT="c${CONFIG_ID}-${INSTANCE_ID}-${SEED}.stdout"
+STDERR="c${CONFIG_ID}-${INSTANCE_ID}-${SEED}.stderr"
+
+OPERATORS_X=(cx ox)
+OPERATORS_M=(em dm ivm sm ism sim)
+
+BEST_SPAN=""
+
+# ---------------------------------------------------------------------------
+# Medir tempo total do script
+# ---------------------------------------------------------------------------
+SECONDS=0  # bash: conta segundos automaticamente
+
+for opx in "${OPERATORS_X[@]}"; do
+  for opm in "${OPERATORS_M[@]}"; do
+
+    CMD=( "${EXE}" "${INSTANCE}" --opx "${opx}" --opm "${opm}" ${CONFIG_PARAMS} )
+
+    # Se quiser debugar:
+    # echo "${CMD[@]}" >&2
+
+    "${CMD[@]}" 1> "${STDOUT}" 2> "${STDERR}"
+    if [ ! -s "${STDOUT}" ]; then
+        error "${STDOUT}: empty or not created (operators opx=${opx}, opm=${opm})"
+    fi
+
+    RAW_LINE=$(tail -n 1 "${STDOUT}")
+    SPAN=$(echo "${RAW_LINE}" | grep -Eo '[0-9]+' | tail -n 1)
+
+    if [ -z "${SPAN}" ]; then
+        echo "DEBUG: ultima linha de ${STDOUT}:" >&2
+        echo ">> ${RAW_LINE}" >&2
+        error "Could not parse numeric span from ${STDOUT} (opx=${opx}, opm=${opm})"
+    fi
+
+    if [ -z "${BEST_SPAN}" ] || [ "${SPAN}" -lt "${BEST_SPAN}" ]; then
+        BEST_SPAN="${SPAN}"
+    fi
+
+  done
+done
+
+ELAPSED_SECONDS=$SECONDS
+
+# ---------------------------------------------------------------------------
+# Combinar SPAN e tempo em um único custo
+# ajuste o ALPHA para dar mais/menos peso ao tempo
+# \text{custo} = \text{SPAN} + \alpha \cdot \text{tempo}
+# ---------------------------------------------------------------------------
+ALPHA=0.001
+
+COST=$(awk -v s="$BEST_SPAN" -v t="$ELAPSED_SECONDS" -v a="$ALPHA" \
+          'BEGIN { printf("%.6f", s + a * t) }')
+
+NORM=$(echo "${COST}" | sed 's/,/./g')
+
+echo "${NORM}"
+
+# Só remove se stderr estiver vazio
+if [ ! -s "${STDERR}" ]; then
+    rm -f "${STDOUT}" "${STDERR}"
+fi
+exit 0

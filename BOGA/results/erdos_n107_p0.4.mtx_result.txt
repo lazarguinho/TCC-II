@@ -1,0 +1,5 @@
+===== RESULTADO GA L(2,1) =====
+Arquivo: /Users/mateuspedrosa/Documents/l21-agbo/data/calibration/erdos_n107_p0.4.mtx (undirected)
+Crossover: cx | Mutação: em | pop=35 | gens=930 | mut=0.4082 | cr=0.7222 | runs=1
+
+----- Execução #1 -----

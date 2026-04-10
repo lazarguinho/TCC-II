@@ -1,0 +1,30 @@
+[2025-12-19 04:48:19] ERRO: matriz não quadrada → beause.mtx
+[2025-12-19 04:48:20] ERRO: matriz não quadrada → gemat1.mtx
+[2025-12-19 04:48:20] ERRO ao processar mcca.mtx: Python int too large to convert to C long
+[2025-12-19 04:48:22] ERRO: matriz não quadrada → well1033_b.mtx
+[2025-12-19 04:48:22] ERRO: matriz não quadrada → orani678_b.mtx
+[2025-12-19 04:48:30] ERRO: matriz não quadrada → illc1033.mtx
+[2025-12-19 04:48:30] ERRO: matriz não quadrada → well1033.mtx
+[2025-12-19 04:48:30] ERRO ao processar young1c.mtx: int() argument must be a string, a bytes-like object or a real number, not 'complex'
+[2025-12-19 04:48:38] ERRO: matriz não quadrada → well1850_b.mtx
+[2025-12-19 04:48:39] ERRO: matriz não quadrada → abb313.mtx
+[2025-12-19 04:48:40] ERRO: matriz não quadrada → sherman3_b.mtx
+[2025-12-19 04:48:40] ERRO: matriz não quadrada → ash958.mtx
+[2025-12-19 04:48:41] ERRO: matriz não quadrada → ash219.mtx
+[2025-12-19 04:48:41] ERRO: matriz não quadrada → sherman1_b.mtx
+[2025-12-19 04:48:41] ERRO: matriz não quadrada → ash608.mtx
+[2025-12-19 04:48:41] ERRO ao processar young2c.mtx: int() argument must be a string, a bytes-like object or a real number, not 'complex'
+[2025-12-19 04:48:42] ERRO: matriz não quadrada → sherman5_b.mtx
+[2025-12-19 04:48:42] ERRO: matriz não quadrada → wm1.mtx
+[2025-12-19 04:48:43] ERRO: matriz não quadrada → wm3.mtx
+[2025-12-19 04:48:43] ERRO: matriz não quadrada → beaflw.mtx
+[2025-12-19 04:48:43] ERRO: matriz não quadrada → wm2.mtx
+[2025-12-19 04:48:43] ERRO: matriz não quadrada → mahindas_b.mtx
+[2025-12-19 04:48:44] ERRO: matriz não quadrada → ash331.mtx
+[2025-12-19 04:48:44] ERRO: matriz não quadrada → illc1850_b.mtx
+[2025-12-19 04:48:44] ERRO ao processar young4c.mtx: int() argument must be a string, a bytes-like object or a real number, not 'complex'
+[2025-12-19 04:48:44] ERRO: matriz não quadrada → well1850.mtx
+[2025-12-19 04:48:44] ERRO: matriz não quadrada → illc1850.mtx
+[2025-12-19 04:48:45] ERRO: matriz não quadrada → beacxc.mtx
+[2025-12-19 04:48:45] ERRO: matriz não quadrada → sherman4_b.mtx
+[2025-12-19 04:48:45] ERRO: matriz não quadrada → illc1033_b.mtx
