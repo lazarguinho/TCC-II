@@ -10,6 +10,9 @@ Além da modelagem matemática, o projeto inclui uma rotina experimental para:
 - salvar a rotulação encontrada em `.csv`;
 - salvar métricas da instância e da execução em `.csv`.
 
+<details>
+<summary>Sumário</summary>
+
 ## Sumário
 
 - [Formulação implementada](#formulação-implementada)
@@ -34,6 +37,8 @@ Além da modelagem matemática, o projeto inclui uma rotina experimental para:
   - [Arquivo de rotulação](#arquivo-de-rotulação)
   - [Arquivo de resultado](#arquivo-de-resultado)
 - [Melhorias futuras](#melhorias-futuras)
+
+</details>
 
 ## Formulação implementada
 
