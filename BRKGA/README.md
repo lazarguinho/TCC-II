@@ -128,11 +128,16 @@ Para compilar o projeto, você precisa de:
 
 - compilador C++ com suporte a **C++17** ou superior;
 - `make`.
+- suporte a **OpenMP**.
 
-No macOS, isso normalmente funciona com:
+No macOS, o projeto usa `clang++` com `libomp` instalado via Homebrew.  
+Nesse caso, pode ser necessário instalar:
 
-- `clang++`
-- Xcode Command Line Tools instalados
+```bash
+brew install libomp
+```
+
+Também é recomendável ter o **Xcode Command Line Tools** instalado.
 
 Para executar o tuning, também é necessário ter o **R** e o pacote **irace** instalados.
 
@@ -146,11 +151,32 @@ Para compilar o projeto:
 make
 ```
 
-Após a compilação, o executável deve estar em:
+O Makefile gera o executável principal:
 
 ```bash
 ./bin/main
 ```
+
+Se o arquivo src/teste.cpp existir, ele também gera automaticamente:
+
+```bash
+./bin/teste
+```
+
+---
+
+## Alvos do Makefile
+
+Os principais alvos disponíveis são:
+
+- `make` — compila o projeto;
+- `make clean` — remove os diretórios `build/` e `bin/`;
+- `make run` — compila e executa `./bin/main`;
+- `make run-test` — compila e executa `./bin/teste`, se existir;
+- `make release` — compila com otimização mais agressiva (`-O3`);
+- `make debug` — compila em modo debug (`-O0 -g -DDEBUG`).
+
+O `Makefile` compila automaticamente todos os arquivos `.cpp` dentro de `src/`, incluindo arquivos em subdiretórios como `src/brkgaAPI/`.
 
 ---
 
