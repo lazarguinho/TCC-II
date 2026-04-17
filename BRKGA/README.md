@@ -87,11 +87,11 @@ Contém o código-fonte principal.
 
   Embora exista uma classe `Graph` no projeto, o `main.cpp` e o `decoder` atualmente usam o alias:
 
-    ```cpp
-    using Graph = std::vector<std::vector<int>>;
-    ```
+  ```cpp
+  using Graph = std::vector<std::vector<int>>;
+  ```
 
-    Ou seja, a execução principal está baseada diretamente em uma lista de adjacência simples, e não necessariamente na classe `Graph` encapsulada. Mesmo assim, a classe permanece útil como abstração para futuras refatorações.
+  Ou seja, a execução principal está baseada diretamente em uma lista de adjacência simples, e não necessariamente na classe `Graph` encapsulada. Mesmo assim, a classe permanece útil como abstração para futuras refatorações.
 
 - `brkgaAPI/`  
   Implementação da biblioteca usada pelo BRKGA:
@@ -133,6 +133,8 @@ No macOS, isso normalmente funciona com:
 
 - `clang++`
 - Xcode Command Line Tools instalados
+
+Para executar o tuning, também é necessário ter o **R** e o pacote **irace** instalados.
 
 ---
 
@@ -430,18 +432,110 @@ using Graph = std::vector<std::vector<int>>;
 
 ---
 
-## Tuning de parâmetros
+## Tuning de parâmetros com iRace
 
-A pasta `tuning/` reúne arquivos para experimentos de calibração dos parâmetros do BRKGA, como:
+A pasta `tuning/` reúne os arquivos usados para calibrar automaticamente os parâmetros do BRKGA com o **iRace**.
 
-- tamanho da população;
-- percentual de elite;
-- percentual de mutantes;
-- probabilidade de recombinação;
-- número de populações;
-- limites de gerações.
+O objetivo do tuning é encontrar combinações de parâmetros que produzam soluções de boa qualidade para o problema de **L(2,1) labeling**, levando em conta também o tempo de execução.
 
-Isso permite testar combinações de parâmetros em várias instâncias e identificar configurações mais eficientes.
+### Arquivos de tuning
+
+Os principais arquivos são:
+
+- `scenario.txt`: define o cenário do experimento, orçamento, paralelismo, diretórios e script de execução;
+- `parameters.txt`: define os parâmetros ajustáveis e seus intervalos;
+- `target-runner`: script chamado pelo iRace para executar o algoritmo e devolver o custo;
+- `configurations.txt`: arquivo opcional para configurações iniciais;
+- `instances-list.txt`: arquivo opcional com lista de instâncias de treino.
+
+### Parâmetros ajustados pelo iRace
+
+Os parâmetros atualmente ajustados são:
+
+- `p`: tamanho da população, no intervalo `(50, 400)`
+- `pe`: fração de elite, no intervalo `(0.05, 0.40)`
+- `pm`: fração de mutantes, no intervalo `(0.05, 0.30)`
+- `rhoe`: probabilidade de herança elite, no intervalo `(0.60, 0.90)`
+- `X_INTVL`: intervalo de troca entre populações, no intervalo `(100, 200)`
+- `X_NUMBER`: número de indivíduos trocados, no intervalo `(1, 8)`
+- `MAX_GENS`: número máximo de gerações, no intervalo `(300, 5000)`
+- `MAX_STAGT`: limite de estagnação, no intervalo `(50, 2000)`
+
+Os parâmetros `K` e `MAXT` aparecem no arquivo de parâmetros, mas estão comentados e não participam do tuning atual.
+
+### Cenário utilizado
+
+No arquivo `scenario.txt`, o tuning foi configurado com as seguintes definições principais:
+
+- diretório de execução: `..`
+- diretório de instâncias de treino: `../data/teste`
+- script executor: `target-runner`
+- orçamento máximo: `180` execuções
+- paralelismo: `4` execuções em paralelo
+- semente do iRace: `123`
+- o algoritmo é tratado como não determinístico (`deterministic = 0`)
+
+### Como o `target-runner` funciona
+
+O script `target-runner` recebe do iRace:
+
+1. identificador da configuração;
+2. identificador da instância;
+3. semente;
+4. caminho da instância;
+5. parâmetros da configuração.
+
+Com essas informações, ele executa:
+
+```bash
+./bin/main <instância> <parâmetros>
+```
+
+O script mede o tempo total da execução, captura o valor numérico final impresso pelo programa e calcula o custo usado pelo iRace.
+
+### Função de custo
+
+O custo devolvido ao iRace é calculado como:
+
+```text
+custo = SPAN + alpha * tempo
+```
+
+com:
+
+```text
+alpha = 0.001
+```
+
+Assim, o iRace busca minimizar principalmente o `SPAN`, mas também penaliza configurações mais lentas.
+
+### Saída durante o tuning
+
+O executável principal imprime no `stdout` apenas o melhor valor global encontrado na execução.  
+O `target-runner` lê esse valor, interpreta-o como o `SPAN` da configuração e o combina com o tempo medido para produzir o custo final.
+
+### Execução do iRace
+
+A execução do tuning é feita a partir da pasta `tuning/`. Um fluxo típico é:
+
+```bash
+cd tuning
+irace
+```
+
+Dependendo da instalação, também pode ser necessário executar:
+
+```bash
+Rscript -e "irace::irace()"
+```
+
+### Observações
+
+No cenário atual:
+
+- `trainInstancesDir` está ativo, então o iRace utiliza as instâncias presentes em `../data/teste`;
+- `trainInstancesFile` está comentado, portanto `instances-list.txt` não está sendo usado;
+- `configurationsFile` está comentado, portanto `configurations.txt` também não está sendo usado.
 
 ---
 
