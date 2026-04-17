@@ -83,7 +83,15 @@ Contém o código-fonte principal.
   Implementam a heurística gulosa usada para construir a rotulação L(2,1) a partir da ordem dos vértices.
 
 - `Graph.cpp` / `Graph.h`  
-  Estruturas e rotinas relacionadas ao grafo.
+  Implementam uma classe de grafo não direcionado baseada em lista de adjacência, com verificação de vértices, inserção de arestas sem duplicatas e consulta de vizinhos.
+
+  Embora exista uma classe `Graph` no projeto, o `main.cpp` e o `decoder` atualmente usam o alias:
+
+    ```cpp
+    using Graph = std::vector<std::vector<int>>;
+    ```
+
+    Ou seja, a execução principal está baseada diretamente em uma lista de adjacência simples, e não necessariamente na classe `Graph` encapsulada. Mesmo assim, a classe permanece útil como abstração para futuras refatorações.
 
 - `brkgaAPI/`  
   Implementação da biblioteca usada pelo BRKGA:
@@ -391,13 +399,13 @@ Para cada run:
 
 ## Observações de implementação
 
-- O tipo do grafo usado no projeto é:
+- O tipo de grafo usado na execução principal atualmente é:
 
 ```cpp
 using Graph = std::vector<std::vector<int>>;
 ```
 
-ou seja, uma lista de adjacência.
+- Em paralelo, o projeto também possui uma classe `Graph` encapsulada com operações de inserção e consulta.
 
 - O `decode(...)` é `const` porque a API do BRKGA exige essa assinatura.
 
@@ -439,6 +447,7 @@ Isso permite testar combinações de parâmetros em várias instâncias e identi
 
 ## Possíveis melhorias futuras
 
+- unificar o uso da estrutura de grafo entre a classe `Graph` e o alias baseado em vetor;
 - adicionar logs mais detalhados no terminal;
 - salvar estatísticas agregadas de múltiplas execuções;
 - calcular média, desvio padrão e melhor resultado final;
