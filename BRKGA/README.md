@@ -1,5 +1,7 @@
 # BRKGA para L(2,1) Labeling em Grafos
 
+> Atílio ainda não terminei, mas aqui tem um rascunho premium plus. Em breve termino aqui.
+
 Este projeto implementa um **BRKGA (Biased Random-Key Genetic Algorithm)** para resolver o problema de **L(2,1) labeling** em grafos.
 
 A aplicação lê uma instância de grafo em formato **Matrix Market (`.mtx`)**, executa o algoritmo evolutivo e salva os resultados em arquivo, incluindo:
