@@ -19,10 +19,11 @@ De forma geral, o algoritmo:
 
 1. lê um grafo a partir de um arquivo `.mtx`;
 2. constrói a representação em lista de adjacência;
-3. inicializa o BRKGA;
-4. evolui a população ao longo das gerações;
-5. interrompe quando atinge um critério de parada;
-6. salva o melhor resultado encontrado.
+3. transforma cada cromossomo em uma ordem de vértices;
+4. aplica uma heurística gulosa para gerar a rotulação;
+5. valida a solução produzida;
+6. usa o valor da solução como fitness no BRKGA;
+7. salva o melhor resultado encontrado.
 
 ---
 
@@ -62,6 +63,7 @@ Exemplo simplificado:
 - O grafo é tratado como **simétrico**:
   - ao ler `(u, v)`, o programa adiciona `v` em `u` e `u` em `v`;
   - laços `(u = v)` não são duplicados.
+- O valor da terceira coluna é consumido na leitura, mas não é utilizado na modelagem do grafo.
 
 ---
 
@@ -78,7 +80,7 @@ Contém o código-fonte principal.
   Implementam o decodificador que transforma cromossomos em soluções viáveis do problema.
 
 - `greedy.cpp` / `greedy.hpp`  
-  Implementam heurísticas auxiliares.
+  Implementam a heurística gulosa usada para construir a rotulação L(2,1) a partir da ordem dos vértices.
 
 - `Graph.cpp` / `Graph.h`  
   Estruturas e rotinas relacionadas ao grafo.
@@ -187,6 +189,103 @@ Após a compilação, o executável deve estar em:
 
 ---
 
+## Como o decoder funciona
+
+O `Decoder` recebe o grafo por referência e implementa o método:
+
+```cpp
+double decode(const std::vector<double>& chrom) const;
+```
+
+Esse método é o elo entre o BRKGA e a heurística de construção da solução.
+
+### Etapas do `decode`
+
+1. **Validação do tamanho do cromossomo**  
+   O número de chaves aleatórias deve ser igual ao número de vértices do grafo.  
+   Caso contrário, o método lança exceção.
+
+2. **Construção de `best_order_`**  
+   O vetor `[0, 1, ..., n-1]` é ordenado por `stable_sort` de acordo com os valores do cromossomo.  
+   Isso transforma o cromossomo em uma **ordem de processamento dos vértices**.
+
+3. **Execução da heurística gulosa**  
+   O decoder chama:
+
+   ```cpp
+   GreedyResult gr = greedy_labeling(g, best_order_);
+   ```
+
+   A heurística constrói a rotulação L(2,1) seguindo a ordem induzida pelo cromossomo.
+
+4. **Armazenamento da solução**  
+   O vetor de rótulos produzido pela heurística é salvo em `labeling_`.
+
+5. **Validação da solução**  
+   O decoder verifica se a rotulação respeita as restrições do problema:
+   - para vértices a distância 1: `|f(u) - f(v)| >= 2`
+   - para vértices a distância 2: `|f(u) - f(w)| >= 1`
+
+6. **Retorno do fitness**  
+   - se a solução for válida, o decoder retorna `gr.k`, isto é, o span da solução;
+   - se a solução for inválida, retorna `1e18`, penalizando fortemente o indivíduo.
+
+---
+
+## Validação L(2,1)
+
+Em `decoder.cpp`, a função auxiliar `validate_L21(...)` verifica se a solução gerada pela heurística respeita as restrições do problema.
+
+### Restrições checadas
+
+#### Distância 1
+Para cada aresta `(u, v)`:
+
+```text
+|f(u) - f(v)| >= 2
+```
+
+#### Distância 2
+Para cada par de vértices `(u, w)` com distância 2:
+
+```text
+|f(u) - f(w)| >= 1
+```
+
+Na prática, a checagem de distância 2 é feita percorrendo, para cada vértice `u`:
+
+- seus vizinhos `v`;
+- e depois os vizinhos `w` de cada `v`.
+
+Se alguma violação for encontrada, a função devolve `false` e informa os vértices e a distância onde ocorreu o problema.
+
+---
+
+## Estado interno do decoder
+
+O `Decoder` mantém três vetores mutáveis para permitir atualização mesmo dentro de um método `const`:
+
+- `best_order_`: ordem dos vértices induzida pelo cromossomo;
+- `labeling_`: rotulação construída pela heurística gulosa;
+- `convergence_`: histórico dos melhores valores por geração.
+
+Esses vetores são expostos pelos getters:
+
+```cpp
+best_order()
+labeling()
+convergence()
+```
+
+O histórico de convergência é alimentado no `main.cpp` por:
+
+```cpp
+decoder.clear_convergence();
+decoder.push_convergence(best_lambda_so_far);
+```
+
+---
+
 ## Critérios de parada
 
 Cada execução do BRKGA termina quando ocorre uma das condições abaixo:
@@ -273,7 +372,7 @@ convergência = [ ... ]
 
 ---
 
-## Estratégia de execução
+## Fluxo geral da execução
 
 Para cada run:
 
@@ -282,15 +381,17 @@ Para cada run:
 3. um `Decoder` é instanciado;
 4. o gerador aleatório usa a semente igual ao índice da execução:
    - `rngSeed = r`
-5. o BRKGA é executado;
-6. a melhor solução encontrada é decodificada;
-7. os resultados são salvos em arquivo.
+5. o BRKGA evolui a população;
+6. a cada geração, o melhor fitness é atualizado;
+7. a convergência é armazenada;
+8. ao final, o melhor cromossomo é decodificado novamente;
+9. os resultados são escritos em arquivo.
 
 ---
 
 ## Observações de implementação
 
-- O tipo do grafo usado em `main.cpp` é:
+- O tipo do grafo usado no projeto é:
 
 ```cpp
 using Graph = std::vector<std::vector<int>>;
@@ -298,13 +399,16 @@ using Graph = std::vector<std::vector<int>>;
 
 ou seja, uma lista de adjacência.
 
+- O `decode(...)` é `const` porque a API do BRKGA exige essa assinatura.
+
+- Para contornar isso, o decoder usa atributos `mutable` para salvar:
+  - a ordem da melhor solução;
+  - a rotulação correspondente;
+  - a convergência.
+
 - A leitura do `.mtx` ignora o valor da terceira coluna, usando apenas os pares de vértices.
 
-- O tamanho do cromossomo (`n`) é definido automaticamente como:
-
-```cpp
-n = número de vértices do grafo
-```
+- O tamanho do cromossomo (`n`) é definido automaticamente como o número de vértices do grafo.
 
 - O melhor fitness global entre todas as execuções é armazenado em `overall_best`.
 
@@ -340,4 +444,4 @@ Isso permite testar combinações de parâmetros em várias instâncias e identi
 - calcular média, desvio padrão e melhor resultado final;
 - suportar mais formatos de entrada;
 - validar automaticamente se o `.mtx` é realmente simétrico;
-- documentar formalmente o `Decoder` e a heurística gulosa.
+- documentar formalmente `GreedyResult` e a função `greedy_labeling(...)`.
