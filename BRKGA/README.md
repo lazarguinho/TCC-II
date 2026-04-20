@@ -1,8 +1,6 @@
-# BRKGA para L(2,1) Labeling em Grafos
+# BRKGA para rotulação-L(2,1) em Grafos
 
-> Atílio ainda não terminei, mas aqui tem um rascunho premium plus. Em breve termino aqui.
-
-Este projeto implementa um **BRKGA (Biased Random-Key Genetic Algorithm)** para resolver o problema de **L(2,1) labeling** em grafos.
+Este projeto implementa um **BRKGA (Biased Random-Key Genetic Algorithm)** para resolver o problema de **rotulação-L(2,1)** em grafos.
 
 A aplicação lê uma instância de grafo em formato **Matrix Market (`.mtx`)**, executa o algoritmo evolutivo e salva os resultados em arquivo, incluindo:
 
@@ -11,11 +9,60 @@ A aplicação lê uma instância de grafo em formato **Matrix Market (`.mtx`)**,
 - rotulação final dos vértices;
 - histórico de convergência.
 
----
+<details>
+<summary>Sumário</summary>
+
+## Sumário
+
+- [Objetivo](#objetivo)
+- [Formato de entrada](#formato-de-entrada)
+  - [Observações importantes](#observações-importantes)
+- [Organização dos arquivos](#organização-dos-arquivos)
+  - [`src/`](#src)
+  - [`data/`](#data)
+  - [`results/`](#results)
+  - [`build/`](#build)
+  - [`bin/`](#bin)
+  - [`tuning/`](#tuning)
+- [Requisitos](#requisitos)
+- [Compilação](#compilação)
+- [Alvos do Makefile](#alvos-do-makefile)
+- [Uso](#uso)
+  - [Exemplo básico](#exemplo-básico)
+  - [Exemplo com múltiplas execuções](#exemplo-com-múltiplas-execuções)
+  - [Ajuda](#ajuda)
+- [Parâmetros disponíveis](#parâmetros-disponíveis)
+- [Como o decoder funciona](#como-o-decoder-funciona)
+  - [Etapas do `decode`](#etapas-do-decode)
+- [Validação L(2,1)](#validação-l21)
+  - [Restrições checadas](#restrições-checadas)
+    - [Distância 1](#distância-1)
+    - [Distância 2](#distância-2)
+- [Estado interno do decoder](#estado-interno-do-decoder)
+- [Critérios de parada](#critérios-de-parada)
+- [Saída do programa](#saída-do-programa)
+  - [Saída no terminal](#saída-no-terminal)
+  - [Arquivo de saída](#arquivo-de-saída)
+- [Conteúdo do arquivo de resultado](#conteúdo-do-arquivo-de-resultado)
+- [Fluxo geral da execução](#fluxo-geral-da-execução)
+- [Observações de implementação](#observações-de-implementação)
+- [Exemplo de execução](#exemplo-de-execução)
+- [Tuning de parâmetros com iRace](#tuning-de-parâmetros-com-irace)
+  - [Arquivos de tuning](#arquivos-de-tuning)
+  - [Parâmetros ajustados pelo iRace](#parâmetros-ajustados-pelo-irace)
+  - [Cenário utilizado](#cenário-utilizado)
+  - [Como o `target-runner` funciona](#como-o-target-runner-funciona)
+  - [Função de custo](#função-de-custo)
+  - [Saída durante o tuning](#saída-durante-o-tuning)
+  - [Execução do iRace](#execução-do-irace)
+  - [Observações](#observações)
+- [Melhorias futuras](#melhorias-futuras)
+
+</details>
 
 ## Objetivo
 
-O programa resolve instâncias do problema **L(2,1) labeling** usando BRKGA.
+O programa resolve instâncias do problema **rotulação-L(2,1)** usando BRKGA.
 
 De forma geral, o algoritmo:
 
@@ -26,8 +73,6 @@ De forma geral, o algoritmo:
 5. valida a solução produzida;
 6. usa o valor da solução como fitness no BRKGA;
 7. salva o melhor resultado encontrado.
-
----
 
 ## Formato de entrada
 
@@ -67,8 +112,6 @@ Exemplo simplificado:
   - laços `(u = v)` não são duplicados.
 - O valor da terceira coluna é consumido na leitura, mas não é utilizado na modelagem do grafo.
 
----
-
 ## Organização dos arquivos
 
 ### `src/`
@@ -93,7 +136,7 @@ Contém o código-fonte principal.
   using Graph = std::vector<std::vector<int>>;
   ```
 
-  Ou seja, a execução principal está baseada diretamente em uma lista de adjacência simples, e não necessariamente na classe `Graph` encapsulada. Mesmo assim, a classe permanece útil como abstração para futuras refatorações.
+  >Ou seja, a execução principal está baseada diretamente em uma lista de adjacência simples, e não na classe `Graph`.
 
 - `brkgaAPI/`  
   Implementação da biblioteca usada pelo BRKGA:
@@ -120,9 +163,7 @@ Executável gerado pelo projeto.
 
 ### `tuning/`
 
-Arquivos relacionados ao ajuste automático de parâmetros do BRKGA.
-
----
+Arquivos relacionados ao ajuste automático de parâmetros do BRKGA com o **iRace**.
 
 ## Requisitos
 
@@ -142,8 +183,6 @@ brew install libomp
 Também é recomendável ter o **Xcode Command Line Tools** instalado.
 
 Para executar o tuning, também é necessário ter o **R** e o pacote **irace** instalados.
-
----
 
 ## Compilação
 
@@ -165,8 +204,6 @@ Se o arquivo src/teste.cpp existir, ele também gera automaticamente:
 ./bin/teste
 ```
 
----
-
 ## Alvos do Makefile
 
 Os principais alvos disponíveis são:
@@ -179,8 +216,6 @@ Os principais alvos disponíveis são:
 - `make debug` — compila em modo debug (`-O0 -g -DDEBUG`).
 
 O `Makefile` compila automaticamente todos os arquivos `.cpp` dentro de `src/`, incluindo arquivos em subdiretórios como `src/brkgaAPI/`.
-
----
 
 ## Uso
 
@@ -206,12 +241,10 @@ O `Makefile` compila automaticamente todos os arquivos `.cpp` dentro de `src/`, 
 ./bin/main --help
 ```
 
----
-
 ## Parâmetros disponíveis
 
 | Opção | Descrição | Valor padrão |
-|---|---|---:|
+|||:|
 | `--runs <N>` | número de execuções independentes | `1` |
 | `--p <N>` | tamanho da população | `100` |
 | `--pe <x>` | fração de indivíduos elite | `0.2` |
@@ -224,8 +257,6 @@ O `Makefile` compila automaticamente todos os arquivos `.cpp` dentro de `src/`, 
 | `--MAX_GENS <N>` | número máximo de gerações | `1000` |
 | `--MAX_STAGT <x>` | máximo de gerações sem melhora | `400` |
 | `-h`, `--help` | mostra a ajuda | — |
-
----
 
 ## Como o decoder funciona
 
@@ -268,8 +299,6 @@ Esse método é o elo entre o BRKGA e a heurística de construção da solução
    - se a solução for válida, o decoder retorna `gr.k`, isto é, o span da solução;
    - se a solução for inválida, retorna `1e18`, penalizando fortemente o indivíduo.
 
----
-
 ## Validação L(2,1)
 
 Em `decoder.cpp`, a função auxiliar `validate_L21(...)` verifica se a solução gerada pela heurística respeita as restrições do problema.
@@ -277,6 +306,7 @@ Em `decoder.cpp`, a função auxiliar `validate_L21(...)` verifica se a soluçã
 ### Restrições checadas
 
 #### Distância 1
+
 Para cada aresta `(u, v)`:
 
 ```text
@@ -284,6 +314,7 @@ Para cada aresta `(u, v)`:
 ```
 
 #### Distância 2
+
 Para cada par de vértices `(u, w)` com distância 2:
 
 ```text
@@ -296,8 +327,6 @@ Na prática, a checagem de distância 2 é feita percorrendo, para cada vértice
 - e depois os vizinhos `w` de cada `v`.
 
 Se alguma violação for encontrada, a função devolve `false` e informa os vértices e a distância onde ocorreu o problema.
-
----
 
 ## Estado interno do decoder
 
@@ -322,8 +351,6 @@ decoder.clear_convergence();
 decoder.push_convergence(best_lambda_so_far);
 ```
 
----
-
 ## Critérios de parada
 
 Cada execução do BRKGA termina quando ocorre uma das condições abaixo:
@@ -346,8 +373,6 @@ trocando:
 ```text
 X_NUMBER melhores indivíduos
 ```
-
----
 
 ## Saída do programa
 
@@ -377,8 +402,6 @@ o arquivo gerado será:
 results/johnson8-2-4_clean.mtx_result.txt
 ```
 
----
-
 ## Conteúdo do arquivo de resultado
 
 O arquivo de saída contém, para cada execução:
@@ -397,7 +420,7 @@ Exemplo de estrutura:
 ===== RESULTADO BRKGA L(2,1) =====
 Arquivo: data/teste/johnson8-2-4_clean.mtx
 
------ Execução #1 -----
+-- Execução #1 --
 [INFO] Parou por MAX_GENS.
 Tempo de execução: 1234ms
 Span (lambda): 17
@@ -407,8 +430,6 @@ convergência = [ ... ]
 
 ===== FIM =====
 ```
-
----
 
 ## Fluxo geral da execução
 
@@ -424,8 +445,6 @@ Para cada run:
 7. a convergência é armazenada;
 8. ao final, o melhor cromossomo é decodificado novamente;
 9. os resultados são escritos em arquivo.
-
----
 
 ## Observações de implementação
 
@@ -450,21 +469,17 @@ using Graph = std::vector<std::vector<int>>;
 
 - O melhor fitness global entre todas as execuções é armazenado em `overall_best`.
 
----
-
 ## Exemplo de execução
 
 ```bash
 ./bin/main data/teste/johnson8-2-4_clean.mtx --runs 5 --p 200 --pe 0.2 --pm 0.1 --rhoe 0.7 --K 4 --MAXT 4 --X_INTVL 50 --X_NUMBER 2 --MAX_GENS 2000 --MAX_STAGT 300
 ```
 
----
-
 ## Tuning de parâmetros com iRace
 
 A pasta `tuning/` reúne os arquivos usados para calibrar automaticamente os parâmetros do BRKGA com o **iRace**.
 
-O objetivo do tuning é encontrar combinações de parâmetros que produzam soluções de boa qualidade para o problema de **L(2,1) labeling**, levando em conta também o tempo de execução.
+O objetivo do tuning é encontrar combinações de parâmetros que produzam soluções de boa qualidade para o problema de **rotulação-L(2,1)**, levando em conta também o tempo de execução.
 
 ### Arquivos de tuning
 
@@ -525,14 +540,14 @@ O script mede o tempo total da execução, captura o valor numérico final impre
 
 O custo devolvido ao iRace é calculado como:
 
-```text
-custo = SPAN + alpha * tempo
+```math
+\text{custo} = \text{SPAN} + \alpha * \text{tempo}
 ```
 
 com:
 
-```text
-alpha = 0.001
+```math
+\alpha = 0.001
 ```
 
 Assim, o iRace busca minimizar principalmente o `SPAN`, mas também penaliza configurações mais lentas.
@@ -565,14 +580,9 @@ No cenário atual:
 - `trainInstancesFile` está comentado, portanto `instances-list.txt` não está sendo usado;
 - `configurationsFile` está comentado, portanto `configurations.txt` também não está sendo usado.
 
----
+## Melhorias futuras
 
-## Possíveis melhorias futuras
-
-- unificar o uso da estrutura de grafo entre a classe `Graph` e o alias baseado em vetor;
-- adicionar logs mais detalhados no terminal;
-- salvar estatísticas agregadas de múltiplas execuções;
-- calcular média, desvio padrão e melhor resultado final;
-- suportar mais formatos de entrada;
-- validar automaticamente se o `.mtx` é realmente simétrico;
-- documentar formalmente `GreedyResult` e a função `greedy_labeling(...)`.
+- [ ] remover a classe `Graph`;
+- [ ] unifcar a saida em um único arquivo `result.csv`;
+- [ ] validar automaticamente se o `.mtx` é realmente simétrico;
+- [ ] documentar formalmente `GreedyResult` e a função `greedy_labeling(...)`.
