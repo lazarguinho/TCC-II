@@ -39,7 +39,7 @@ X_INTVL         "--X_INTVL "         i       (100, 200)
 X_NUMBER        "--X_NUMBER "        i       (1, 8)
 
 MAX_GENS        "--MAX_GENS "        i       (300, 5000)
-MAX_STAGT       "--MAX_STAGT "       r       (50, 2000)
+MAX_STAGT       "--MAX_STAGT "       i       (50, 2000)
 
 [forbidden]
 

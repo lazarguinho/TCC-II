@@ -48,6 +48,14 @@ static bool validate_L21(
 }
 
 double Decoder::decode(const std::vector<double>& chrom) const {
+    // Interrupção no meio da geração: se o prazo foi atingido, não decodifica.
+    // Qualquer thread que detectar o estouro seta o flag atômico e retorna 1e18
+    // (fitness péssimo), preservando os indivíduos elite já avaliados.
+    if (std::chrono::high_resolution_clock::now() >= deadline_) {
+        time_expired_.store(true, std::memory_order_relaxed);
+        return 1e18;
+    }
+
     const std::size_t n = g.size();
 
     if (chrom.size() != n) {

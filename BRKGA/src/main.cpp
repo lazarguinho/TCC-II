@@ -49,7 +49,7 @@ Graph read_mtx_graph(const std::string &filename)
     Graph g(rows);
 
     int u, v;
-    int val; // ignora o valor, mas precisa consumir!
+    long long val; // ignora o valor, mas precisa consumir!
     for (int i = 0; i < nnz; ++i)
     {
         if (!(file >> u >> v >> val))
@@ -294,6 +294,10 @@ int main(int argc, char **argv)
             auto begin = std::chrono::high_resolution_clock::now();
             const auto TIME_LIMIT = std::chrono::minutes(15);
 
+            // Informa o prazo absoluto ao decoder para que ele possa
+            // interromper no meio de uma geração (dentro do loop OpenMP).
+            decoder.set_deadline(begin + TIME_LIMIT);
+
             unsigned generation = 0;
             unsigned stagnant_count = 0;
 
@@ -302,6 +306,15 @@ int main(int argc, char **argv)
             do
             {
                 ga.evolve();
+
+                // O decoder pode ter atingido o prazo durante a decodificação
+                // paralela de indivíduos (meio de geração). Verificamos aqui
+                // logo após evolve() retornar para parar o quanto antes.
+                if (decoder.time_expired()) {
+                    out << "[INFO] Time limit atingido: 15 minutos."
+                           " Interrompido no meio de uma geração.\n";
+                    break;
+                }
 
                 if (bestFitness > ga.getBestFitness())
                 {
@@ -322,7 +335,8 @@ int main(int argc, char **argv)
 
                 auto now = std::chrono::high_resolution_clock::now();
                 if (now - begin >= TIME_LIMIT) {
-                    out << "[INFO] Time limit atingido: 15 minutos. Parando a run.\n";
+                    out << "[INFO] Time limit atingido: 15 minutos."
+                           " Parando entre gerações.\n";
                     break;
                 }
 

@@ -3,6 +3,8 @@
 
 #include <vector>
 #include <cstddef>
+#include <atomic>
+#include <chrono>
 #include "greedy.hpp"
 
 using Graph = std::vector<std::vector<int>>;
@@ -24,6 +26,15 @@ public:
     void clear_convergence() const { convergence_.clear(); }
     void push_convergence(int best_lambda_so_far) const { convergence_.push_back(best_lambda_so_far); }
 
+    // Controle de tempo: define prazo absoluto e verifica se foi ultrapassado.
+    // Seguro para múltiplas threads (OpenMP): deadline_ é escrita uma vez antes
+    // do paralelismo; time_expired_ é atômica.
+    void set_deadline(std::chrono::high_resolution_clock::time_point dl) const {
+        deadline_ = dl;
+        time_expired_.store(false, std::memory_order_relaxed);
+    }
+    bool time_expired() const { return time_expired_.load(std::memory_order_relaxed); }
+
 private:
     const Graph& g;
 
@@ -31,6 +42,13 @@ private:
     mutable std::vector<int> best_order_;
     mutable std::vector<int> labeling_;
     mutable std::vector<int> convergence_;
+
+    // Prazo absoluto; inicializado com max() → sem limite por padrão
+    mutable std::chrono::high_resolution_clock::time_point deadline_{
+        std::chrono::high_resolution_clock::time_point::max()
+    };
+    // Flag thread-safe: setado por qualquer thread de decode() ao detectar timeout
+    mutable std::atomic<bool> time_expired_{false};
 };
 
 #endif
