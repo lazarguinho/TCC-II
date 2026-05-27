@@ -284,67 +284,76 @@ int main(int argc, char **argv)
             Decoder decoder(g);
             decoder.clear_convergence();
 
+            // O prazo de 15 min cobre a run inteira, incluindo a inicialização
+            // do BRKGA (construtor decodifica K*p cromossomos). Por isso begin
+            // e set_deadline vêm ANTES do construtor.
+            auto begin = std::chrono::high_resolution_clock::now();
+            const auto TIME_LIMIT = std::chrono::minutes(15);
+            decoder.set_deadline(begin + TIME_LIMIT);
+
             const long unsigned rngSeed = r;
             MTRand rng(rngSeed);
 
             opt.n = static_cast<unsigned>(g.size());
 
+            // O construtor já respeita o prazo via decoder: indivíduos não
+            // decodificados a tempo ficam com fitness 1e18 e vão para o fundo
+            // da população. Sempre haverá ao menos um resultado válido
+            // (o melhor dos indivíduos que foram decodificados antes do prazo).
             BRKGA<Decoder, MTRand> ga(opt.n, opt.p, opt.pe, opt.pm, opt.rhoe, decoder, rng, opt.K, opt.MAXT);
-
-            auto begin = std::chrono::high_resolution_clock::now();
-            const auto TIME_LIMIT = std::chrono::minutes(15);
-
-            // Informa o prazo absoluto ao decoder para que ele possa
-            // interromper no meio de uma geração (dentro do loop OpenMP).
-            decoder.set_deadline(begin + TIME_LIMIT);
 
             unsigned generation = 0;
             unsigned stagnant_count = 0;
 
             double bestFitness = std::numeric_limits<double>::max();
 
-            do
-            {
-                ga.evolve();
-
-                // O decoder pode ter atingido o prazo durante a decodificação
-                // paralela de indivíduos (meio de geração). Verificamos aqui
-                // logo após evolve() retornar para parar o quanto antes.
-                if (decoder.time_expired()) {
-                    out << "[INFO] Time limit atingido: 15 minutos."
-                           " Interrompido no meio de uma geração.\n";
-                    break;
-                }
-
-                if (bestFitness > ga.getBestFitness())
+            if (decoder.time_expired()) {
+                out << "[INFO] Time limit atingido: 15 minutos."
+                       " Esgotado durante a inicialização da população.\n";
+            } else {
+                do
                 {
-                    bestFitness = ga.getBestFitness();
-                    stagnant_count = 0;
-                }
-                else
-                {
-                    stagnant_count++;
-                }
+                    ga.evolve();
 
-                decoder.push_convergence(static_cast<int>(bestFitness));
+                    // O decoder pode ter atingido o prazo durante a decodificação
+                    // paralela de indivíduos (meio de geração). Verificamos aqui
+                    // logo após evolve() retornar para parar o quanto antes.
+                    if (decoder.time_expired()) {
+                        out << "[INFO] Time limit atingido: 15 minutos."
+                               " Interrompido no meio de uma geração.\n";
+                        break;
+                    }
 
-                if ((++generation) % opt.X_INTVL == 0)
-                {
-                    ga.exchangeElite(opt.X_NUMBER);
-                }
+                    if (bestFitness > ga.getBestFitness())
+                    {
+                        bestFitness = ga.getBestFitness();
+                        stagnant_count = 0;
+                    }
+                    else
+                    {
+                        stagnant_count++;
+                    }
 
-                auto now = std::chrono::high_resolution_clock::now();
-                if (now - begin >= TIME_LIMIT) {
-                    out << "[INFO] Time limit atingido: 15 minutos."
-                           " Parando entre gerações.\n";
-                    break;
-                }
+                    decoder.push_convergence(static_cast<int>(bestFitness));
 
-            } while (generation < opt.MAX_GENS && stagnant_count < opt.MAX_STAGT);
+                    if ((++generation) % opt.X_INTVL == 0)
+                    {
+                        ga.exchangeElite(opt.X_NUMBER);
+                    }
 
-            if (generation >= opt.MAX_GENS) out << "[INFO] Parou por MAX_GENS.\n";
-            else if (stagnant_count >= opt.MAX_STAGT) out << "[INFO] Parou por estagnação.\n";
-            // se caiu no time limit, já escreveu a mensagem no break
+                    auto now = std::chrono::high_resolution_clock::now();
+                    if (now - begin >= TIME_LIMIT) {
+                        out << "[INFO] Time limit atingido: 15 minutos."
+                               " Parando entre gerações.\n";
+                        break;
+                    }
+
+                } while (generation < opt.MAX_GENS && stagnant_count < opt.MAX_STAGT);
+
+                if (generation >= opt.MAX_GENS) out << "[INFO] Parou por MAX_GENS.\n";
+                else if (stagnant_count >= opt.MAX_STAGT) out << "[INFO] Parou por estagnação.\n";
+                // se caiu no time limit, já escreveu a mensagem no break
+            }
             
             auto end = std::chrono::high_resolution_clock::now();
             auto elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
