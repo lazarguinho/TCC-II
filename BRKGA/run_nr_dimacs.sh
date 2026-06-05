@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
-# Executa o BRKGA para todos os grafos em data/NR_DIMACS_cleaned/
+# Executa o BRKGA para todos os grafos em data/Harwell-Boeing_cleaned/
 # Apaga o .mtx se a execução for bem-sucedida.
-# Logs em data/NR_DIMACS_cleaned/run.log
+# Logs em data/Harwell-Boeing_cleaned/run.log
 
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DATA_DIR="$SCRIPT_DIR/data/NR_DIMACS_cleaned"
+DATA_DIR="$SCRIPT_DIR/data/Harwell-Boeing_cleaned"
 BIN="$SCRIPT_DIR/bin/main"
 LOG="$DATA_DIR/run.log"
-PARAMS="--p 121 --pe 0.153 --pm 0.2638 --rhoe 0.8288 --X_INTVL 155 --X_NUMBER 1 --MAX_GENS 1650 --MAX_STAGT 85"
+PARAMS="--p 173 --pe 0.1106 --pm 0.2430 --rhoe 0.7645 --X_INTVL 167 --X_NUMBER 1 --MAX_GENS 1036 --MAX_STAGT 123"
 
 # Conta grafos restantes
 TOTAL=$(ls "$DATA_DIR"/*.mtx 2>/dev/null | wc -l | tr -d ' ')

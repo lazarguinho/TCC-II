@@ -1,0 +1,4 @@
+[2025-12-28 14:33:43] ERRO ao processar DSJC500-5.mtx: Truncated file. Expected another 62624 lines.
+[2025-12-28 14:33:43] ERRO ao processar p-hat500-1.mtx: Invalid integer value.
+[2025-12-28 14:33:49] ERRO ao processar p-hat1000-3.mtx: Invalid integer value.
+[2025-12-28 14:35:03] ERRO ao processar DSJC1000-5.mtx: Truncated file. Expected another 249826 lines.
