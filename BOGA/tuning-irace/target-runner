@@ -38,55 +38,36 @@ fi
 STDOUT="c${CONFIG_ID}-${INSTANCE_ID}-${SEED}.stdout"
 STDERR="c${CONFIG_ID}-${INSTANCE_ID}-${SEED}.stderr"
 
-OPERATORS_X=(cx ox)
-OPERATORS_M=(em dm ivm sm ism sim)
-
-BEST_SPAN=""
-
 # ---------------------------------------------------------------------------
 # Medir tempo total do script
 # ---------------------------------------------------------------------------
 SECONDS=0  # bash: conta segundos automaticamente
 
-for opx in "${OPERATORS_X[@]}"; do
-  for opm in "${OPERATORS_M[@]}"; do
+CMD=( "${EXE}" "${INSTANCE}" --opx cx --opm em ${CONFIG_PARAMS} )
 
-    CMD=( "${EXE}" "${INSTANCE}" --opx "${opx}" --opm "${opm}" ${CONFIG_PARAMS} )
+"${CMD[@]}" 1> "${STDOUT}" 2> "${STDERR}"
+if [ ! -s "${STDOUT}" ]; then
+    error "${STDOUT}: empty or not created"
+fi
 
-    # Se quiser debugar:
-    # echo "${CMD[@]}" >&2
+RAW_LINE=$(tail -n 1 "${STDOUT}")
+SPAN=$(echo "${RAW_LINE}" | grep -Eo '[0-9]+' | tail -n 1)
 
-    "${CMD[@]}" 1> "${STDOUT}" 2> "${STDERR}"
-    if [ ! -s "${STDOUT}" ]; then
-        error "${STDOUT}: empty or not created (operators opx=${opx}, opm=${opm})"
-    fi
-
-    RAW_LINE=$(tail -n 1 "${STDOUT}")
-    SPAN=$(echo "${RAW_LINE}" | grep -Eo '[0-9]+' | tail -n 1)
-
-    if [ -z "${SPAN}" ]; then
-        echo "DEBUG: ultima linha de ${STDOUT}:" >&2
-        echo ">> ${RAW_LINE}" >&2
-        error "Could not parse numeric span from ${STDOUT} (opx=${opx}, opm=${opm})"
-    fi
-
-    if [ -z "${BEST_SPAN}" ] || [ "${SPAN}" -lt "${BEST_SPAN}" ]; then
-        BEST_SPAN="${SPAN}"
-    fi
-
-  done
-done
+if [ -z "${SPAN}" ]; then
+    echo "DEBUG: ultima linha de ${STDOUT}:" >&2
+    echo ">> ${RAW_LINE}" >&2
+    error "Could not parse numeric span from ${STDOUT}"
+fi
 
 ELAPSED_SECONDS=$SECONDS
 
 # ---------------------------------------------------------------------------
 # Combinar SPAN e tempo em um único custo
-# ajuste o ALPHA para dar mais/menos peso ao tempo
 # \text{custo} = \text{SPAN} + \alpha \cdot \text{tempo}
 # ---------------------------------------------------------------------------
 ALPHA=0.001
 
-COST=$(awk -v s="$BEST_SPAN" -v t="$ELAPSED_SECONDS" -v a="$ALPHA" \
+COST=$(awk -v s="$SPAN" -v t="$ELAPSED_SECONDS" -v a="$ALPHA" \
           'BEGIN { printf("%.6f", s + a * t) }')
 
 NORM=$(echo "${COST}" | sed 's/,/./g')

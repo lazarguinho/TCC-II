@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status,lb,gap,bb_nodes
+C2000-9_clean,2000,1799532,0.90022,1848,1751,1124761.79,2036.0,BEST FOUND (time limit exceeded),0.0000,1.000000,0

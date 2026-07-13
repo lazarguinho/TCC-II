@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status,lb,gap,bb_nodes
+1138_bus_clean,1138,1458,0.00225,17,1,8521.25,18,BEST FOUND (integer optimal solution),18.0000,0.000000,0

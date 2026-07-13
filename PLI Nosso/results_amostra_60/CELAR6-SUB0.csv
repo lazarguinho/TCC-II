@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status,lb,gap,bb_nodes
+CELAR6-SUB0,32,223,0.44960,25,3,900068.29,30.0,BEST FOUND (time limit exceeded),15.0000,0.500000,2416329

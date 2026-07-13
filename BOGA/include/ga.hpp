@@ -10,6 +10,7 @@
 #include <stdexcept>
 #include <random>
 #include <functional>
+#include <chrono>
 
 #include "greedy.hpp"
 
@@ -19,6 +20,7 @@ struct GAResult
     int span_value;
     std::vector<int> labeling;
     std::vector<int> span_per_generation;
+    std::string stop_reason;
 };
 
 std::vector<std::vector<int>>
@@ -62,9 +64,10 @@ GAResult genetic_algorithm_labeling(
     double mutation_rate,
     double crossover_rate,
     CrossoverOp crossover_op,
-    MutationOp mutation_op)
+    MutationOp mutation_op,
+    std::size_t max_stagnation = 150)
 {
-    std::mt19937 rng(123);
+    std::mt19937 rng(std::random_device{}());
     std::uniform_real_distribution<double> dist01(0.0, 1.0);
 
     if (population_size % 2 != 0)
@@ -81,27 +84,81 @@ GAResult genetic_algorithm_labeling(
 
     GAResult result;
 
-    for (std::size_t g = 0; g < generations; ++g)
+    int best_span_so_far = std::numeric_limits<int>::max();
+    int best_ever_span   = std::numeric_limits<int>::max();
+    std::vector<int> best_ever_order;
+    std::vector<int> best_ever_labeling;
+    std::size_t stagnant_count = 0;
+    std::size_t g = 0;
+    bool time_limit_hit = false;
+
+    const auto begin      = std::chrono::steady_clock::now();
+    const auto TIME_LIMIT = std::chrono::minutes(15);
+    const Deadline deadline = begin + TIME_LIMIT;
+
+    for (; g < generations; ++g)
     {
-        // avalia fitness (span)
-        std::vector<double> fitness_values(population.size());
+        // avalia fitness — inicializa com max para que indivíduos não avaliados
+        // (interrupção por tempo) fiquem no fundo após a ordenação
+        std::vector<double> fitness_values(population.size(),
+                                           std::numeric_limits<double>::max());
         for (std::size_t i = 0; i < population.size(); ++i)
         {
-            fitness_values[i] = static_cast<double>(fitness_function(graph, population[i]));
+            // passa deadline para o greedy — interrompe por vértice se o prazo vencer
+            GreedyResult gr = greedy_labeling(graph, population[i], &deadline);
+            if (gr.k == std::numeric_limits<int>::max())
+            {
+                time_limit_hit = true;
+                break;
+            }
+            fitness_values[i] = static_cast<double>(gr.k);
+
+            if (gr.k < best_ever_span)
+            {
+                best_ever_span     = gr.k;
+                best_ever_order    = population[i];
+                best_ever_labeling = std::move(gr.labels);
+            }
         }
 
-        // elitismo: mantém os 2 melhores
+        // ordena pelos valores de fitness (indivíduos não avaliados ficam no fundo)
         std::vector<std::size_t> idx(population.size());
         std::iota(idx.begin(), idx.end(), 0);
         std::sort(idx.begin(), idx.end(),
                   [&](std::size_t a, std::size_t b)
                   {
-                      return fitness_values[a] < fitness_values[b]; // menor é melhor
+                      return fitness_values[a] < fitness_values[b];
                   });
 
-        int best_this_gen = static_cast<int>(fitness_values[idx[0]]);
-        result.span_per_generation.push_back(best_this_gen);
-        
+        // atualiza convergência apenas se ao menos um indivíduo foi avaliado
+        if (fitness_values[idx[0]] < std::numeric_limits<double>::max())
+        {
+            int best_this_gen = static_cast<int>(fitness_values[idx[0]]);
+            result.span_per_generation.push_back(best_this_gen);
+
+            if (best_this_gen < best_span_so_far)
+            {
+                best_span_so_far = best_this_gen;
+                stagnant_count   = 0;
+            }
+            else
+            {
+                ++stagnant_count;
+            }
+        }
+
+        if (time_limit_hit)
+            break;
+
+        if (stagnant_count >= max_stagnation)
+            break;
+
+        if (std::chrono::steady_clock::now() - begin >= TIME_LIMIT)
+        {
+            time_limit_hit = true;
+            break;
+        }
+
         std::vector<std::vector<int>> new_population;
         new_population.reserve(population_size);
         new_population.push_back(population[idx[0]]);
@@ -138,23 +195,29 @@ GAResult genetic_algorithm_labeling(
         population = std::move(new_population);
     }
 
-    // melhor indivíduo final
-    std::vector<double> fitness_values(population.size());
-    for (std::size_t i = 0; i < population.size(); ++i)
+    if (time_limit_hit)
+        result.stop_reason = "TIME_LIMIT";
+    else if (g >= generations)
+        result.stop_reason = "MAX_GENS";
+    else
+        result.stop_reason = "STAGNATION";
+
+    // fallback: tempo estourou antes de qualquer indivíduo ser avaliado
+    // passa o deadline para não rodar indefinidamente após o prazo
+    if (best_ever_order.empty())
     {
-        fitness_values[i] = static_cast<double>(fitness_function(graph, population[i]));
+        best_ever_order = population[0];
+        GreedyResult gr = greedy_labeling(graph, best_ever_order, &deadline);
+        if (gr.k != std::numeric_limits<int>::max())
+        {
+            best_ever_span     = gr.k;
+            best_ever_labeling = std::move(gr.labels);
+        }
     }
-    std::size_t best_idx =
-        static_cast<std::size_t>(
-            std::distance(fitness_values.begin(),
-                          std::min_element(fitness_values.begin(), fitness_values.end())));
 
-    auto best_order = population[best_idx];
-    GreedyResult gr = greedy_labeling(graph, best_order);
-
-    result.best_order = std::move(best_order);
-    result.span_value = gr.k;
-    result.labeling = std::move(gr.labels);
+    result.best_order = std::move(best_ever_order);
+    result.span_value = best_ever_span;
+    result.labeling   = std::move(best_ever_labeling);
 
     return result;
 }

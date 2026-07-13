@@ -1,0 +1,299 @@
+[2026-06-26 06:47:10] === Início do lote (99 grafos) ===
+[2026-06-26 06:47:10] [1/99] Iniciando: erdos_n110_p0.6.mtx
+110
+[2026-06-26 06:56:07] ✓ Sucesso: erdos_n110_p0.6.mtx — apagando arquivo
+[2026-06-26 06:56:07] [2/99] Iniciando: erdos_n117_p0.4.mtx
+117
+[2026-06-26 07:01:28] ✓ Sucesso: erdos_n117_p0.4.mtx — apagando arquivo
+[2026-06-26 07:01:28] [3/99] Iniciando: erdos_n133_p0.4.mtx
+133
+[2026-06-26 07:10:01] ✓ Sucesso: erdos_n133_p0.4.mtx — apagando arquivo
+[2026-06-26 07:10:01] [4/99] Iniciando: erdos_n138_p0.4.mtx
+138
+[2026-06-26 07:20:01] ✓ Sucesso: erdos_n138_p0.4.mtx — apagando arquivo
+[2026-06-26 07:20:01] [5/99] Iniciando: erdos_n140_p0.8.mtx
+140
+[2026-06-26 07:35:01] ✓ Sucesso: erdos_n140_p0.8.mtx — apagando arquivo
+[2026-06-26 07:35:01] [6/99] Iniciando: erdos_n142_p0.8.mtx
+142
+[2026-06-26 07:50:01] ✓ Sucesso: erdos_n142_p0.8.mtx — apagando arquivo
+[2026-06-26 07:50:01] [7/99] Iniciando: erdos_n144_p0.6.mtx
+144
+[2026-06-26 08:05:01] ✓ Sucesso: erdos_n144_p0.6.mtx — apagando arquivo
+[2026-06-26 08:05:01] [8/99] Iniciando: erdos_n188_p0.2.mtx
+188
+[2026-06-26 08:13:41] ✓ Sucesso: erdos_n188_p0.2.mtx — apagando arquivo
+[2026-06-26 08:13:41] [9/99] Iniciando: erdos_n190_p0.8.mtx
+190
+[2026-06-26 08:28:41] ✓ Sucesso: erdos_n190_p0.8.mtx — apagando arquivo
+[2026-06-26 08:28:41] [10/99] Iniciando: erdos_n201_p0.2.mtx
+201
+[2026-06-26 08:40:11] ✓ Sucesso: erdos_n201_p0.2.mtx — apagando arquivo
+[2026-06-26 08:40:11] [11/99] Iniciando: erdos_n218_p0.2.mtx
+218
+[2026-06-26 08:55:11] ✓ Sucesso: erdos_n218_p0.2.mtx — apagando arquivo
+[2026-06-26 08:55:11] [12/99] Iniciando: erdos_n220_p0.6.mtx
+220
+[2026-06-26 09:10:11] ✓ Sucesso: erdos_n220_p0.6.mtx — apagando arquivo
+[2026-06-26 09:10:11] [13/99] Iniciando: erdos_n222_p0.6.mtx
+222
+[2026-06-26 09:25:11] ✓ Sucesso: erdos_n222_p0.6.mtx — apagando arquivo
+[2026-06-26 09:25:11] [14/99] Iniciando: erdos_n237_p0.8.mtx
+237
+[2026-06-26 09:40:11] ✓ Sucesso: erdos_n237_p0.8.mtx — apagando arquivo
+[2026-06-26 09:40:11] [15/99] Iniciando: erdos_n271_p0.8.mtx
+271
+[2026-06-26 09:55:11] ✓ Sucesso: erdos_n271_p0.8.mtx — apagando arquivo
+[2026-06-26 09:55:11] [16/99] Iniciando: erdos_n272_p0.6.mtx
+272
+[2026-06-26 10:10:11] ✓ Sucesso: erdos_n272_p0.6.mtx — apagando arquivo
+[2026-06-26 10:10:11] [17/99] Iniciando: erdos_n280_p0.2.mtx
+280
+[2026-06-26 10:25:11] ✓ Sucesso: erdos_n280_p0.2.mtx — apagando arquivo
+[2026-06-26 10:25:11] [18/99] Iniciando: erdos_n290_p0.8.mtx
+290
+[2026-06-26 10:40:11] ✓ Sucesso: erdos_n290_p0.8.mtx — apagando arquivo
+[2026-06-26 10:40:11] [19/99] Iniciando: erdos_n300_p0.6.mtx
+300
+[2026-06-26 10:55:11] ✓ Sucesso: erdos_n300_p0.6.mtx — apagando arquivo
+[2026-06-26 10:55:11] [20/99] Iniciando: erdos_n303_p0.4.mtx
+303
+[2026-06-26 11:10:11] ✓ Sucesso: erdos_n303_p0.4.mtx — apagando arquivo
+[2026-06-26 11:10:12] [21/99] Iniciando: erdos_n311_p0.8.mtx
+311
+[2026-06-26 11:25:12] ✓ Sucesso: erdos_n311_p0.8.mtx — apagando arquivo
+[2026-06-26 11:25:12] [22/99] Iniciando: erdos_n314_p0.2.mtx
+314
+[2026-06-26 11:40:12] ✓ Sucesso: erdos_n314_p0.2.mtx — apagando arquivo
+[2026-06-26 11:40:12] [23/99] Iniciando: erdos_n314_p0.6.mtx
+314
+[2026-06-26 11:55:12] ✓ Sucesso: erdos_n314_p0.6.mtx — apagando arquivo
+[2026-06-26 11:55:12] [24/99] Iniciando: erdos_n322_p0.2.mtx
+322
+[2026-06-26 12:10:12] ✓ Sucesso: erdos_n322_p0.2.mtx — apagando arquivo
+[2026-06-26 12:10:12] [25/99] Iniciando: erdos_n326_p0.6.mtx
+326
+[2026-06-26 12:25:12] ✓ Sucesso: erdos_n326_p0.6.mtx — apagando arquivo
+[2026-06-26 12:25:12] [26/99] Iniciando: erdos_n332_p0.4.mtx
+332
+[2026-06-26 12:40:12] ✓ Sucesso: erdos_n332_p0.4.mtx — apagando arquivo
+[2026-06-26 12:40:12] [27/99] Iniciando: erdos_n343_p0.6.mtx
+343
+[2026-06-26 12:55:12] ✓ Sucesso: erdos_n343_p0.6.mtx — apagando arquivo
+[2026-06-26 12:55:12] [28/99] Iniciando: erdos_n350_p0.6.mtx
+350
+[2026-06-26 13:10:12] ✓ Sucesso: erdos_n350_p0.6.mtx — apagando arquivo
+[2026-06-26 13:10:12] [29/99] Iniciando: erdos_n352_p0.8.mtx
+352
+[2026-06-26 13:25:12] ✓ Sucesso: erdos_n352_p0.8.mtx — apagando arquivo
+[2026-06-26 13:25:12] [30/99] Iniciando: erdos_n354_p0.8.mtx
+354
+[2026-06-26 13:40:13] ✓ Sucesso: erdos_n354_p0.8.mtx — apagando arquivo
+[2026-06-26 13:40:13] [31/99] Iniciando: erdos_n355_p0.4.mtx
+355
+[2026-06-26 13:55:13] ✓ Sucesso: erdos_n355_p0.4.mtx — apagando arquivo
+[2026-06-26 13:55:13] [32/99] Iniciando: erdos_n360_p0.8.mtx
+360
+[2026-06-26 14:10:13] ✓ Sucesso: erdos_n360_p0.8.mtx — apagando arquivo
+[2026-06-26 14:10:13] [33/99] Iniciando: erdos_n387_p0.4.mtx
+387
+[2026-06-26 14:25:13] ✓ Sucesso: erdos_n387_p0.4.mtx — apagando arquivo
+[2026-06-26 14:25:13] [34/99] Iniciando: erdos_n397_p0.8.mtx
+397
+[2026-06-26 14:40:13] ✓ Sucesso: erdos_n397_p0.8.mtx — apagando arquivo
+[2026-06-26 14:40:13] [35/99] Iniciando: erdos_n414_p0.6.mtx
+414
+[2026-06-26 14:55:13] ✓ Sucesso: erdos_n414_p0.6.mtx — apagando arquivo
+[2026-06-26 14:55:13] [36/99] Iniciando: erdos_n422_p0.6.mtx
+422
+[2026-06-26 15:10:14] ✓ Sucesso: erdos_n422_p0.6.mtx — apagando arquivo
+[2026-06-26 15:10:14] [37/99] Iniciando: erdos_n435_p0.2.mtx
+435
+[2026-06-26 15:25:14] ✓ Sucesso: erdos_n435_p0.2.mtx — apagando arquivo
+[2026-06-26 15:25:14] [38/99] Iniciando: erdos_n437_p0.2.mtx
+437
+[2026-06-26 15:40:14] ✓ Sucesso: erdos_n437_p0.2.mtx — apagando arquivo
+[2026-06-26 15:40:14] [39/99] Iniciando: erdos_n439_p0.6.mtx
+439
+[2026-06-26 15:55:14] ✓ Sucesso: erdos_n439_p0.6.mtx — apagando arquivo
+[2026-06-26 15:55:14] [40/99] Iniciando: erdos_n461_p0.8.mtx
+461
+[2026-06-26 16:10:14] ✓ Sucesso: erdos_n461_p0.8.mtx — apagando arquivo
+[2026-06-26 16:10:14] [41/99] Iniciando: erdos_n478_p0.4.mtx
+478
+[2026-06-26 16:25:14] ✓ Sucesso: erdos_n478_p0.4.mtx — apagando arquivo
+[2026-06-26 16:25:14] [42/99] Iniciando: erdos_n481_p0.2.mtx
+481
+[2026-06-26 16:40:14] ✓ Sucesso: erdos_n481_p0.2.mtx — apagando arquivo
+[2026-06-26 16:40:14] [43/99] Iniciando: erdos_n486_p0.8.mtx
+486
+[2026-06-26 16:55:14] ✓ Sucesso: erdos_n486_p0.8.mtx — apagando arquivo
+[2026-06-26 16:55:14] [44/99] Iniciando: erdos_n492_p0.4.mtx
+492
+[2026-06-26 17:10:15] ✓ Sucesso: erdos_n492_p0.4.mtx — apagando arquivo
+[2026-06-26 17:10:15] [45/99] Iniciando: erdos_n496_p0.6.mtx
+496
+[2026-06-26 17:25:15] ✓ Sucesso: erdos_n496_p0.6.mtx — apagando arquivo
+[2026-06-26 17:25:15] [46/99] Iniciando: erdos_n503_p0.2.mtx
+503
+[2026-06-26 17:40:15] ✓ Sucesso: erdos_n503_p0.2.mtx — apagando arquivo
+[2026-06-26 17:40:15] [47/99] Iniciando: erdos_n506_p0.2.mtx
+506
+[2026-06-26 17:55:15] ✓ Sucesso: erdos_n506_p0.2.mtx — apagando arquivo
+[2026-06-26 17:55:15] [48/99] Iniciando: erdos_n527_p0.8.mtx
+527
+[2026-06-26 18:10:15] ✓ Sucesso: erdos_n527_p0.8.mtx — apagando arquivo
+[2026-06-26 18:10:15] [49/99] Iniciando: erdos_n533_p0.8.mtx
+533
+[2026-06-26 18:25:16] ✓ Sucesso: erdos_n533_p0.8.mtx — apagando arquivo
+[2026-06-26 18:25:16] [50/99] Iniciando: erdos_n544_p0.2.mtx
+544
+[2026-06-26 18:40:16] ✓ Sucesso: erdos_n544_p0.2.mtx — apagando arquivo
+[2026-06-26 18:40:16] [51/99] Iniciando: erdos_n564_p0.6.mtx
+564
+[2026-06-26 18:55:16] ✓ Sucesso: erdos_n564_p0.6.mtx — apagando arquivo
+[2026-06-26 18:55:16] [52/99] Iniciando: erdos_n569_p0.4.mtx
+569
+[2026-06-26 19:10:17] ✓ Sucesso: erdos_n569_p0.4.mtx — apagando arquivo
+[2026-06-26 19:10:17] [53/99] Iniciando: erdos_n569_p0.8.mtx
+569
+[2026-06-26 19:25:17] ✓ Sucesso: erdos_n569_p0.8.mtx — apagando arquivo
+[2026-06-26 19:25:17] [54/99] Iniciando: erdos_n571_p0.2.mtx
+571
+[2026-06-26 19:40:17] ✓ Sucesso: erdos_n571_p0.2.mtx — apagando arquivo
+[2026-06-26 19:40:17] [55/99] Iniciando: erdos_n573_p0.6.mtx
+573
+[2026-06-26 19:55:17] ✓ Sucesso: erdos_n573_p0.6.mtx — apagando arquivo
+[2026-06-26 19:55:17] [56/99] Iniciando: erdos_n574_p0.6.mtx
+574
+[2026-06-26 20:10:18] ✓ Sucesso: erdos_n574_p0.6.mtx — apagando arquivo
+[2026-06-26 20:10:18] [57/99] Iniciando: erdos_n586_p0.4.mtx
+586
+[2026-06-26 20:25:18] ✓ Sucesso: erdos_n586_p0.4.mtx — apagando arquivo
+[2026-06-26 20:25:18] [58/99] Iniciando: erdos_n590_p0.2.mtx
+590
+[2026-06-26 20:40:18] ✓ Sucesso: erdos_n590_p0.2.mtx — apagando arquivo
+[2026-06-26 20:40:18] [59/99] Iniciando: erdos_n611_p0.2.mtx
+611
+[2026-06-26 20:55:18] ✓ Sucesso: erdos_n611_p0.2.mtx — apagando arquivo
+[2026-06-26 20:55:18] [60/99] Iniciando: erdos_n617_p0.8.mtx
+617
+[2026-06-26 21:10:19] ✓ Sucesso: erdos_n617_p0.8.mtx — apagando arquivo
+[2026-06-26 21:10:19] [61/99] Iniciando: erdos_n619_p0.2.mtx
+619
+[2026-06-26 21:25:19] ✓ Sucesso: erdos_n619_p0.2.mtx — apagando arquivo
+[2026-06-26 21:25:19] [62/99] Iniciando: erdos_n624_p0.8.mtx
+624
+[2026-06-26 21:40:21] ✓ Sucesso: erdos_n624_p0.8.mtx — apagando arquivo
+[2026-06-26 21:40:21] [63/99] Iniciando: erdos_n640_p0.8.mtx
+640
+[2026-06-26 21:55:21] ✓ Sucesso: erdos_n640_p0.8.mtx — apagando arquivo
+[2026-06-26 21:55:21] [64/99] Iniciando: erdos_n642_p0.4.mtx
+642
+[2026-06-26 22:10:21] ✓ Sucesso: erdos_n642_p0.4.mtx — apagando arquivo
+[2026-06-26 22:10:21] [65/99] Iniciando: erdos_n648_p0.6.mtx
+648
+[2026-06-26 22:25:22] ✓ Sucesso: erdos_n648_p0.6.mtx — apagando arquivo
+[2026-06-26 22:25:22] [66/99] Iniciando: erdos_n654_p0.6.mtx
+654
+[2026-06-26 22:40:22] ✓ Sucesso: erdos_n654_p0.6.mtx — apagando arquivo
+[2026-06-26 22:40:22] [67/99] Iniciando: erdos_n656_p0.4.mtx
+656
+[2026-06-26 22:55:23] ✓ Sucesso: erdos_n656_p0.4.mtx — apagando arquivo
+[2026-06-26 22:55:23] [68/99] Iniciando: erdos_n699_p0.4.mtx
+699
+[2026-06-26 23:10:23] ✓ Sucesso: erdos_n699_p0.4.mtx — apagando arquivo
+[2026-06-26 23:10:23] [69/99] Iniciando: erdos_n712_p0.4.mtx
+712
+[2026-06-26 23:25:23] ✓ Sucesso: erdos_n712_p0.4.mtx — apagando arquivo
+[2026-06-26 23:25:23] [70/99] Iniciando: erdos_n713_p0.2.mtx
+713
+[2026-06-26 23:40:24] ✓ Sucesso: erdos_n713_p0.2.mtx — apagando arquivo
+[2026-06-26 23:40:24] [71/99] Iniciando: erdos_n734_p0.4.mtx
+734
+[2026-06-26 23:55:24] ✓ Sucesso: erdos_n734_p0.4.mtx — apagando arquivo
+[2026-06-26 23:55:24] [72/99] Iniciando: erdos_n759_p0.2.mtx
+759
+[2026-06-27 00:10:24] ✓ Sucesso: erdos_n759_p0.2.mtx — apagando arquivo
+[2026-06-27 00:10:24] [73/99] Iniciando: erdos_n772_p0.6.mtx
+772
+[2026-06-27 00:25:25] ✓ Sucesso: erdos_n772_p0.6.mtx — apagando arquivo
+[2026-06-27 00:25:25] [74/99] Iniciando: erdos_n784_p0.4.mtx
+784
+[2026-06-27 00:40:25] ✓ Sucesso: erdos_n784_p0.4.mtx — apagando arquivo
+[2026-06-27 00:40:25] [75/99] Iniciando: erdos_n784_p0.8.mtx
+1568
+[2026-06-27 00:55:27] ✓ Sucesso: erdos_n784_p0.8.mtx — apagando arquivo
+[2026-06-27 00:55:27] [76/99] Iniciando: erdos_n799_p0.6.mtx
+799
+[2026-06-27 01:10:27] ✓ Sucesso: erdos_n799_p0.6.mtx — apagando arquivo
+[2026-06-27 01:10:27] [77/99] Iniciando: erdos_n803_p0.4.mtx
+803
+[2026-06-27 01:25:28] ✓ Sucesso: erdos_n803_p0.4.mtx — apagando arquivo
+[2026-06-27 01:25:28] [78/99] Iniciando: erdos_n819_p0.6.mtx
+819
+[2026-06-27 01:40:29] ✓ Sucesso: erdos_n819_p0.6.mtx — apagando arquivo
+[2026-06-27 01:40:29] [79/99] Iniciando: erdos_n832_p0.4.mtx
+832
+[2026-06-27 01:55:29] ✓ Sucesso: erdos_n832_p0.4.mtx — apagando arquivo
+[2026-06-27 01:55:29] [80/99] Iniciando: erdos_n843_p0.8.mtx
+1686
+[2026-06-27 02:10:29] ✓ Sucesso: erdos_n843_p0.8.mtx — apagando arquivo
+[2026-06-27 02:10:29] [81/99] Iniciando: erdos_n844_p0.4.mtx
+844
+[2026-06-27 02:25:30] ✓ Sucesso: erdos_n844_p0.4.mtx — apagando arquivo
+[2026-06-27 02:25:30] [82/99] Iniciando: erdos_n845_p0.8.mtx
+1690
+[2026-06-27 02:40:32] ✓ Sucesso: erdos_n845_p0.8.mtx — apagando arquivo
+[2026-06-27 02:40:32] [83/99] Iniciando: erdos_n852_p0.4.mtx
+852
+[2026-06-27 02:55:32] ✓ Sucesso: erdos_n852_p0.4.mtx — apagando arquivo
+[2026-06-27 02:55:32] [84/99] Iniciando: erdos_n858_p0.2.mtx
+858
+[2026-06-27 03:10:32] ✓ Sucesso: erdos_n858_p0.2.mtx — apagando arquivo
+[2026-06-27 03:10:32] [85/99] Iniciando: erdos_n859_p0.6.mtx
+1718
+[2026-06-27 03:25:33] ✓ Sucesso: erdos_n859_p0.6.mtx — apagando arquivo
+[2026-06-27 03:25:33] [86/99] Iniciando: erdos_n875_p0.2.mtx
+875
+[2026-06-27 03:40:33] ✓ Sucesso: erdos_n875_p0.2.mtx — apagando arquivo
+[2026-06-27 03:40:33] [87/99] Iniciando: erdos_n878_p0.4.mtx
+878
+[2026-06-27 03:55:33] ✓ Sucesso: erdos_n878_p0.4.mtx — apagando arquivo
+[2026-06-27 03:55:33] [88/99] Iniciando: erdos_n883_p0.2.mtx
+883
+[2026-06-27 04:10:34] ✓ Sucesso: erdos_n883_p0.2.mtx — apagando arquivo
+[2026-06-27 04:10:34] [89/99] Iniciando: erdos_n902_p0.6.mtx
+1804
+[2026-06-27 04:25:36] ✓ Sucesso: erdos_n902_p0.6.mtx — apagando arquivo
+[2026-06-27 04:25:36] [90/99] Iniciando: erdos_n911_p0.8.mtx
+1822
+[2026-06-27 04:40:37] ✓ Sucesso: erdos_n911_p0.8.mtx — apagando arquivo
+[2026-06-27 04:40:37] [91/99] Iniciando: erdos_n912_p0.4.mtx
+912
+[2026-06-27 04:55:37] ✓ Sucesso: erdos_n912_p0.4.mtx — apagando arquivo
+[2026-06-27 04:55:37] [92/99] Iniciando: erdos_n924_p0.2.mtx
+924
+[2026-06-27 05:10:38] ✓ Sucesso: erdos_n924_p0.2.mtx — apagando arquivo
+[2026-06-27 05:10:38] [93/99] Iniciando: erdos_n929_p0.4.mtx
+929
+[2026-06-27 05:25:38] ✓ Sucesso: erdos_n929_p0.4.mtx — apagando arquivo
+[2026-06-27 05:25:38] [94/99] Iniciando: erdos_n945_p0.2.mtx
+945
+[2026-06-27 05:40:39] ✓ Sucesso: erdos_n945_p0.2.mtx — apagando arquivo
+[2026-06-27 05:40:39] [95/99] Iniciando: erdos_n957_p0.4.mtx
+957
+[2026-06-27 05:55:39] ✓ Sucesso: erdos_n957_p0.4.mtx — apagando arquivo
+[2026-06-27 05:55:39] [96/99] Iniciando: erdos_n967_p0.8.mtx
+1934
+[2026-06-27 06:10:42] ✓ Sucesso: erdos_n967_p0.8.mtx — apagando arquivo
+[2026-06-27 06:10:42] [97/99] Iniciando: erdos_n975_p0.8.mtx
+1950
+[2026-06-27 06:25:44] ✓ Sucesso: erdos_n975_p0.8.mtx — apagando arquivo
+[2026-06-27 06:25:44] [98/99] Iniciando: erdos_n980_p0.6.mtx
+1960
+[2026-06-27 06:40:45] ✓ Sucesso: erdos_n980_p0.6.mtx — apagando arquivo
+[2026-06-27 06:40:45] [99/99] Iniciando: erdos_n994_p0.2.mtx
+994
+[2026-06-27 06:55:45] ✓ Sucesso: erdos_n994_p0.2.mtx — apagando arquivo
+[2026-06-27 06:55:45] === Fim do lote — sucesso: 99 | falhas: 0 ===

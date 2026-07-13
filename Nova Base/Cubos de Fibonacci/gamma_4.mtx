@@ -1,0 +1,23 @@
+%%MatrixMarket matrix coordinate integer general
+% Cubo de Fibonacci Gamma_4 | 8 vertices | 20 arestas
+8 8 20
+1 2 1
+2 1 1
+1 3 1
+3 1 1
+1 4 1
+4 1 1
+1 6 1
+6 1 1
+2 5 1
+5 2 1
+2 7 1
+7 2 1
+3 8 1
+8 3 1
+4 5 1
+5 4 1
+6 7 1
+7 6 1
+6 8 1
+8 6 1

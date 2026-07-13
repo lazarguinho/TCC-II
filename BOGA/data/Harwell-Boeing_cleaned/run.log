@@ -1,0 +1,812 @@
+[2026-06-27 06:07:14] === Início do lote (270 grafos) ===
+[2026-06-27 06:07:14] [1/270] Iniciando: 1138_bus_clean.mtx
+13
+[2026-06-27 06:08:08] ✓ Sucesso: 1138_bus_clean.mtx — apagando arquivo
+[2026-06-27 06:08:08] [2/270] Iniciando: 494_bus_clean.mtx
+7
+[2026-06-27 06:08:18] ✓ Sucesso: 494_bus_clean.mtx — apagando arquivo
+[2026-06-27 06:08:18] [3/270] Iniciando: 662_bus_clean.mtx
+9
+[2026-06-27 06:08:37] ✓ Sucesso: 662_bus_clean.mtx — apagando arquivo
+[2026-06-27 06:08:37] [4/270] Iniciando: 685_bus_clean.mtx
+12
+[2026-06-27 06:08:57] ✓ Sucesso: 685_bus_clean.mtx — apagando arquivo
+[2026-06-27 06:08:57] [5/270] Iniciando: arc130_clean.mtx
+72
+[2026-06-27 06:08:59] ✓ Sucesso: arc130_clean.mtx — apagando arquivo
+[2026-06-27 06:08:59] [6/270] Iniciando: ash292_clean.mtx
+203
+[2026-06-27 06:09:45] ✓ Sucesso: ash292_clean.mtx — apagando arquivo
+[2026-06-27 06:09:45] [7/270] Iniciando: ash85_clean.mtx
+59
+[2026-06-27 06:09:46] ✓ Sucesso: ash85_clean.mtx — apagando arquivo
+[2026-06-27 06:09:46] [8/270] Iniciando: bcspwr01_clean.mtx
+23
+[2026-06-27 06:09:47] ✓ Sucesso: bcspwr01_clean.mtx — apagando arquivo
+[2026-06-27 06:09:47] [9/270] Iniciando: bcspwr02_clean.mtx
+29
+[2026-06-27 06:09:47] ✓ Sucesso: bcspwr02_clean.mtx — apagando arquivo
+[2026-06-27 06:09:47] [10/270] Iniciando: bcspwr03_clean.mtx
+99
+[2026-06-27 06:09:49] ✓ Sucesso: bcspwr03_clean.mtx — apagando arquivo
+[2026-06-27 06:09:49] [11/270] Iniciando: bcspwr04_clean.mtx
+233
+[2026-06-27 06:10:14] ✓ Sucesso: bcspwr04_clean.mtx — apagando arquivo
+[2026-06-27 06:10:14] [12/270] Iniciando: bcspwr05_clean.mtx
+327
+[2026-06-27 06:10:40] ✓ Sucesso: bcspwr05_clean.mtx — apagando arquivo
+[2026-06-27 06:10:40] [13/270] Iniciando: bcspwr06_clean.mtx
+935
+[2026-06-27 06:15:08] ✓ Sucesso: bcspwr06_clean.mtx — apagando arquivo
+[2026-06-27 06:15:08] [14/270] Iniciando: bcspwr07_clean.mtx
+1029
+[2026-06-27 06:20:34] ✓ Sucesso: bcspwr07_clean.mtx — apagando arquivo
+[2026-06-27 06:20:34] [15/270] Iniciando: bcspwr08_clean.mtx
+1053
+[2026-06-27 06:26:16] ✓ Sucesso: bcspwr08_clean.mtx — apagando arquivo
+[2026-06-27 06:26:16] [16/270] Iniciando: bcspwr09_clean.mtx
+1540
+[2026-06-27 06:32:59] ✓ Sucesso: bcspwr09_clean.mtx — apagando arquivo
+[2026-06-27 06:32:59] [17/270] Iniciando: bcspwr10_clean.mtx
+5070
+[2026-06-27 06:47:59] ✓ Sucesso: bcspwr10_clean.mtx — apagando arquivo
+[2026-06-27 06:47:59] [18/270] Iniciando: bcsstk01_clean.mtx
+8
+[2026-06-27 06:48:00] ✓ Sucesso: bcsstk01_clean.mtx — apagando arquivo
+[2026-06-27 06:48:00] [19/270] Iniciando: bcsstk02_clean.mtx
+53
+[2026-06-27 06:48:01] ✓ Sucesso: bcsstk02_clean.mtx — apagando arquivo
+[2026-06-27 06:48:01] [20/270] Iniciando: bcsstk03_clean.mtx
+2
+[2026-06-27 06:48:02] ✓ Sucesso: bcsstk03_clean.mtx — apagando arquivo
+[2026-06-27 06:48:02] [21/270] Iniciando: bcsstk04_clean.mtx
+58
+[2026-06-27 06:48:06] ✓ Sucesso: bcsstk04_clean.mtx — apagando arquivo
+[2026-06-27 06:48:06] [22/270] Iniciando: bcsstk05_clean.mtx
+27
+[2026-06-27 06:48:08] ✓ Sucesso: bcsstk05_clean.mtx — apagando arquivo
+[2026-06-27 06:48:08] [23/270] Iniciando: bcsstk06_clean.mtx
+36
+[2026-06-27 06:48:19] ✓ Sucesso: bcsstk06_clean.mtx — apagando arquivo
+[2026-06-27 06:48:19] [24/270] Iniciando: bcsstk07_clean.mtx
+36
+[2026-06-27 06:48:30] ✓ Sucesso: bcsstk07_clean.mtx — apagando arquivo
+[2026-06-27 06:48:30] [25/270] Iniciando: bcsstk08_clean.mtx
+170
+[2026-06-27 06:49:24] ✓ Sucesso: bcsstk08_clean.mtx — apagando arquivo
+[2026-06-27 06:49:24] [26/270] Iniciando: bcsstk09_clean.mtx
+31
+[2026-06-27 06:50:23] ✓ Sucesso: bcsstk09_clean.mtx — apagando arquivo
+[2026-06-27 06:50:23] [27/270] Iniciando: bcsstk10_clean.mtx
+38
+[2026-06-27 06:51:23] ✓ Sucesso: bcsstk10_clean.mtx — apagando arquivo
+[2026-06-27 06:51:23] [28/270] Iniciando: bcsstk11_clean.mtx
+41
+[2026-06-27 06:53:14] ✓ Sucesso: bcsstk11_clean.mtx — apagando arquivo
+[2026-06-27 06:53:14] [29/270] Iniciando: bcsstk12_clean.mtx
+39
+[2026-06-27 06:55:04] ✓ Sucesso: bcsstk12_clean.mtx — apagando arquivo
+[2026-06-27 06:55:04] [30/270] Iniciando: bcsstk13_clean.mtx
+17
+[2026-06-27 06:57:49] ✓ Sucesso: bcsstk13_clean.mtx — apagando arquivo
+[2026-06-27 06:57:49] [31/270] Iniciando: bcsstk14_clean.mtx
+87
+[2026-06-27 07:00:51] ✓ Sucesso: bcsstk14_clean.mtx — apagando arquivo
+[2026-06-27 07:00:51] [32/270] Iniciando: bcsstk15_clean.mtx
+189
+[2026-06-27 07:11:56] ✓ Sucesso: bcsstk15_clean.mtx — apagando arquivo
+[2026-06-27 07:11:56] [33/270] Iniciando: bcsstk16_clean.mtx
+109
+[2026-06-27 07:26:56] ✓ Sucesso: bcsstk16_clean.mtx — apagando arquivo
+[2026-06-27 07:26:56] [34/270] Iniciando: bcsstk17_clean.mtx
+97
+[2026-06-27 07:41:56] ✓ Sucesso: bcsstk17_clean.mtx — apagando arquivo
+[2026-06-27 07:41:56] [35/270] Iniciando: bcsstk18_clean.mtx
+48
+[2026-06-27 07:56:56] ✓ Sucesso: bcsstk18_clean.mtx — apagando arquivo
+[2026-06-27 07:56:56] [36/270] Iniciando: bcsstk19_clean.mtx
+6
+[2026-06-27 07:57:24] ✓ Sucesso: bcsstk19_clean.mtx — apagando arquivo
+[2026-06-27 07:57:24] [37/270] Iniciando: bcsstk20_clean.mtx
+2
+[2026-06-27 07:57:33] ✓ Sucesso: bcsstk20_clean.mtx — apagando arquivo
+[2026-06-27 07:57:33] [38/270] Iniciando: bcsstk21_clean.mtx
+14
+[2026-06-27 08:06:20] ✓ Sucesso: bcsstk21_clean.mtx — apagando arquivo
+[2026-06-27 08:06:20] [39/270] Iniciando: bcsstk22_clean.mtx
+10
+[2026-06-27 08:06:21] ✓ Sucesso: bcsstk22_clean.mtx — apagando arquivo
+[2026-06-27 08:06:21] [40/270] Iniciando: bcsstk23_clean.mtx
+2
+[2026-06-27 08:12:55] ✓ Sucesso: bcsstk23_clean.mtx — apagando arquivo
+[2026-06-27 08:12:55] [41/270] Iniciando: bcsstk24_clean.mtx
+6
+[2026-06-27 08:21:26] ✓ Sucesso: bcsstk24_clean.mtx — apagando arquivo
+[2026-06-27 08:21:26] [42/270] Iniciando: bcsstk25_clean.mtx
+3
+[2026-06-27 08:36:26] ✓ Sucesso: bcsstk25_clean.mtx — apagando arquivo
+[2026-06-27 08:36:26] [43/270] Iniciando: bcsstk26_clean.mtx
+10
+[2026-06-27 08:38:54] ✓ Sucesso: bcsstk26_clean.mtx — apagando arquivo
+[2026-06-27 08:38:54] [44/270] Iniciando: bcsstk27_clean.mtx
+199
+[2026-06-27 08:41:37] ✓ Sucesso: bcsstk27_clean.mtx — apagando arquivo
+[2026-06-27 08:41:37] [45/270] Iniciando: bcsstk28_clean.mtx
+142
+[2026-06-27 08:56:37] ✓ Sucesso: bcsstk28_clean.mtx — apagando arquivo
+[2026-06-27 08:56:37] [46/270] Iniciando: bcsstk29_clean.mtx
+27984
+[2026-06-27 09:11:37] ✓ Sucesso: bcsstk29_clean.mtx — apagando arquivo
+[2026-06-27 09:11:37] [47/270] Iniciando: bcsstk30_clean.mtx
+57848
+[2026-06-27 09:26:39] ✓ Sucesso: bcsstk30_clean.mtx — apagando arquivo
+[2026-06-27 09:26:39] [48/270] Iniciando: bcsstk31_clean.mtx
+71176
+[2026-06-27 09:41:40] ✓ Sucesso: bcsstk31_clean.mtx — apagando arquivo
+[2026-06-27 09:41:40] [49/270] Iniciando: bcsstk32_clean.mtx
+89218
+[2026-06-27 09:56:41] ✓ Sucesso: bcsstk32_clean.mtx — apagando arquivo
+[2026-06-27 09:56:41] [50/270] Iniciando: bcsstk33_clean.mtx
+17476
+[2026-06-27 10:11:41] ✓ Sucesso: bcsstk33_clean.mtx — apagando arquivo
+[2026-06-27 10:11:42] [51/270] Iniciando: bcsstm01_clean.mtx
+0
+[2026-06-27 10:11:42] ✓ Sucesso: bcsstm01_clean.mtx — apagando arquivo
+[2026-06-27 10:11:42] [52/270] Iniciando: bcsstm02_clean.mtx
+0
+[2026-06-27 10:11:42] ✓ Sucesso: bcsstm02_clean.mtx — apagando arquivo
+[2026-06-27 10:11:42] [53/270] Iniciando: bcsstm03_clean.mtx
+0
+[2026-06-27 10:11:43] ✓ Sucesso: bcsstm03_clean.mtx — apagando arquivo
+[2026-06-27 10:11:43] [54/270] Iniciando: bcsstm04_clean.mtx
+0
+[2026-06-27 10:11:43] ✓ Sucesso: bcsstm04_clean.mtx — apagando arquivo
+[2026-06-27 10:11:43] [55/270] Iniciando: bcsstm05_clean.mtx
+0
+[2026-06-27 10:11:45] ✓ Sucesso: bcsstm05_clean.mtx — apagando arquivo
+[2026-06-27 10:11:45] [56/270] Iniciando: bcsstm06_clean.mtx
+0
+[2026-06-27 10:11:52] ✓ Sucesso: bcsstm06_clean.mtx — apagando arquivo
+[2026-06-27 10:11:52] [57/270] Iniciando: bcsstm07_clean.mtx
+110
+[2026-06-27 10:12:03] ✓ Sucesso: bcsstm07_clean.mtx — apagando arquivo
+[2026-06-27 10:12:03] [58/270] Iniciando: bcsstm08_clean.mtx
+0
+[2026-06-27 10:12:50] ✓ Sucesso: bcsstm08_clean.mtx — apagando arquivo
+[2026-06-27 10:12:50] [59/270] Iniciando: bcsstm09_clean.mtx
+0
+[2026-06-27 10:13:37] ✓ Sucesso: bcsstm09_clean.mtx — apagando arquivo
+[2026-06-27 10:13:37] [60/270] Iniciando: bcsstm10_clean.mtx
+216
+[2026-06-27 10:14:52] ✓ Sucesso: bcsstm10_clean.mtx — apagando arquivo
+[2026-06-27 10:14:52] [61/270] Iniciando: bcsstm11_clean.mtx
+0
+[2026-06-27 10:16:20] ✓ Sucesso: bcsstm11_clean.mtx — apagando arquivo
+[2026-06-27 10:16:20] [62/270] Iniciando: bcsstm12_clean.mtx
+30
+[2026-06-27 10:17:53] ✓ Sucesso: bcsstm12_clean.mtx — apagando arquivo
+[2026-06-27 10:17:53] [63/270] Iniciando: bcsstm13_clean.mtx
+76
+[2026-06-27 10:20:47] ✓ Sucesso: bcsstm13_clean.mtx — apagando arquivo
+[2026-06-27 10:20:47] [64/270] Iniciando: bcsstm19_clean.mtx
+0
+[2026-06-27 10:21:14] ✓ Sucesso: bcsstm19_clean.mtx — apagando arquivo
+[2026-06-27 10:21:14] [65/270] Iniciando: bcsstm20_clean.mtx
+0
+[2026-06-27 10:21:24] ✓ Sucesso: bcsstm20_clean.mtx — apagando arquivo
+[2026-06-27 10:21:24] [66/270] Iniciando: bcsstm21_clean.mtx
+0
+[2026-06-27 10:30:04] ✓ Sucesso: bcsstm21_clean.mtx — apagando arquivo
+[2026-06-27 10:30:04] [67/270] Iniciando: bcsstm22_clean.mtx
+0
+[2026-06-27 10:30:05] ✓ Sucesso: bcsstm22_clean.mtx — apagando arquivo
+[2026-06-27 10:30:05] [68/270] Iniciando: bcsstm23_clean.mtx
+0
+[2026-06-27 10:36:38] ✓ Sucesso: bcsstm23_clean.mtx — apagando arquivo
+[2026-06-27 10:36:38] [69/270] Iniciando: bcsstm24_clean.mtx
+0
+[2026-06-27 10:45:08] ✓ Sucesso: bcsstm24_clean.mtx — apagando arquivo
+[2026-06-27 10:45:08] [70/270] Iniciando: bcsstm25_clean.mtx
+0
+[2026-06-27 11:00:08] ✓ Sucesso: bcsstm25_clean.mtx — apagando arquivo
+[2026-06-27 11:00:08] [71/270] Iniciando: bcsstm26_clean.mtx
+0
+[2026-06-27 11:02:37] ✓ Sucesso: bcsstm26_clean.mtx — apagando arquivo
+[2026-06-27 11:02:37] [72/270] Iniciando: bcsstm27_clean.mtx
+526
+[2026-06-27 11:07:06] ✓ Sucesso: bcsstm27_clean.mtx — apagando arquivo
+[2026-06-27 11:07:06] [73/270] Iniciando: blckhole_clean.mtx
+1524
+[2026-06-27 11:22:06] ✓ Sucesso: blckhole_clean.mtx — apagando arquivo
+[2026-06-27 11:22:06] [74/270] Iniciando: bp_0_clean.mtx
+703
+[2026-06-27 11:23:50] ✓ Sucesso: bp_0_clean.mtx — apagando arquivo
+[2026-06-27 11:23:50] [75/270] Iniciando: bp_1000_clean.mtx
+664
+[2026-06-27 11:25:43] ✓ Sucesso: bp_1000_clean.mtx — apagando arquivo
+[2026-06-27 11:25:43] [76/270] Iniciando: bp_1200_clean.mtx
+652
+[2026-06-27 11:27:32] ✓ Sucesso: bp_1200_clean.mtx — apagando arquivo
+[2026-06-27 11:27:32] [77/270] Iniciando: bp_1400_clean.mtx
+673
+[2026-06-27 11:29:21] ✓ Sucesso: bp_1400_clean.mtx — apagando arquivo
+[2026-06-27 11:29:21] [78/270] Iniciando: bp_1600_clean.mtx
+657
+[2026-06-27 11:31:09] ✓ Sucesso: bp_1600_clean.mtx — apagando arquivo
+[2026-06-27 11:31:09] [79/270] Iniciando: bp_200_clean.mtx
+671
+[2026-06-27 11:32:58] ✓ Sucesso: bp_200_clean.mtx — apagando arquivo
+[2026-06-27 11:32:58] [80/270] Iniciando: bp_400_clean.mtx
+657
+[2026-06-27 11:34:48] ✓ Sucesso: bp_400_clean.mtx — apagando arquivo
+[2026-06-27 11:34:48] [81/270] Iniciando: bp_600_clean.mtx
+662
+[2026-06-27 11:36:38] ✓ Sucesso: bp_600_clean.mtx — apagando arquivo
+[2026-06-27 11:36:38] [82/270] Iniciando: bp_800_clean.mtx
+680
+[2026-06-27 11:38:32] ✓ Sucesso: bp_800_clean.mtx — apagando arquivo
+[2026-06-27 11:38:32] [83/270] Iniciando: can_1054_clean.mtx
+837
+[2026-06-27 11:53:32] ✓ Sucesso: can_1054_clean.mtx — apagando arquivo
+[2026-06-27 11:53:32] [84/270] Iniciando: can_1072_clean.mtx
+869
+[2026-06-27 12:08:32] ✓ Sucesso: can_1072_clean.mtx — apagando arquivo
+[2026-06-27 12:08:32] [85/270] Iniciando: can_144_clean.mtx
+132
+[2026-06-27 12:08:48] ✓ Sucesso: can_144_clean.mtx — apagando arquivo
+[2026-06-27 12:08:48] [86/270] Iniciando: can_161_clean.mtx
+125
+[2026-06-27 12:09:05] ✓ Sucesso: can_161_clean.mtx — apagando arquivo
+[2026-06-27 12:09:05] [87/270] Iniciando: can_187_clean.mtx
+154
+[2026-06-27 12:09:26] ✓ Sucesso: can_187_clean.mtx — apagando arquivo
+[2026-06-27 12:09:26] [88/270] Iniciando: can_229_clean.mtx
+173
+[2026-06-27 12:09:55] ✓ Sucesso: can_229_clean.mtx — apagando arquivo
+[2026-06-27 12:09:55] [89/270] Iniciando: can_24_clean.mtx
+18
+[2026-06-27 12:09:55] ✓ Sucesso: can_24_clean.mtx — apagando arquivo
+[2026-06-27 12:09:55] [90/270] Iniciando: can_256_clean.mtx
+247
+[2026-06-27 12:11:15] ✓ Sucesso: can_256_clean.mtx — apagando arquivo
+[2026-06-27 12:11:15] [91/270] Iniciando: can_268_clean.mtx
+240
+[2026-06-27 12:12:42] ✓ Sucesso: can_268_clean.mtx — apagando arquivo
+[2026-06-27 12:12:42] [92/270] Iniciando: can_292_clean.mtx
+220
+[2026-06-27 12:13:40] ✓ Sucesso: can_292_clean.mtx — apagando arquivo
+[2026-06-27 12:13:40] [93/270] Iniciando: can_445_clean.mtx
+345
+[2026-06-27 12:15:44] ✓ Sucesso: can_445_clean.mtx — apagando arquivo
+[2026-06-27 12:15:44] [94/270] Iniciando: can_61_clean.mtx
+44
+[2026-06-27 12:15:45] ✓ Sucesso: can_61_clean.mtx — apagando arquivo
+[2026-06-27 12:15:45] [95/270] Iniciando: can_62_clean.mtx
+39
+[2026-06-27 12:15:46] ✓ Sucesso: can_62_clean.mtx — apagando arquivo
+[2026-06-27 12:15:46] [96/270] Iniciando: can_634_clean.mtx
+540
+[2026-06-27 12:23:35] ✓ Sucesso: can_634_clean.mtx — apagando arquivo
+[2026-06-27 12:23:35] [97/270] Iniciando: can_715_clean.mtx
+523
+[2026-06-27 12:30:12] ✓ Sucesso: can_715_clean.mtx — apagando arquivo
+[2026-06-27 12:30:12] [98/270] Iniciando: can_73_clean.mtx
+48
+[2026-06-27 12:30:12] ✓ Sucesso: can_73_clean.mtx — apagando arquivo
+[2026-06-27 12:30:12] [99/270] Iniciando: can_838_clean.mtx
+764
+[2026-06-27 12:45:11] ✓ Sucesso: can_838_clean.mtx — apagando arquivo
+[2026-06-27 12:45:11] [100/270] Iniciando: can_96_clean.mtx
+69
+[2026-06-27 12:45:13] ✓ Sucesso: can_96_clean.mtx — apagando arquivo
+[2026-06-27 12:45:13] [101/270] Iniciando: cegb2802_clean.mtx
+1851
+[2026-06-27 13:00:14] ✓ Sucesso: cegb2802_clean.mtx — apagando arquivo
+[2026-06-27 13:00:14] [102/270] Iniciando: cegb2919_clean.mtx
+2310
+[2026-06-27 13:15:14] ✓ Sucesso: cegb2919_clean.mtx — apagando arquivo
+[2026-06-27 13:15:14] [103/270] Iniciando: cegb3024_clean.mtx
+2214
+[2026-06-27 13:30:14] ✓ Sucesso: cegb3024_clean.mtx — apagando arquivo
+[2026-06-27 13:30:14] [104/270] Iniciando: cegb3306_clean.mtx
+2334
+[2026-06-27 13:45:14] ✓ Sucesso: cegb3306_clean.mtx — apagando arquivo
+[2026-06-27 13:45:14] [105/270] Iniciando: curtis54_clean.mtx
+35
+[2026-06-27 13:45:15] ✓ Sucesso: curtis54_clean.mtx — apagando arquivo
+[2026-06-27 13:45:15] [106/270] Iniciando: dwt_1005_clean.mtx
+870
+[2026-06-27 13:56:00] ✓ Sucesso: dwt_1005_clean.mtx — apagando arquivo
+[2026-06-27 13:56:00] [107/270] Iniciando: dwt_1007_clean.mtx
+690
+[2026-06-27 14:06:52] ✓ Sucesso: dwt_1007_clean.mtx — apagando arquivo
+[2026-06-27 14:06:52] [108/270] Iniciando: dwt_1242_clean.mtx
+926
+[2026-06-27 14:21:52] ✓ Sucesso: dwt_1242_clean.mtx — apagando arquivo
+[2026-06-27 14:21:52] [109/270] Iniciando: dwt_162_clean.mtx
+122
+[2026-06-27 14:22:05] ✓ Sucesso: dwt_162_clean.mtx — apagando arquivo
+[2026-06-27 14:22:05] [110/270] Iniciando: dwt_193_clean.mtx
+173
+[2026-06-27 14:23:59] ✓ Sucesso: dwt_193_clean.mtx — apagando arquivo
+[2026-06-27 14:23:59] [111/270] Iniciando: dwt_198_clean.mtx
+159
+[2026-06-27 14:24:16] ✓ Sucesso: dwt_198_clean.mtx — apagando arquivo
+[2026-06-27 14:24:16] [112/270] Iniciando: dwt_209_clean.mtx
+168
+[2026-06-27 14:24:43] ✓ Sucesso: dwt_209_clean.mtx — apagando arquivo
+[2026-06-27 14:24:43] [113/270] Iniciando: dwt_221_clean.mtx
+193
+[2026-06-27 14:25:08] ✓ Sucesso: dwt_221_clean.mtx — apagando arquivo
+[2026-06-27 14:25:08] [114/270] Iniciando: dwt_234_clean.mtx
+157
+[2026-06-27 14:25:14] ✓ Sucesso: dwt_234_clean.mtx — apagando arquivo
+[2026-06-27 14:25:14] [115/270] Iniciando: dwt_245_clean.mtx
+162
+[2026-06-27 14:25:33] ✓ Sucesso: dwt_245_clean.mtx — apagando arquivo
+[2026-06-27 14:25:33] [116/270] Iniciando: dwt_2680_clean.mtx
+1951
+[2026-06-27 14:40:33] ✓ Sucesso: dwt_2680_clean.mtx — apagando arquivo
+[2026-06-27 14:40:33] [117/270] Iniciando: dwt_307_clean.mtx
+231
+[2026-06-27 14:41:30] ✓ Sucesso: dwt_307_clean.mtx — apagando arquivo
+[2026-06-27 14:41:30] [118/270] Iniciando: dwt_310_clean.mtx
+215
+[2026-06-27 14:42:23] ✓ Sucesso: dwt_310_clean.mtx — apagando arquivo
+[2026-06-27 14:42:24] [119/270] Iniciando: dwt_346_clean.mtx
+248
+[2026-06-27 14:43:54] ✓ Sucesso: dwt_346_clean.mtx — apagando arquivo
+[2026-06-27 14:43:54] [120/270] Iniciando: dwt_361_clean.mtx
+247
+[2026-06-27 14:45:13] ✓ Sucesso: dwt_361_clean.mtx — apagando arquivo
+[2026-06-27 14:45:13] [121/270] Iniciando: dwt_419_clean.mtx
+367
+[2026-06-27 14:47:06] ✓ Sucesso: dwt_419_clean.mtx — apagando arquivo
+[2026-06-27 14:47:06] [122/270] Iniciando: dwt_492_clean.mtx
+366
+[2026-06-27 14:48:33] ✓ Sucesso: dwt_492_clean.mtx — apagando arquivo
+[2026-06-27 14:48:33] [123/270] Iniciando: dwt_503_clean.mtx
+449
+[2026-06-27 14:54:00] ✓ Sucesso: dwt_503_clean.mtx — apagando arquivo
+[2026-06-27 14:54:00] [124/270] Iniciando: dwt_512_clean.mtx
+356
+[2026-06-27 14:55:49] ✓ Sucesso: dwt_512_clean.mtx — apagando arquivo
+[2026-06-27 14:55:49] [125/270] Iniciando: dwt_592_clean.mtx
+432
+[2026-06-27 14:59:43] ✓ Sucesso: dwt_592_clean.mtx — apagando arquivo
+[2026-06-27 14:59:43] [126/270] Iniciando: dwt_59_clean.mtx
+38
+[2026-06-27 14:59:44] ✓ Sucesso: dwt_59_clean.mtx — apagando arquivo
+[2026-06-27 14:59:44] [127/270] Iniciando: dwt_607_clean.mtx
+406
+[2026-06-27 15:03:27] ✓ Sucesso: dwt_607_clean.mtx — apagando arquivo
+[2026-06-27 15:03:27] [128/270] Iniciando: dwt_66_clean.mtx
+45
+[2026-06-27 15:03:27] ✓ Sucesso: dwt_66_clean.mtx — apagando arquivo
+[2026-06-27 15:03:27] [129/270] Iniciando: dwt_72_clean.mtx
+41
+[2026-06-27 15:03:28] ✓ Sucesso: dwt_72_clean.mtx — apagando arquivo
+[2026-06-27 15:03:28] [130/270] Iniciando: dwt_758_clean.mtx
+512
+[2026-06-27 15:08:43] ✓ Sucesso: dwt_758_clean.mtx — apagando arquivo
+[2026-06-27 15:08:43] [131/270] Iniciando: dwt_869_clean.mtx
+594
+[2026-06-27 15:16:40] ✓ Sucesso: dwt_869_clean.mtx — apagando arquivo
+[2026-06-27 15:16:40] [132/270] Iniciando: dwt_878_clean.mtx
+614
+[2026-06-27 15:24:48] ✓ Sucesso: dwt_878_clean.mtx — apagando arquivo
+[2026-06-27 15:24:48] [133/270] Iniciando: dwt_87_clean.mtx
+61
+[2026-06-27 15:24:49] ✓ Sucesso: dwt_87_clean.mtx — apagando arquivo
+[2026-06-27 15:24:49] [134/270] Iniciando: dwt_918_clean.mtx
+690
+[2026-06-27 15:32:54] ✓ Sucesso: dwt_918_clean.mtx — apagando arquivo
+[2026-06-27 15:32:54] [135/270] Iniciando: dwt_992_clean.mtx
+985
+[2026-06-27 15:47:54] ✓ Sucesso: dwt_992_clean.mtx — apagando arquivo
+[2026-06-27 15:47:54] [136/270] Iniciando: eris1176_clean.mtx
+1083
+[2026-06-27 16:02:55] ✓ Sucesso: eris1176_clean.mtx — apagando arquivo
+[2026-06-27 16:02:55] [137/270] Iniciando: fs_183_1_clean.mtx
+67
+[2026-06-27 16:02:57] ✓ Sucesso: fs_183_1_clean.mtx — apagando arquivo
+[2026-06-27 16:02:57] [138/270] Iniciando: fs_183_3_clean.mtx
+67
+[2026-06-27 16:02:59] ✓ Sucesso: fs_183_3_clean.mtx — apagando arquivo
+[2026-06-27 16:02:59] [139/270] Iniciando: fs_183_4_clean.mtx
+67
+[2026-06-27 16:03:01] ✓ Sucesso: fs_183_4_clean.mtx — apagando arquivo
+[2026-06-27 16:03:01] [140/270] Iniciando: fs_183_6_clean.mtx
+67
+[2026-06-27 16:03:03] ✓ Sucesso: fs_183_6_clean.mtx — apagando arquivo
+[2026-06-27 16:03:03] [141/270] Iniciando: fs_541_1_clean.mtx
+153
+[2026-06-27 16:03:18] ✓ Sucesso: fs_541_1_clean.mtx — apagando arquivo
+[2026-06-27 16:03:18] [142/270] Iniciando: fs_541_2_clean.mtx
+171
+[2026-06-27 16:03:32] ✓ Sucesso: fs_541_2_clean.mtx — apagando arquivo
+[2026-06-27 16:03:32] [143/270] Iniciando: fs_541_3_clean.mtx
+177
+[2026-06-27 16:03:47] ✓ Sucesso: fs_541_3_clean.mtx — apagando arquivo
+[2026-06-27 16:03:47] [144/270] Iniciando: fs_541_4_clean.mtx
+184
+[2026-06-27 16:04:02] ✓ Sucesso: fs_541_4_clean.mtx — apagando arquivo
+[2026-06-27 16:04:02] [145/270] Iniciando: fs_680_1_clean.mtx
+2
+[2026-06-27 16:04:22] ✓ Sucesso: fs_680_1_clean.mtx — apagando arquivo
+[2026-06-27 16:04:22] [146/270] Iniciando: fs_680_2_clean.mtx
+2
+[2026-06-27 16:04:41] ✓ Sucesso: fs_680_2_clean.mtx — apagando arquivo
+[2026-06-27 16:04:41] [147/270] Iniciando: fs_680_3_clean.mtx
+2
+[2026-06-27 16:05:01] ✓ Sucesso: fs_680_3_clean.mtx — apagando arquivo
+[2026-06-27 16:05:01] [148/270] Iniciando: fs_760_1_clean.mtx
+22
+[2026-06-27 16:05:28] ✓ Sucesso: fs_760_1_clean.mtx — apagando arquivo
+[2026-06-27 16:05:28] [149/270] Iniciando: fs_760_2_clean.mtx
+22
+[2026-06-27 16:05:54] ✓ Sucesso: fs_760_2_clean.mtx — apagando arquivo
+[2026-06-27 16:05:54] [150/270] Iniciando: fs_760_3_clean.mtx
+22
+[2026-06-27 16:06:20] ✓ Sucesso: fs_760_3_clean.mtx — apagando arquivo
+[2026-06-27 16:06:20] [151/270] Iniciando: gemat11_clean.mtx
+2172
+[2026-06-27 16:21:21] ✓ Sucesso: gemat11_clean.mtx — apagando arquivo
+[2026-06-27 16:21:21] [152/270] Iniciando: gemat12_clean.mtx
+2155
+[2026-06-27 16:36:21] ✓ Sucesso: gemat12_clean.mtx — apagando arquivo
+[2026-06-27 16:36:21] [153/270] Iniciando: gent113_clean.mtx
+102
+[2026-06-27 16:36:34] ✓ Sucesso: gent113_clean.mtx — apagando arquivo
+[2026-06-27 16:36:34] [154/270] Iniciando: gr_30_30_clean.mtx
+15
+[2026-06-27 16:37:09] ✓ Sucesso: gr_30_30_clean.mtx — apagando arquivo
+[2026-06-27 16:37:09] [155/270] Iniciando: gre_1107_clean.mtx
+20
+[2026-06-27 16:38:00] ✓ Sucesso: gre_1107_clean.mtx — apagando arquivo
+[2026-06-27 16:38:00] [156/270] Iniciando: gre_115_clean.mtx
+9
+[2026-06-27 16:38:01] ✓ Sucesso: gre_115_clean.mtx — apagando arquivo
+[2026-06-27 16:38:01] [157/270] Iniciando: gre_185_clean.mtx
+15
+[2026-06-27 16:38:02] ✓ Sucesso: gre_185_clean.mtx — apagando arquivo
+[2026-06-27 16:38:02] [158/270] Iniciando: gre_216a_clean.mtx
+13
+[2026-06-27 16:38:05] ✓ Sucesso: gre_216a_clean.mtx — apagando arquivo
+[2026-06-27 16:38:05] [159/270] Iniciando: gre_216b_clean.mtx
+13
+[2026-06-27 16:38:07] ✓ Sucesso: gre_216b_clean.mtx — apagando arquivo
+[2026-06-27 16:38:07] [160/270] Iniciando: gre_343_clean.mtx
+13
+[2026-06-27 16:38:12] ✓ Sucesso: gre_343_clean.mtx — apagando arquivo
+[2026-06-27 16:38:12] [161/270] Iniciando: gre_512_clean.mtx
+15
+[2026-06-27 16:38:24] ✓ Sucesso: gre_512_clean.mtx — apagando arquivo
+[2026-06-27 16:38:24] [162/270] Iniciando: hor_131_clean.mtx
+19
+[2026-06-27 16:38:32] ✓ Sucesso: hor_131_clean.mtx — apagando arquivo
+[2026-06-27 16:38:32] [163/270] Iniciando: ibm32_clean.mtx
+25
+[2026-06-27 16:38:32] ✓ Sucesso: ibm32_clean.mtx — apagando arquivo
+[2026-06-27 16:38:32] [164/270] Iniciando: impcol_a_clean.mtx
+117
+[2026-06-27 16:38:36] ✓ Sucesso: impcol_a_clean.mtx — apagando arquivo
+[2026-06-27 16:38:36] [165/270] Iniciando: impcol_b_clean.mtx
+30
+[2026-06-27 16:38:36] ✓ Sucesso: impcol_b_clean.mtx — apagando arquivo
+[2026-06-27 16:38:36] [166/270] Iniciando: impcol_c_clean.mtx
+61
+[2026-06-27 16:38:38] ✓ Sucesso: impcol_c_clean.mtx — apagando arquivo
+[2026-06-27 16:38:38] [167/270] Iniciando: impcol_d_clean.mtx
+206
+[2026-06-27 16:38:50] ✓ Sucesso: impcol_d_clean.mtx — apagando arquivo
+[2026-06-27 16:38:50] [168/270] Iniciando: impcol_e_clean.mtx
+128
+[2026-06-27 16:38:55] ✓ Sucesso: impcol_e_clean.mtx — apagando arquivo
+[2026-06-27 16:38:55] [169/270] Iniciando: jagmesh1_clean.mtx
+658
+[2026-06-27 16:44:42] ✓ Sucesso: jagmesh1_clean.mtx — apagando arquivo
+[2026-06-27 16:44:42] [170/270] Iniciando: jagmesh2_clean.mtx
+726
+[2026-06-27 16:51:42] ✓ Sucesso: jagmesh2_clean.mtx — apagando arquivo
+[2026-06-27 16:51:42] [171/270] Iniciando: jagmesh3_clean.mtx
+800
+[2026-06-27 16:59:32] ✓ Sucesso: jagmesh3_clean.mtx — apagando arquivo
+[2026-06-27 16:59:32] [172/270] Iniciando: jagmesh4_clean.mtx
+986
+[2026-06-27 17:12:25] ✓ Sucesso: jagmesh4_clean.mtx — apagando arquivo
+[2026-06-27 17:12:25] [173/270] Iniciando: jagmesh5_clean.mtx
+810
+[2026-06-27 17:20:34] ✓ Sucesso: jagmesh5_clean.mtx — apagando arquivo
+[2026-06-27 17:20:34] [174/270] Iniciando: jagmesh6_clean.mtx
+936
+[2026-06-27 17:31:22] ✓ Sucesso: jagmesh6_clean.mtx — apagando arquivo
+[2026-06-27 17:31:22] [175/270] Iniciando: jagmesh7_clean.mtx
+797
+[2026-06-27 17:39:17] ✓ Sucesso: jagmesh7_clean.mtx — apagando arquivo
+[2026-06-27 17:39:17] [176/270] Iniciando: jagmesh8_clean.mtx
+784
+[2026-06-27 17:47:21] ✓ Sucesso: jagmesh8_clean.mtx — apagando arquivo
+[2026-06-27 17:47:21] [177/270] Iniciando: jagmesh9_clean.mtx
+951
+[2026-06-27 17:59:28] ✓ Sucesso: jagmesh9_clean.mtx — apagando arquivo
+[2026-06-27 17:59:28] [178/270] Iniciando: jgl009_clean.mtx
+8
+[2026-06-27 17:59:28] ✓ Sucesso: jgl009_clean.mtx — apagando arquivo
+[2026-06-27 17:59:28] [179/270] Iniciando: jgl011_clean.mtx
+10
+[2026-06-27 17:59:28] ✓ Sucesso: jgl011_clean.mtx — apagando arquivo
+[2026-06-27 17:59:28] [180/270] Iniciando: jpwh_991_clean.mtx
+712
+[2026-06-27 18:05:14] ✓ Sucesso: jpwh_991_clean.mtx — apagando arquivo
+[2026-06-27 18:05:14] [181/270] Iniciando: lap_25_clean.mtx
+18
+[2026-06-27 18:05:14] ✓ Sucesso: lap_25_clean.mtx — apagando arquivo
+[2026-06-27 18:05:14] [182/270] Iniciando: lns_131_clean.mtx
+4
+[2026-06-27 18:05:15] ✓ Sucesso: lns_131_clean.mtx — apagando arquivo
+[2026-06-27 18:05:15] [183/270] Iniciando: lns_3937_clean.mtx
+6
+[2026-06-27 18:15:48] ✓ Sucesso: lns_3937_clean.mtx — apagando arquivo
+[2026-06-27 18:15:48] [184/270] Iniciando: lns_511_clean.mtx
+5
+[2026-06-27 18:15:59] ✓ Sucesso: lns_511_clean.mtx — apagando arquivo
+[2026-06-27 18:15:59] [185/270] Iniciando: lnsp3937_clean.mtx
+6
+[2026-06-27 18:26:33] ✓ Sucesso: lnsp3937_clean.mtx — apagando arquivo
+[2026-06-27 18:26:33] [186/270] Iniciando: lnsp_131_clean.mtx
+5
+[2026-06-27 18:26:34] ✓ Sucesso: lnsp_131_clean.mtx — apagando arquivo
+[2026-06-27 18:26:34] [187/270] Iniciando: lnsp_511_clean.mtx
+7
+[2026-06-27 18:26:45] ✓ Sucesso: lnsp_511_clean.mtx — apagando arquivo
+[2026-06-27 18:26:45] [188/270] Iniciando: lock1074_clean.mtx
+781
+[2026-06-27 18:41:45] ✓ Sucesso: lock1074_clean.mtx — apagando arquivo
+[2026-06-27 18:41:45] [189/270] Iniciando: lock2232_clean.mtx
+1531
+[2026-06-27 18:56:45] ✓ Sucesso: lock2232_clean.mtx — apagando arquivo
+[2026-06-27 18:56:45] [190/270] Iniciando: lock3491_clean.mtx
+2435
+[2026-06-27 19:11:46] ✓ Sucesso: lock3491_clean.mtx — apagando arquivo
+[2026-06-27 19:11:46] [191/270] Iniciando: lock_700_clean.mtx
+525
+[2026-06-27 19:26:46] ✓ Sucesso: lock_700_clean.mtx — apagando arquivo
+[2026-06-27 19:26:46] [192/270] Iniciando: lshp1009_clean.mtx
+726
+[2026-06-27 19:33:33] ✓ Sucesso: lshp1009_clean.mtx — apagando arquivo
+[2026-06-27 19:33:33] [193/270] Iniciando: lshp1561_clean.mtx
+1119
+[2026-06-27 19:48:33] ✓ Sucesso: lshp1561_clean.mtx — apagando arquivo
+[2026-06-27 19:48:33] [194/270] Iniciando: lshp1882_clean.mtx
+1343
+[2026-06-27 20:03:33] ✓ Sucesso: lshp1882_clean.mtx — apagando arquivo
+[2026-06-27 20:03:33] [195/270] Iniciando: lshp2233_clean.mtx
+1584
+[2026-06-27 20:18:33] ✓ Sucesso: lshp2233_clean.mtx — apagando arquivo
+[2026-06-27 20:18:33] [196/270] Iniciando: lshp2614_clean.mtx
+1845
+[2026-06-27 20:33:33] ✓ Sucesso: lshp2614_clean.mtx — apagando arquivo
+[2026-06-27 20:33:33] [197/270] Iniciando: lshp3025_clean.mtx
+2128
+[2026-06-27 20:48:33] ✓ Sucesso: lshp3025_clean.mtx — apagando arquivo
+[2026-06-27 20:48:33] [198/270] Iniciando: lshp3466_clean.mtx
+2429
+[2026-06-27 21:03:34] ✓ Sucesso: lshp3466_clean.mtx — apagando arquivo
+[2026-06-27 21:03:34] [199/270] Iniciando: lshp_265_clean.mtx
+199
+[2026-06-27 21:04:00] ✓ Sucesso: lshp_265_clean.mtx — apagando arquivo
+[2026-06-27 21:04:00] [200/270] Iniciando: lshp_406_clean.mtx
+298
+[2026-06-27 21:05:06] ✓ Sucesso: lshp_406_clean.mtx — apagando arquivo
+[2026-06-27 21:05:06] [201/270] Iniciando: lshp_577_clean.mtx
+416
+[2026-06-27 21:07:18] ✓ Sucesso: lshp_577_clean.mtx — apagando arquivo
+[2026-06-27 21:07:18] [202/270] Iniciando: lshp_778_clean.mtx
+560
+[2026-06-27 21:11:21] ✓ Sucesso: lshp_778_clean.mtx — apagando arquivo
+[2026-06-27 21:11:21] [203/270] Iniciando: lund_a_clean.mtx
+27
+[2026-06-27 21:11:23] ✓ Sucesso: lund_a_clean.mtx — apagando arquivo
+[2026-06-27 21:11:23] [204/270] Iniciando: lund_b_clean.mtx
+62
+[2026-06-27 21:11:26] ✓ Sucesso: lund_b_clean.mtx — apagando arquivo
+[2026-06-27 21:11:26] [205/270] Iniciando: mahindas_clean.mtx
+927
+[2026-06-27 21:13:54] ✓ Sucesso: mahindas_clean.mtx — apagando arquivo
+[2026-06-27 21:13:54] [206/270] Iniciando: man_5976_clean.mtx
+4132
+[2026-06-27 21:28:54] ✓ Sucesso: man_5976_clean.mtx — apagando arquivo
+[2026-06-27 21:28:54] [207/270] Iniciando: mbeacxc_clean.mtx
+416
+[2026-06-27 21:32:33] ✓ Sucesso: mbeacxc_clean.mtx — apagando arquivo
+[2026-06-27 21:32:33] [208/270] Iniciando: mbeaflw_clean.mtx
+481
+[2026-06-27 21:47:33] ✓ Sucesso: mbeaflw_clean.mtx — apagando arquivo
+[2026-06-27 21:47:33] [209/270] Iniciando: mbeause_clean.mtx
+485
+[2026-06-27 22:02:33] ✓ Sucesso: mbeause_clean.mtx — apagando arquivo
+[2026-06-27 22:02:33] [210/270] Iniciando: mcfe_clean.mtx
+56
+[2026-06-27 22:03:00] ✓ Sucesso: mcfe_clean.mtx — apagando arquivo
+[2026-06-27 22:03:00] [211/270] Iniciando: nnc1374_clean.mtx
+558
+[2026-06-27 22:04:49] ✓ Sucesso: nnc1374_clean.mtx — apagando arquivo
+[2026-06-27 22:04:49] [212/270] Iniciando: nnc261_clean.mtx
+106
+[2026-06-27 22:04:54] ✓ Sucesso: nnc261_clean.mtx — apagando arquivo
+[2026-06-27 22:04:54] [213/270] Iniciando: nnc666_clean.mtx
+266
+[2026-06-27 22:05:20] ✓ Sucesso: nnc666_clean.mtx — apagando arquivo
+[2026-06-27 22:05:20] [214/270] Iniciando: nos1_clean.mtx
+8
+[2026-06-27 22:05:23] ✓ Sucesso: nos1_clean.mtx — apagando arquivo
+[2026-06-27 22:05:23] [215/270] Iniciando: nos2_clean.mtx
+2
+[2026-06-27 22:06:00] ✓ Sucesso: nos2_clean.mtx — apagando arquivo
+[2026-06-27 22:06:00] [216/270] Iniciando: nos3_clean.mtx
+549
+[2026-06-27 22:07:28] ✓ Sucesso: nos3_clean.mtx — apagando arquivo
+[2026-06-27 22:07:28] [217/270] Iniciando: nos4_clean.mtx
+11
+[2026-06-27 22:07:28] ✓ Sucesso: nos4_clean.mtx — apagando arquivo
+[2026-06-27 22:07:28] [218/270] Iniciando: nos5_clean.mtx
+24
+[2026-06-27 22:07:38] ✓ Sucesso: nos5_clean.mtx — apagando arquivo
+[2026-06-27 22:07:38] [219/270] Iniciando: nos6_clean.mtx
+10
+[2026-06-27 22:07:57] ✓ Sucesso: nos6_clean.mtx — apagando arquivo
+[2026-06-27 22:07:57] [220/270] Iniciando: nos7_clean.mtx
+14
+[2026-06-27 22:08:19] ✓ Sucesso: nos7_clean.mtx — apagando arquivo
+[2026-06-27 22:08:19] [221/270] Iniciando: orani678_clean.mtx
+909
+[2026-06-27 22:23:19] ✓ Sucesso: orani678_clean.mtx — apagando arquivo
+[2026-06-27 22:23:19] [222/270] Iniciando: orsirr_1_clean.mtx
+308
+[2026-06-27 22:24:28] ✓ Sucesso: orsirr_1_clean.mtx — apagando arquivo
+[2026-06-27 22:24:28] [223/270] Iniciando: orsirr_2_clean.mtx
+298
+[2026-06-27 22:25:22] ✓ Sucesso: orsirr_2_clean.mtx — apagando arquivo
+[2026-06-27 22:25:22] [224/270] Iniciando: orsreg_1_clean.mtx
+850
+[2026-06-27 22:30:46] ✓ Sucesso: orsreg_1_clean.mtx — apagando arquivo
+[2026-06-27 22:30:46] [225/270] Iniciando: plat1919_clean.mtx
+28
+[2026-06-27 22:33:22] ✓ Sucesso: plat1919_clean.mtx — apagando arquivo
+[2026-06-27 22:33:22] [226/270] Iniciando: plat362_clean.mtx
+25
+[2026-06-27 22:33:29] ✓ Sucesso: plat362_clean.mtx — apagando arquivo
+[2026-06-27 22:33:29] [227/270] Iniciando: plsk1919_clean.mtx
+10
+[2026-06-27 22:35:59] ✓ Sucesso: plsk1919_clean.mtx — apagando arquivo
+[2026-06-27 22:35:59] [228/270] Iniciando: plskz362_clean.mtx
+9
+[2026-06-27 22:36:04] ✓ Sucesso: plskz362_clean.mtx — apagando arquivo
+[2026-06-27 22:36:04] [229/270] Iniciando: pores_1_clean.mtx
+8
+[2026-06-27 22:36:05] ✓ Sucesso: pores_1_clean.mtx — apagando arquivo
+[2026-06-27 22:36:05] [230/270] Iniciando: pores_2_clean.mtx
+156
+[2026-06-27 22:37:24] ✓ Sucesso: pores_2_clean.mtx — apagando arquivo
+[2026-06-27 22:37:24] [231/270] Iniciando: pores_3_clean.mtx
+36
+[2026-06-27 22:37:37] ✓ Sucesso: pores_3_clean.mtx — apagando arquivo
+[2026-06-27 22:37:37] [232/270] Iniciando: psmigr_1_clean.mtx
+3090
+[2026-06-27 22:52:38] ✓ Sucesso: psmigr_1_clean.mtx — apagando arquivo
+[2026-06-27 22:52:38] [233/270] Iniciando: psmigr_2_clean.mtx
+2001
+[2026-06-27 23:07:38] ✓ Sucesso: psmigr_2_clean.mtx — apagando arquivo
+[2026-06-27 23:07:38] [234/270] Iniciando: psmigr_3_clean.mtx
+2001
+[2026-06-27 23:22:38] ✓ Sucesso: psmigr_3_clean.mtx — apagando arquivo
+[2026-06-27 23:22:38] [235/270] Iniciando: rgg010_clean.mtx
+9
+[2026-06-27 23:22:38] ✓ Sucesso: rgg010_clean.mtx — apagando arquivo
+[2026-06-27 23:22:38] [236/270] Iniciando: saylr1_clean.mtx
+25
+[2026-06-27 23:22:41] ✓ Sucesso: saylr1_clean.mtx — apagando arquivo
+[2026-06-27 23:22:41] [237/270] Iniciando: saylr3_clean.mtx
+147
+[2026-06-27 23:23:24] ✓ Sucesso: saylr3_clean.mtx — apagando arquivo
+[2026-06-27 23:23:24] [238/270] Iniciando: saylr4_clean.mtx
+2114
+[2026-06-27 23:37:43] ✓ Sucesso: saylr4_clean.mtx — apagando arquivo
+[2026-06-27 23:37:43] [239/270] Iniciando: sherman1_clean.mtx
+147
+[2026-06-27 23:38:26] ✓ Sucesso: sherman1_clean.mtx — apagando arquivo
+[2026-06-27 23:38:26] [240/270] Iniciando: sherman3_clean.mtx
+14
+[2026-06-27 23:53:26] ✓ Sucesso: sherman3_clean.mtx — apagando arquivo
+[2026-06-27 23:53:26] [241/270] Iniciando: sherman4_clean.mtx
+11
+[2026-06-27 23:54:16] ✓ Sucesso: sherman4_clean.mtx — apagando arquivo
+[2026-06-27 23:54:16] [242/270] Iniciando: sherman5_clean.mtx
+184
+[2026-06-28 00:01:54] ✓ Sucesso: sherman5_clean.mtx — apagando arquivo
+[2026-06-28 00:01:54] [243/270] Iniciando: shl_0_clean.mtx
+562
+[2026-06-28 00:03:07] ✓ Sucesso: shl_0_clean.mtx — apagando arquivo
+[2026-06-28 00:03:07] [244/270] Iniciando: shl_200_clean.mtx
+568
+[2026-06-28 00:04:25] ✓ Sucesso: shl_200_clean.mtx — apagando arquivo
+[2026-06-28 00:04:25] [245/270] Iniciando: shl_400_clean.mtx
+589
+[2026-06-28 00:05:41] ✓ Sucesso: shl_400_clean.mtx — apagando arquivo
+[2026-06-28 00:05:41] [246/270] Iniciando: sstmodel_clean.mtx
+1786
+[2026-06-28 00:20:41] ✓ Sucesso: sstmodel_clean.mtx — apagando arquivo
+[2026-06-28 00:20:41] [247/270] Iniciando: steam1_clean.mtx
+54
+[2026-06-28 00:20:46] ✓ Sucesso: steam1_clean.mtx — apagando arquivo
+[2026-06-28 00:20:46] [248/270] Iniciando: steam2_clean.mtx
+111
+[2026-06-28 00:21:11] ✓ Sucesso: steam2_clean.mtx — apagando arquivo
+[2026-06-28 00:21:11] [249/270] Iniciando: steam3_clean.mtx
+15
+[2026-06-28 00:21:11] ✓ Sucesso: steam3_clean.mtx — apagando arquivo
+[2026-06-28 00:21:11] [250/270] Iniciando: str_0_clean.mtx
+299
+[2026-06-28 00:21:27] ✓ Sucesso: str_0_clean.mtx — apagando arquivo
+[2026-06-28 00:21:27] [251/270] Iniciando: str_200_clean.mtx
+291
+[2026-06-28 00:21:42] ✓ Sucesso: str_200_clean.mtx — apagando arquivo
+[2026-06-28 00:21:42] [252/270] Iniciando: str_400_clean.mtx
+274
+[2026-06-28 00:21:59] ✓ Sucesso: str_400_clean.mtx — apagando arquivo
+[2026-06-28 00:21:59] [253/270] Iniciando: str_600_clean.mtx
+270
+[2026-06-28 00:22:14] ✓ Sucesso: str_600_clean.mtx — apagando arquivo
+[2026-06-28 00:22:14] [254/270] Iniciando: watt_1_clean.mtx
+14
+[2026-06-28 00:24:34] ✓ Sucesso: watt_1_clean.mtx — apagando arquivo
+[2026-06-28 00:24:34] [255/270] Iniciando: watt_2_clean.mtx
+72
+[2026-06-28 00:26:54] ✓ Sucesso: watt_2_clean.mtx — apagando arquivo
+[2026-06-28 00:26:54] [256/270] Iniciando: west0067_clean.mtx
+16
+[2026-06-28 00:26:54] ✓ Sucesso: west0067_clean.mtx — apagando arquivo
+[2026-06-28 00:26:54] [257/270] Iniciando: west0132_clean.mtx
+72
+[2026-06-28 00:26:56] ✓ Sucesso: west0132_clean.mtx — apagando arquivo
+[2026-06-28 00:26:56] [258/270] Iniciando: west0156_clean.mtx
+113
+[2026-06-28 00:26:58] ✓ Sucesso: west0156_clean.mtx — apagando arquivo
+[2026-06-28 00:26:58] [259/270] Iniciando: west0167_clean.mtx
+94
+[2026-06-28 00:27:01] ✓ Sucesso: west0167_clean.mtx — apagando arquivo
+[2026-06-28 00:27:01] [260/270] Iniciando: west0381_clean.mtx
+221
+[2026-06-28 00:27:13] ✓ Sucesso: west0381_clean.mtx — apagando arquivo
+[2026-06-28 00:27:13] [261/270] Iniciando: west0479_clean.mtx
+250
+[2026-06-28 00:27:30] ✓ Sucesso: west0479_clean.mtx — apagando arquivo
+[2026-06-28 00:27:30] [262/270] Iniciando: west0497_clean.mtx
+292
+[2026-06-28 00:27:50] ✓ Sucesso: west0497_clean.mtx — apagando arquivo
+[2026-06-28 00:27:50] [263/270] Iniciando: west0655_clean.mtx
+345
+[2026-06-28 00:28:22] ✓ Sucesso: west0655_clean.mtx — apagando arquivo
+[2026-06-28 00:28:22] [264/270] Iniciando: west0989_clean.mtx
+557
+[2026-06-28 00:29:38] ✓ Sucesso: west0989_clean.mtx — apagando arquivo
+[2026-06-28 00:29:38] [265/270] Iniciando: west1505_clean.mtx
+815
+[2026-06-28 00:32:36] ✓ Sucesso: west1505_clean.mtx — apagando arquivo
+[2026-06-28 00:32:36] [266/270] Iniciando: west2021_clean.mtx
+1005
+[2026-06-28 00:37:12] ✓ Sucesso: west2021_clean.mtx — apagando arquivo
+[2026-06-28 00:37:12] [267/270] Iniciando: will199_clean.mtx
+182
+[2026-06-28 00:37:33] ✓ Sucesso: will199_clean.mtx — apagando arquivo
+[2026-06-28 00:37:33] [268/270] Iniciando: will57_clean.mtx
+41
+[2026-06-28 00:37:33] ✓ Sucesso: will57_clean.mtx — apagando arquivo
+[2026-06-28 00:37:33] [269/270] Iniciando: young3c_clean.mtx
+477
+[2026-06-28 00:38:57] ✓ Sucesso: young3c_clean.mtx — apagando arquivo
+[2026-06-28 00:38:57] [270/270] Iniciando: zenios_clean.mtx
+42
+[2026-06-28 00:44:36] ✓ Sucesso: zenios_clean.mtx — apagando arquivo
+[2026-06-28 00:44:36] === Fim do lote — sucesso: 270 | falhas: 0 ===

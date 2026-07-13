@@ -7,8 +7,6 @@
 #include <algorithm>
 #include <random>
 #include <limits>
-#include <iostream>
-#include <iomanip>
 
 // ------------------------------------------------------------
 // util: sorteia limites [l, r] distintos
@@ -143,77 +141,3 @@ order_crossover(const std::vector<int> &p1, const std::vector<int> &p2)
     return {c1, c2};
 }
 
-// ------------------------------------------------------------
-// Partially Mapped Crossover (PMX)
-// ------------------------------------------------------------
-static inline void pmx_one_child(const std::vector<int> &donor,
-                                 const std::vector<int> &other,
-                                 std::size_t l, std::size_t r,
-                                 std::vector<int> &child)
-{
-    const std::size_t n = donor.size();
-    child.assign(n, std::numeric_limits<int>::min());
-
-    // conjunto e mapas
-    std::unordered_set<int> donorSeg(donor.begin() + static_cast<std::ptrdiff_t>(l),
-                                     donor.begin() + static_cast<std::ptrdiff_t>(r) + 1);
-    std::unordered_map<int, int> mapOtherToDonor;
-    mapOtherToDonor.reserve(r - l + 1);
-
-    // copia o segmento e cria o mapeamento bidirecional
-    for (std::size_t i = l; i <= r; ++i)
-        mapOtherToDonor[other[i]] = donor[i], child[i] = donor[i];
-
-    auto resolve_conflict = [&](int g) -> int
-    {
-        while (mapOtherToDonor.count(g))
-            g = mapOtherToDonor[g];
-        return g;
-    };
-
-    // preenche o resto
-    for (std::size_t i = 0; i < n; ++i)
-    {
-        if (i >= l && i <= r)
-            continue;
-        int cand = other[i];
-        if (donorSeg.count(cand))
-            cand = resolve_conflict(cand);
-        child[i] = cand;
-    }
-}
-
-std::pair<std::vector<int>, std::vector<int>>
-partially_mapped_crossover(const std::vector<int> &p1, const std::vector<int> &p2)
-{
-    const std::size_t n = p1.size();
-    if (n == 0 || p2.size() != n)
-        throw std::invalid_argument("pmx: parents must be non-empty and same length.");
-
-    // valida conjunto
-    {
-        std::unordered_set<int> s1(p1.begin(), p1.end());
-        for (int v : p2)
-            if (!s1.count(v))
-            {
-                std::cout << "p1 = " << std::setw(2) << p1[0];
-                for (std::size_t i = 1; i < n; ++i)
-                    std::cout << " " << std::setw(2) << p1[i];
-                std::cout << std::endl
-                          << "p2 = " << std::setw(2) << p2[0];
-                for (std::size_t i = 1; i < n; ++i)
-                    std::cout << " " << std::setw(2) << p2[i];
-                std::cout << std::endl;
-                throw std::invalid_argument("pmx: parents must contain the same set of values.");
-            }
-    }
-
-    static thread_local std::mt19937 rng(std::random_device{}());
-    auto [l, r] = pick_segment_bounds(n, rng);
-
-    std::vector<int> c1, c2;
-    pmx_one_child(p1, p2, l, r, c1);
-    pmx_one_child(p2, p1, l, r, c2);
-
-    return {c1, c2};
-}

@@ -27,16 +27,5 @@ cycle_crossover(const std::vector<int>& p1, const std::vector<int>& p2);
 std::pair<std::vector<int>, std::vector<int>>
 order_crossover(const std::vector<int>& p1, const std::vector<int>& p2);
 
-/**
- * Partially Mapped Crossover (PMX)
- *
- * Seleciona um segmento e o copia em posição fixa. Usa mapeamento bidirecional entre os
- * genes dos dois pais dentro do segmento para resolver conflitos ao preencher o restante,
- * garantindo permutações viáveis (sem duplicatas).
- *
- * @throws std::invalid_argument se tamanhos diferirem ou não forem permutações compatíveis.
- */
-std::pair<std::vector<int>, std::vector<int>>
-partially_mapped_crossover(const std::vector<int>& p1, const std::vector<int>& p2);
 
 #endif // L21_AGBO_CROSSOVER_HPP

@@ -20,8 +20,10 @@ $(TARGET): $(OBJS)
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
+HEADERS = $(wildcard $(INC_DIR)/*.hpp)
+
 # Compilação de cada .cpp em .o
-$(BIN_DIR)/%.o: $(SRC_DIR)/%.cpp $(INC_DIR)/greedy.hpp
+$(BIN_DIR)/%.o: $(SRC_DIR)/%.cpp $(HEADERS)
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 

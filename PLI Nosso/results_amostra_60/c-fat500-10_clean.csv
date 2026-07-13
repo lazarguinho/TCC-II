@@ -1,0 +1,2 @@
+graph,#vertices,#edges,density,max_degree,min_degree,time(ms),lambda,status,lb,gap,bb_nodes
+c-fat500-10_clean,500,46627,0.37376,188,185,901494.28,413.0,BEST FOUND (time limit exceeded),2.0000,0.995157,6600

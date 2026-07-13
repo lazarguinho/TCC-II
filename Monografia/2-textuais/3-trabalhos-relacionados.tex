@@ -1,0 +1,69 @@
+\chapter{Trabalhos Relacionados}
+\label{cap:trabalhos-relacionados}
+
+Neste capítulo, são apresentados e discutidos trabalhos da literatura relacionados à resolução do Problema da Rotulação–L(2,1) em grafos. A seleção desses trabalhos foi baseada em sua relevância teórica e prática, bem como na utilização de heurísticas e algoritmos evolucionários, em especial os algoritmos genéticos.
+
+\section{Solving L(2, 1)-labeling Problem of Graphs using Genetic Algorithms}
+
+O trabalho de \citeonline{coreanos} desenvolve \glspl{ag} voltados à resolução do Problema da Rotulação–L(2,1). Os autores propõem usar como cromossomo uma permutação dos vértices do grafo, utilizando uma codificação inspirada na abordagem do \gls{pcv}. A seleção da população é realizada pela heurística gulosa, chamada pelos autores de algoritmo First-Fit, é empregando o método da roleta viciada para seleção dos indivíduos, elitismo para preservação das melhores soluções, os operadores genéticos de cruzamentos \gls{pmx}, \gls{ox} e \gls{cx}, além dos operadores de mutação \gls{dm}, \gls{em}, \gls{ivm}, \gls{sm}, \gls{ism} e \gls{sim}, todos adaptados ao contexto da rotulação.
+
+Os experimentos foram conduzidos em três grafos k-partidos completos: $K_{6,6,6,6,6}$, $K_{10,10,10,10,10}$ e $K_{5,5,5,5,5,5,5,5,5,5}$. Para esses testes, os autores utilizaram tamanhos populacionais de 20, 60 e 250 indivíduos. As taxas de cruzamento utilizadas foram de 0{,}6, e 0{,}8, enquanto as taxas de mutação foram de 0{,}01, 0{,}05 e 0{,}1. O critério de parada adotado foi um número fixo de 2000 gerações. Cada experimento foi executado 10 vezes independentemente, com o objetivo de obter estatísticas consistentes sobre o desempenho médio dos \glspl{ag}. Os resultados indicam que a combinação do cruzamento \gls{cx} com a mutação \gls{sim} em populações maiores 60 produziram os melhores resultados termos de qualidade das soluções, valor de $\lambda(G)$. 
+
+O presente trabalho amplia a análise ao propor, além de investigar o impacto de diferentes operadores de cruzamento e mutação, bem como de parâmetros genéticos, adicionalmente avaliar heurísticas de ordenação para a geração da população inicial, com o objetivo de fornecer ao \gls{ag} uma base inicial de soluções com qualidade potencialmente superior à geração puramente aleatória. Além disso, será implementado um \gls{agcae} como alternativa aos \gls{agbo}. A eficácia dos algoritmos desenvolvidos será avaliada em diferentes classes de grafos, além dos grafos $k$-partidos completos, como detalhado no Quadro~\ref{qua:comparativo-trabalhos} e os resultados obtidos serão comparados com os limitantes superiores conhecidos para $\lambda(G)$, bem como com os valores obtidos por meio de uma formulação de \gls{pli} aplicada ao problema de rotulação–L(2,1). A avaliação dos resultados não se limitará à qualidade das soluções encontradas, mas também considerará o tempo de execução e a estabilidade dos algoritmos, observada pela variabilidade das soluções ao longo de múltiplas execuções independentes. Essa análise permitirá uma compreensão mais abrangente sobre a eficiência, robustez e confiabilidade das abordagens propostas para o problema de rotulação–L(2,1).
+
+\section{Heuristic Algorithms for the L(2, 1)-Labeling Problem}
+
+O estudo de \citeonline{indianos} investiga abordagens heurísticas para o problema de rotulação–L(2,1). Inicialmente, os autores aplicaram ordenações heurísticas de vértices à heurística gulosa, com o objetivo de melhorar a qualidade das rotulações geradas. As estratégias de ordenação consideradas foram a ordem aleatória, a ordem do menor-último e a ordem do maior-primeiro. A eficácia dessas heurísticas varia conforme o tipo de grafo analisado. Os resultados mostram que, embora a ordem do maior-primeiro seja vantajosa em muitas situações, há casos em que a ordem do menor-último proporciona uma rotulação melhor. Em árvores, por exemplo, a ordem do maior-primeiro tende a produzir rotulações mais eficientes do que a ordem do menor-último. Já em grafos cordais, a ordem do menor-último apresentou uma eficiência consideravelmente menor em comparação com a ordem do maior-primeiro. A comparação entre as duas estratégias foi feita com base na porcentagem de casos em que uma heurística superou a outra, medida em diferentes cenários.
+
+Posteriormente, os autores propõem a integração dessas ordenações heurísticas como mecanismos de geração da população inicial em um algoritmo genético, combinando roleta viciada para a seleção, \gls{cx} para o cruzamento com taxa de 0{,}9 e \gls{em} para mutação com taxa de 0{,}1. O critério de parada adotado foi o numero máximo de gerações que interrompe a busca. A eficácia dos métodos é comprovada por meio de experimentos com grafos aleatórios, nos quais os \glspl{ag} superam as as heurísticas gulosas de ordem do maior-primeiro e ordem do menor-último em qualidade dos resultados de grafos aleatórios com 50, 80 e 100 vértices, especialmente quando a população inicial inclui ordenações heurísticas estruturadas. As análises evidenciaram que, embora não haja uma ordenação heurística universalmente superior, a combinação dos algoritmos genéticos com estratégias de ordenação informada levou a soluções mais robustas e eficazes para o problema.
+
+Embora os trabalhos de \citeonline{coreanos} e \citeonline{indianos} compartilhem o objetivo comum de resolver o problema de rotulação–L(2,1) em grafos por meio de algoritmos genéticos, eles diferem significativamente em suas abordagens e foco experimental. Ambos empregam operadores de cruzamento e mutação adaptados ao contexto de permutações, além de utilizar estratégias de seleção como a roleta viciada. No entanto, enquanto \citeonline{coreanos} concentra-se em avaliar o impacto de diferentes combinações de operadores genéticos em grafos k-partidos completos, testando variações nos parâmetros evolutivos, o estudo de \citeonline{indianos} direciona-se à análise do papel das ordenações heurísticas de vértices, tanto em heurísticas gulosas quanto na geração da população inicial dos algoritmos genéticos. Uma similaridade importante entre os dois estudos é o uso da heurística gulosa como base para avaliação das rotulações, mas apenas \citeonline{indianos} explora diretamente a contribuição de diferentes estratégias de ordenação de forma sistemática. O presente trabalho procura unir essas duas perspectivas, incorporando heurísticas de ordenação na população inicial e avaliando múltiplos operadores e parâmetros genéticos, buscando avaliar a qualidade das soluções em diferentes classes de grafos.
+
+\section{L(2, 1)-coloring of the Fibonacci cubes}
+
+\citeonline{taranenko20042} investiga a Rotulação–L(2,1) em uma classe específica de grafos conhecidos como cubos de Fibonacci, denotados por $\Gamma_n$. Estes grafos são relevantes em topologias de redes de comunicação e, até a publicação do estudo, o valor de $\lambda(\Gamma_n)$ era uma questão em aberto.
+
+Quatro abordagens principais são propostas e comparadas: um algoritmo probabilístico conhecido como método de \textit{Petford–Welsh}, e três variantes de algoritmos evolucionários. O primeiro algoritmo evolucionário, denominado \textit{Permutation Representation of Evolutionary Algorithm}, utiliza uma codificação baseada em permutação dos vértices, de forma similar aos trabalhos de \citeonline{coreanos} e \citeonline{indianos}, usando o cruzamento \gls{ox}. O segundo, denominado \textit{Integer Representation of Evolutionary Algorithm}, emprega uma representação inteira para o cromossomo, onde cada gene corresponde diretamente ao rótulo de um vértice, e utiliza um operador de cruzamento específico para problemas de coloração. A terceira abordagem é um algoritmo evolucionário híbrido, que substitui o operador de mutação padrão do \textit{Integer Representation of Evolutionary Algorithm} por uma busca local baseada no método de \textit{Petford–Welsh}.
+
+Os experimentos foram realizados em cubos de Fibonacci $\Gamma_n$ com $n$ variando até 16 (correspondendo a grafos com até 2584 vértices). Os resultados demonstraram a superioridade do algoritmo evolucionário híbrido, que obteve os melhores valores de $\lambda(\Gamma_n)$ para todas as instâncias testadas. Além disso, o estudo conseguiu determinar os valores ótimos de $\lambda(\Gamma_n)$ para $n \leq 7$, confirmados por meio de um algoritmo de \textit{backtracking}.
+
+O trabalho de \citeonline{taranenko20042} é particularmente relevante por comparar diferentes representações de cromossomos (permutação vs. inteira) e por introduzir uma abordagem híbrida que combina um algoritmo evolucionário com uma heurística de busca local. No entanto, o foco do estudo é restrito a uma única classe de grafos, os cubos de Fibonacci. O presente trabalho, em contrapartida, visa avaliar o desempenho das metodologias propostas em um conjunto diversificado de classes de grafos. Adicionalmente, enquanto \citeonline{taranenko20042} explora a hibridização com busca local, nossa proposta investigará uma arquitetura evolucionária distinta, o \gls{agcae}, e dará uma ênfase maior à influência das heurísticas de ordenação na construção da população inicial, um aspecto não aprofundado por eles. Por fim, nossa avaliação incluirá uma comparação direta com os resultados de uma formulação de \gls{pli}, fornecendo um referencial de otimalidade que não foi utilizado no estudo sobre os cubos de Fibonacci.
+
+
+A seguir, é apresentado o Quadro~\ref{qua:comparativo-trabalhos} que sintetiza as principais características dos trabalhos abordados e os contrapõe à proposta desta pesquisa.
+
+\begin{quadro}[h!]	
+	\centering
+	\Caption{\label{qua:comparativo-trabalhos}Comparação entre os trabalhos relacionados e o trabalho proposto}		
+	\UFCqua{}{
+        % Use o ambiente tabularx com a largura \textwidth
+		\begin{tabularx}{\textwidth}{ 
+            % Substitua os p{...} por colunas X. 
+            % Todas as colunas X dividirão o espaço igualmente.
+            | >{\raggedright\arraybackslash}p{3.5cm} 
+            | >{\raggedright\arraybackslash}X 
+            | >{\raggedright\arraybackslash}X 
+            | >{\raggedright\arraybackslash}X 
+            | >{\raggedright\arraybackslash}X 
+            | >{\raggedright\arraybackslash}X | 
+        }
+			\hline
+			\textbf{Trabalho} &
+            \textbf{Abordagem} &
+            \textbf{Codificação} &
+            \textbf{Operadores Genéticos} &
+            \textbf{Tipo de Grafo} \\
+			\hline
+			\cite{coreanos} & \gls{agbo} + heurística gulosa & Permutação & \gls{pmx} + \gls{ox} + \gls{cx} + \gls{dm} + \gls{em} + \gls{ivm} + \gls{sm} + \gls{ism} + \gls{sim} & $k$-partidos completos \\
+			\hline
+			\cite{indianos} & \gls{agbo} + heurística gulosa & Permutação & \gls{cx} + \gls{em} & Árvores + Cordais + Grafos aleatórios \\
+			\hline
+			\cite{taranenko20042} & \gls{ag} puro e híbrido + heurística gulosa + \textit{Petford–Welsh} & Permutação e Inteira & \gls{ox} + \gls{em} & Cubos de \textit{Fibonacci} \\
+			\hline
+			Este trabalho & \gls{agbo} + \gls{agcae} + heurística gulosa & Permutação e Chaves aleatórias & \gls{pmx} + \gls{ox} + \gls{cx} + \gls{dm} + \gls{em} + \gls{ivm} + \gls{sm} + \gls{ism} + \gls{sim} & Árvores + Caminhos + Grafos aleatórios + DIMACS + CELLAR + Harwell-Boeing \\
+			\hline
+		\end{tabularx}
+	}{
+		\Fonte{Elaborado pelo autor.}
+	}
+\end{quadro}

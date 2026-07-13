@@ -89,6 +89,7 @@ struct Options {
     double mut = 0.10;
     double cr = 1.0;
     size_t runs = 1;
+    size_t max_stagt = 150;
     bool show_help = false;
 };
 
@@ -101,16 +102,17 @@ Posicional:
   <caminho.mtx>            Arquivo Matrix Market (.mtx)
 
 Opções:
-  --opx, -x <cx|ox|pmx>    Operador de crossover (padrão: cx)
-  --opm, -m <em|dm|ivm|sm|ism|sim>
+  --opx, -x <cx|ox>        Operador de crossover (padrão: cx)
+  --opm, -m <em|dm|sm|ism>
                            Operador de mutação (padrão: em)
   --pop <N>                Tamanho da população (padrão: 20)
   --gens <N>               Número de gerações (padrão: 100)
   --mut <r>                Taxa de mutação [0..1] (padrão: 0.10)
   --cr <r>                 Taxa de cruzamento [0..1] (padrão: 1.0)
   --runs <N>               Número de execuções (padrão: 1)
+  --max-stagt <N>          Gerações sem melhora para parar (padrão: 150)
   --undirected, -u         Lê o grafo como não-direcionado
-  --directed, -d           Lê o grafo como direcionado (padrão)
+  --directed, -d           Lê o grafo como direcionado
   --help, -h               Mostra esta ajuda
 
 Exemplo:
@@ -146,6 +148,9 @@ Options parse_args(int argc, char** argv) {
         } else if (a == "--runs") {
             opt.runs = static_cast<size_t>(std::stoul(need_value(i, a.c_str())));
             if (opt.runs < 1) throw std::runtime_error("--runs deve ser >= 1");
+        } else if (a == "--max-stagt") {
+            opt.max_stagt = static_cast<size_t>(std::stoul(need_value(i, a.c_str())));
+            if (opt.max_stagt < 1) throw std::runtime_error("--max-stagt deve ser >= 1");
         } else if (a == "-u" || a == "--undirected") {
             opt.undirected = true;
         } else if (a == "-d" || a == "--directed") {
@@ -182,16 +187,13 @@ int main(int argc, char** argv) {
         CrossoverOp cross = cycle_crossover;  // default
         if      (opt.opx == "cx")  cross = cycle_crossover;
         else if (opt.opx == "ox")  cross = order_crossover;
-        else if (opt.opx == "pmx") cross = partially_mapped_crossover;
         else std::cerr << "Aviso: crossover inválido '" << opt.opx << "', usando 'cx'.\n";
 
         MutationOp mut_op = exchange_mutation; // default
         if      (opt.opm == "em")  mut_op = exchange_mutation;
         else if (opt.opm == "dm")  mut_op = displacement_mutation;
-        else if (opt.opm == "ivm") mut_op = inversion_mutation;
         else if (opt.opm == "sm")  mut_op = scramble_mutation;
         else if (opt.opm == "ism") mut_op = insertion_mutation;
-        else if (opt.opm == "sim") mut_op = simple_inversion_mutation;
         else std::cerr << "Aviso: mutação inválida '" << opt.opm << "', usando 'em'.\n";
 
         // ---- Ler grafo ----
@@ -205,7 +207,7 @@ int main(int argc, char** argv) {
         out << "===== RESULTADO GA L(2,1) =====\n";
         out << "Arquivo: " << opt.file << (opt.undirected ? " (undirected)\n" : " (directed)\n");
         out << "Crossover: " << opt.opx << " | Mutação: " << opt.opm
-                  << " | pop=" << opt.pop << " | gens=" << opt.gens << " | mut=" << opt.mut << " | cr=" << opt.cr << " | runs=" << opt.runs << "\n";
+                  << " | pop=" << opt.pop << " | gens=" << opt.gens << " | mut=" << opt.mut << " | cr=" << opt.cr << " | runs=" << opt.runs << " | max-stagt=" << opt.max_stagt << "\n";
 
         GAResult best_overall;
         int best_span = std::numeric_limits<int>::max();
@@ -222,15 +224,18 @@ int main(int argc, char** argv) {
                 opt.mut,
                 opt.cr,
                 cross,
-                mut_op
+                mut_op,
+                opt.max_stagt
             );
 
-            out << "Span (lambda): " << res.span_value << "\n";
+            bool valid = res.span_value != std::numeric_limits<int>::max();
+            out << "Span (lambda): " << (valid ? std::to_string(res.span_value) : "N/A (sem resultado no prazo)") << "\n";
+            out << "Parada: " << res.stop_reason << " (geração " << res.span_per_generation.size() << ")\n";
             print_vec(out, res.best_order, "best_order");
             print_vec(out, res.labeling,   "labeling");
             print_vec(out, res.span_per_generation, "convergência");
 
-            if (res.span_value < best_span) {
+            if (valid && res.span_value < best_span) {
                 best_span = res.span_value;
                 best_overall = res;
                 has_best = true;
@@ -249,7 +254,11 @@ int main(int argc, char** argv) {
             print_vec(out, best_overall.best_order, "best_order");
             print_vec(out, best_overall.labeling,   "labeling");
         } else {
-            out << "Nenhum resultado encontrado.\n";
+            // Nenhum indivíduo avaliado dentro do prazo: usa penalidade = 2*n
+            // para que o irace consiga parsear um valor numérico válido no stdout
+            const int penalty = 2 * n;
+            out << "Nenhum resultado encontrado (penalidade = " << penalty << ").\n";
+            std::cout << penalty << "\n";
         }
 
         return 0;

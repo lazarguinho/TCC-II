@@ -1,0 +1,16 @@
+===== RESULTADO GA L(2,1) =====
+Arquivo: /Users/mateuspedrosa/Documents/TCC-II/BOGA/data/Harwell-Boeing_cleaned/rgg010_clean.mtx (undirected)
+Crossover: cx | Mutação: em | pop=30 | gens=53 | mut=0.446 | cr=0.5724 | runs=1 | max-stagt=1031
+
+----- Execução #1 -----
+Span (lambda): 9
+Parada: MAX_GENS (geração 53)
+best_order = [6, 5, 9, 8, 4, 7, 1, 3, 2, 0]
+labeling = [9, 3, 6, 7, 4, 2, 0, 5, 1, 0]
+convergência = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+================================
+
+----- Melhor execução -----
+Span (lambda): 9
+best_order = [6, 5, 9, 8, 4, 7, 1, 3, 2, 0]
+labeling = [9, 3, 6, 7, 4, 2, 0, 5, 1, 0]

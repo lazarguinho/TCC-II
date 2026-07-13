@@ -31,6 +31,7 @@ pop             "--pop "            c      (20,22,24,26,28,30,32,34,36,38,40,42,
 gens            "--gens "           i      (50,1000)
 mut             "--mut "            r      (0.01,1.0)
 cr              "--cr "             r      (0.3,1.0)
+max_stagt       "--max-stagt "      i      (50,2000)
 
 
 [forbidden]

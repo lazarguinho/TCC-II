@@ -1,0 +1,61 @@
+file,origin,n,m,density,size_bin,dens_bin,path
+erdos_n100_p0.2.mtx,Aleatórios,100,1008,0.203636,P2_small,D3_medium,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Aleatórios/erdos_n100_p0.2.mtx
+erdos_n100_p0.8.mtx,Aleatórios,100,3958,0.799596,P2_small,D4_dense,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Aleatórios/erdos_n100_p0.8.mtx
+erdos_n200_p0.2.mtx,Aleatórios,200,3886,0.195276,P2_small,D2_low,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Aleatórios/erdos_n200_p0.2.mtx
+erdos_n300_p0.6.mtx,Aleatórios,300,26781,0.597124,P3_medium,D4_dense,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Aleatórios/erdos_n300_p0.6.mtx
+erdos_n400_p0.2.mtx,Aleatórios,400,15767,0.197581,P3_medium,D2_low,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Aleatórios/erdos_n400_p0.2.mtx
+erdos_n500_p0.4.mtx,Aleatórios,500,50151,0.402012,P3_medium,D3_medium,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Aleatórios/erdos_n500_p0.4.mtx
+erdos_n600_p0.8.mtx,Aleatórios,600,143926,0.800924,P4_large,D4_dense,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Aleatórios/erdos_n600_p0.8.mtx
+erdos_n700_p0.6.mtx,Aleatórios,700,147027,0.600969,P4_large,D4_dense,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Aleatórios/erdos_n700_p0.6.mtx
+erdos_n800_p0.2.mtx,Aleatórios,800,64141,0.200691,P4_large,D3_medium,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Aleatórios/erdos_n800_p0.2.mtx
+erdos_n1000_p0.2.mtx,Aleatórios,1000,99839,0.199878,P4_large,D2_low,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Aleatórios/erdos_n1000_p0.2.mtx
+erdos_n1000_p0.4.mtx,Aleatórios,1000,199962,0.400324,P4_large,D3_medium,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Aleatórios/erdos_n1000_p0.4.mtx
+celar02.mtx,CELAR,200,1235,0.06206,P2_small,D2_low,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/CELAR/celar02.mtx
+celar03.mtx,CELAR,400,2760,0.034586,P3_medium,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/CELAR/celar03.mtx
+celar11.mtx,CELAR,680,4103,0.017773,P4_large,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/CELAR/celar11.mtx
+celar01.mtx,CELAR,916,5548,0.013239,P4_large,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/CELAR/celar01.mtx
+gamma_2.mtx,Cubos de Fibonacci,3,2,0.666667,P1_tiny,D4_dense,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Cubos de Fibonacci/gamma_2.mtx
+gamma_10.mtx,Cubos de Fibonacci,144,420,0.040793,P2_small,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Cubos de Fibonacci/gamma_10.mtx
+gamma_11.mtx,Cubos de Fibonacci,233,744,0.027527,P3_medium,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Cubos de Fibonacci/gamma_11.mtx
+gamma_13.mtx,Cubos de Fibonacci,610,2285,0.012302,P4_large,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Cubos de Fibonacci/gamma_13.mtx
+gamma_16.mtx,Cubos de Fibonacci,2584,11822,0.003542,P5_xlarge,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Cubos de Fibonacci/gamma_16.mtx
+jgl009_clean.mtx,Harwell-Being,9,16,0.444444,P1_tiny,D3_medium,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/jgl009_clean.mtx
+bcsstm01_clean.mtx,Harwell-Being,48,0,0.0,P1_tiny,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/bcsstm01_clean.mtx
+bcsstk03_clean.mtx,Harwell-Being,112,264,0.042471,P2_small,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/bcsstk03_clean.mtx
+can_144_clean.mtx,Harwell-Being,144,576,0.055944,P2_small,D2_low,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/can_144_clean.mtx
+dwt_198_clean.mtx,Harwell-Being,198,597,0.030611,P2_small,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/dwt_198_clean.mtx
+can_229_clean.mtx,Harwell-Being,229,774,0.029648,P3_medium,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/can_229_clean.mtx
+dwt_234_clean.mtx,Harwell-Being,234,300,0.011005,P3_medium,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/dwt_234_clean.mtx
+steam1_clean.mtx,Harwell-Being,240,1761,0.061402,P3_medium,D2_low,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/steam1_clean.mtx
+bcsstm20_clean.mtx,Harwell-Being,485,0,0.0,P3_medium,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/bcsstm20_clean.mtx
+mbeacxc_clean.mtx,Harwell-Being,496,41686,0.339573,P3_medium,D3_medium,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/mbeacxc_clean.mtx
+fs_541_3_clean.mtx,Harwell-Being,541,2466,0.016882,P4_large,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/fs_541_3_clean.mtx
+mcfe_clean.mtx,Harwell-Being,765,15358,0.052554,P4_large,D2_low,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/mcfe_clean.mtx
+west0989_clean.mtx,Harwell-Being,989,3500,0.007164,P4_large,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/west0989_clean.mtx
+1138_bus_clean.mtx,Harwell-Being,1138,1458,0.002254,P5_xlarge,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/1138_bus_clean.mtx
+dwt_1242_clean.mtx,Harwell-Being,1242,4592,0.005959,P5_xlarge,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/dwt_1242_clean.mtx
+psmigr_3_clean.mtx,Harwell-Being,3140,410781,0.083353,P5_xlarge,D2_low,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/psmigr_3_clean.mtx
+lns_3937_clean.mtx,Harwell-Being,3937,12771,0.001648,P5_xlarge,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/lns_3937_clean.mtx
+bcsstk31_clean.mtx,Harwell-Being,35588,572914,0.000905,P5_xlarge,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Harwell-Being/bcsstk31_clean.mtx
+partite3_K5x10.mtx,Multipartidos Completos,50,1125,0.918367,P1_tiny,D4_dense,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Multipartidos Completos/partite3_K5x10.mtx
+partite2_K10x5.mtx,Multipartidos Completos,50,1000,0.816327,P1_tiny,D4_dense,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/Multipartidos Completos/partite2_K10x5.mtx
+johnson8-2-4_clean.mtx,NR_DIMACS,28,105,0.277778,P1_tiny,D3_medium,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/johnson8-2-4_clean.mtx
+hamming6-2_clean.mtx,NR_DIMACS,64,912,0.452381,P2_small,D3_medium,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/hamming6-2_clean.mtx
+keller4_clean.mtx,NR_DIMACS,171,9435,0.649123,P2_small,D4_dense,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/keller4_clean.mtx
+san200-0-7-1_clean.mtx,NR_DIMACS,200,13930,0.7,P2_small,D4_dense,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/san200-0-7-1_clean.mtx
+c-fat200-5_clean.mtx,NR_DIMACS,200,8473,0.425779,P2_small,D3_medium,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/c-fat200-5_clean.mtx
+c-fat200-1_clean.mtx,NR_DIMACS,200,1534,0.077085,P2_small,D2_low,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/c-fat200-1_clean.mtx
+MANN-a27_clean.mtx,NR_DIMACS,378,70551,0.990148,P3_medium,D4_dense,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/MANN-a27_clean.mtx
+san400-0-7-1_clean.mtx,NR_DIMACS,400,55860,0.7,P3_medium,D4_dense,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/san400-0-7-1_clean.mtx
+gen400-p0-9-75_clean.mtx,NR_DIMACS,400,71820,0.9,P3_medium,D4_dense,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/gen400-p0-9-75_clean.mtx
+c-fat500-10_clean.mtx,NR_DIMACS,500,46627,0.373764,P3_medium,D3_medium,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/c-fat500-10_clean.mtx
+c-fat500-1_clean.mtx,NR_DIMACS,500,4459,0.035743,P3_medium,D1_sparse,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/c-fat500-1_clean.mtx
+c-fat500-5_clean.mtx,NR_DIMACS,500,23191,0.1859,P3_medium,D2_low,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/c-fat500-5_clean.mtx
+keller5_clean.mtx,NR_DIMACS,776,225990,0.751546,P4_large,D4_dense,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/keller5_clean.mtx
+C1000-9_clean.mtx,NR_DIMACS,1000,450079,0.901059,P4_large,D4_dense,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/C1000-9_clean.mtx
+p-hat1000-1_clean.mtx,NR_DIMACS,1000,122253,0.244751,P4_large,D3_medium,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/p-hat1000-1_clean.mtx
+p-hat1500-1_clean.mtx,NR_DIMACS,1500,284923,0.253434,P5_xlarge,D3_medium,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/p-hat1500-1_clean.mtx
+C2000-9_clean.mtx,NR_DIMACS,2000,1799532,0.900216,P5_xlarge,D4_dense,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/C2000-9_clean.mtx
+keller6_clean.mtx,NR_DIMACS,3361,4619898,0.818191,P5_xlarge,D4_dense,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/NR_DIMACS/keller6_clean.mtx
+CELAR6-SUB0.mtx,SUBCELAR6,32,111,0.22379,P1_tiny,D3_medium,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/SUBCELAR6/CELAR6-SUB0.mtx
+CELAR6-SUB3.mtx,SUBCELAR6,36,219,0.347619,P1_tiny,D3_medium,/Users/mateuspedrosa/Documents/TCC-II/Nova Base/SUBCELAR6/CELAR6-SUB3.mtx

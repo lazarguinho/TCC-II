@@ -10,7 +10,8 @@
   #define DOUT if (false) std::cout
 #endif
 
-GreedyResult greedy_labeling(const Graph& graph, const std::vector<int>& order) {
+GreedyResult greedy_labeling(const Graph& graph, const std::vector<int>& order,
+                              const Deadline* deadline) {
     const int n = static_cast<int>(order.size());
     DOUT << "Número de vértices (n): " << n << '\n';
 
@@ -30,10 +31,13 @@ GreedyResult greedy_labeling(const Graph& graph, const std::vector<int>& order) 
 
     DOUT << "Para cada vértice:\n";
     for (int v_idx = 0; v_idx < n; ++v_idx) {
+        if (deadline && std::chrono::steady_clock::now() >= *deadline)
+            return GreedyResult{std::numeric_limits<int>::max(), {}};
+
         int v = order[v_idx];
         DOUT << "\t-----Vértice " << v << "-----\n";
 
-        std::vector<char> banned(max_label_bound, false);
+        std::vector<char> banned(max_label_bound + 1, false);
         DOUT << "\tbanned: [";
         for (int i = 0; i < max_label_bound; ++i) {
             DOUT << (banned[i] ? "sim" : "não");
@@ -53,9 +57,9 @@ GreedyResult greedy_labeling(const Graph& graph, const std::vector<int>& order) 
                 DOUT << "Sim!\n";
                 int lu = f[neighbor];
                 DOUT << "\t\t\tComo o rótulo de " << neighbor << " é " << lu << '\n';
-                if (lu >= 0 && lu < max_label_bound) banned[lu] = true;
-                if (lu - 1 >= 0 && lu - 1 < max_label_bound) banned[lu - 1] = true;
-                if (lu + 1 >= 0 && lu + 1 < max_label_bound) banned[lu + 1] = true;
+                if (lu >= 0 && lu <= max_label_bound) banned[lu] = true;
+                if (lu - 1 >= 0 && lu - 1 <= max_label_bound) banned[lu - 1] = true;
+                if (lu + 1 >= 0 && lu + 1 <= max_label_bound) banned[lu + 1] = true;
                 DOUT << "\t\t\t\tOs rótulos " << lu - 1 << ", " << lu << " e " << lu + 1 << " estao banidos\n";
             } else {
                 DOUT << "Não!\n";
@@ -73,7 +77,7 @@ GreedyResult greedy_labeling(const Graph& graph, const std::vector<int>& order) 
                     DOUT << "Sim!\n";
                     int lw = f[w];
                     DOUT << "\t\t\t\tComo o rótulo de " << w << " é " << lw << '\n';
-                    if (lw >= 0 && lw < max_label_bound) banned[lw] = true;
+                    if (lw >= 0 && lw <= max_label_bound) banned[lw] = true;
                     DOUT << "\t\t\t\t\tO rótulo " << lw << " está banido\n";
                 } else {
                     DOUT << "Não!\n";
@@ -85,7 +89,7 @@ GreedyResult greedy_labeling(const Graph& graph, const std::vector<int>& order) 
         DOUT << "\t\tRótulo escolhido começando em " << chosen << "\n";
 
         DOUT << "\t\tEnquanto rótulo escolhido estiver banido vá para o próximo rótulo, mas pare caso chegue ao rótulo máximo " << max_label_bound << '\n';
-        while (chosen < max_label_bound && banned[chosen]) ++chosen;
+        while (chosen <= max_label_bound && banned[chosen]) ++chosen;
 
         DOUT << "\t\tRótulo escolhido: " << chosen << '\n';
 

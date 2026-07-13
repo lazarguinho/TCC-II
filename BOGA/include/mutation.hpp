@@ -21,12 +21,6 @@ std::vector<int> exchange_mutation(const std::vector<int>& individual, double mu
 std::vector<int> displacement_mutation(const std::vector<int>& individual, double mutation_rate, std::mt19937& rng);
 
 /**
- * Seleciona um segmento contínuo, inverte sua ordem e reinsere
- * o segmento invertido em uma posição aleatória.
- */
-std::vector<int> inversion_mutation(const std::vector<int>& individual, double mutation_rate, std::mt19937& rng);
-
-/**
  * Seleciona um segmento contínuo e embaralha aleatoriamente
  * os elementos apenas dentro desse intervalo.
  */
@@ -38,9 +32,5 @@ std::vector<int> scramble_mutation(const std::vector<int>& individual, double mu
  */
 std::vector<int> insertion_mutation(const std::vector<int>& individual, double mutation_rate, std::mt19937& rng);
 
-/**
- * Seleciona dois pontos de corte (l < r) e inverte o segmento [l, r] in-place.
- */
-std::vector<int> simple_inversion_mutation(const std::vector<int>& individual, double mutation_rate, std::mt19937& rng);
 
 #endif // L21_AGBO_MUTATION_HPP
